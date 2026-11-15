@@ -13,6 +13,15 @@ A ring that is almost closed, with a small sun in the opening. The ring only loa
 
 ![Logo sheet](design/20-logo-ring-of-light.png)
 
+## Social media
+
+| File | Size | Use |
+| --- | --- | --- |
+| [luxyos-profile-dark.png](../brand/social/luxyos-profile-dark.png) | 1024 × 1024 | Profile picture (dark). Safe when cut to a circle |
+| [luxyos-profile-light.png](../brand/social/luxyos-profile-light.png) | 1024 × 1024 | Profile picture (light) |
+| [luxyos-banner.png](../brand/social/luxyos-banner.png) | 1500 × 500 | Banner / header (X, LinkedIn, YouTube). Text sits to the right, clear of the profile picture |
+| [luxyos-share-en.png](../brand/social/luxyos-share-en.png), [nl](../brand/social/luxyos-share-nl.png) | 1200 × 630 | Link preview. luxyos.com uses it automatically (Open Graph) |
+
 ## Colours
 
 | Name | Hex | Use |
