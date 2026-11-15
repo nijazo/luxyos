@@ -872,7 +872,7 @@ Keuzescherm bij de eerste start:
 
 | Keuze | Opties | Let op |
 | --- | --- | --- |
-| Antivirus | De eigen AV of een andere | Basis: ClamAV. Belangrijk, omdat Windows-virussen via Wine kunnen draaien |
+| Antivirus | IT DeXt Antivirus (ingebouwd en gratis) of een andere | Basis: ClamAV. Belangrijk, omdat Windows-virussen via Wine kunnen draaien |
 | Webbrowser | Firefox, Chrome, Edge, Brave, Vivaldi, Opera | Downloaden van de officiële site. Chrome mag je niet zelf meeleveren |
 | Zoekmachine | Google, Bing, DuckDuckGo, Ecosia, Startpage, Qwant | Neutraal aangeboden, zonder afspraken over inkomsten |
 

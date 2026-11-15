@@ -34,6 +34,7 @@ A Windows `.exe` "migration assistant": check report → collect data → full W
 - Nothing leaves the system without permission. Everything that sends data is off by default.
 - Privacy overview: which program connected to what, with per-app internet switches.
 - Sandbox per app; permissions from the app manifest.
+- IT DeXt Antivirus built in and free: real-time protection, Windows programs scanned before they run, quarantine ([design 25](design/25-security-antivirus.png)). Users can choose another antivirus.
 - AI setting for administrators: **blocked**, **local only** or **allowed** (OS features, store, app execution, network blocklist, NPU).
 - Disk encryption on by default (LUKS2 + TPM). Reset: keep files or remove everything (crypto-erase).
 - Central certificate management, like Windows (personal, trusted roots, intermediates, publishers, untrusted, machine).
@@ -42,12 +43,12 @@ A Windows `.exe` "migration assistant": check report → collect data → full W
 
 - Account types: Administrator, Standard, Child, Guest. Groups, including custom groups and AD groups.
 - Sign-in: local account (password, PIN, fingerprint, security key), Active Directory, Entra ID.
-- Users manage their own profile: photo, name, password, linked mail, calendar, contacts and files (Gmail, Outlook/Microsoft 365, Yahoo, IMAP).
+- Users manage their own profile: photo, name, password, linked mail, calendar, contacts and files (Gmail, Outlook/Microsoft 365, Yahoo, IMAP) ([design 24](design/24-accounts.png)).
 
 ## System management
 
 - Device Manager: status per device in plain language, install, update and roll back drivers, firmware updates.
-- Network: IPv4/IPv6, DHCP or static, DNS (also encrypted DNS), VPN, profiles, per-app firewall, SMB sharing.
+- Network: IPv4/IPv6, DHCP or static, DNS (also encrypted DNS), VPN, profiles, per-app firewall, SMB sharing ([design 23](design/23-network-settings.png)).
 - Disk Management: create, extend, shrink partitions; format FAT32, exFAT, NTFS, ext4, Btrfs; drive letters for Windows programs; SMART warnings.
 - Battery: automatic power profiles, only open apps get energy, per-app battery usage, 80 % charge limit.
 - Phone link over Wi-Fi, Bluetooth and USB (KDE Connect based), Android and iPhone.

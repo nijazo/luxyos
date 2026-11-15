@@ -87,7 +87,14 @@ section.blik .wrap { padding-top: 40px; padding-bottom: 8px; }
 .blik a:focus-visible, .knop:focus-visible { outline: 3px solid var(--zon); outline-offset: 3px; }
 .blik img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--rand); box-shadow: 0 10px 30px rgba(19,36,59,0.12); background: var(--bg-zacht); }
 .blik figcaption { margin-top: 10px; font-size: 14px; color: var(--tekst-zacht); }
-.raster3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 26px; }
+.verhaal { display: grid; gap: 64px; margin-top: 8px; }
+.rij { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 40px; align-items: center; margin: 0; }
+.rij:nth-child(even) { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+.rij:nth-child(even) .tekst { order: 2; }
+.rij h3 { margin: 0 0 8px; font-size: clamp(20px, 2.4vw, 26px); letter-spacing: -0.01em; line-height: 1.2; }
+.rij .tekst { margin: 0; font-size: inherit; color: inherit; }
+.rij .tekst p { margin: 0; color: var(--tekst-zacht); font-size: 17px; }
+@media (max-width: 760px) { .verhaal { gap: 44px; } .rij, .rij:nth-child(even) { grid-template-columns: 1fr; gap: 14px; } .rij:nth-child(even) .tekst { order: 0; } .rij .tekst p { font-size: 16px; } }
 section.mee .wrap { padding-top: 56px; padding-bottom: 8px; }
 .raster2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
 .mee .kaart { padding: 26px; gap: 12px; }
@@ -238,11 +245,39 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <div class="wrap">
 <h2>Prvi pogled</h2>
 <p class="sub">Dizajni izgleda LuxyOS-a. Još nije gotov proizvod; imena i brojevi su primjeri.</p>
-<figure><a href="../img/desktop-en-1440.webp"><img src="../img/desktop-en-1440.webp" srcset="../img/desktop-en-720.webp 720w, ../img/desktop-en-1440.webp 1440w" sizes="(max-width: 1100px) 100vw, 1040px" width="1440" height="900" alt="Radna površina LuxyOS-a s otvorenim izbornikom Start i pregledom usluga" loading="lazy" decoding="async"></a><figcaption>Radna površina s izbornikom Start. Rade samo usluge koje koristiš.</figcaption></figure>
-<div class="raster3">
-<figure><a href="../img/explorer-en-1440.webp"><img src="../img/explorer-en-1440.webp" srcset="../img/explorer-en-720.webp 720w, ../img/explorer-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Preglednik datoteka s otvorenom mapom Dokumenti: mape lijevo, datoteke s datumom, vrstom i veličinom" loading="lazy" decoding="async"></a><figcaption>Preglednik datoteka: tvoje mape i datoteke tamo gdje ih očekuješ.</figcaption></figure>
-<figure><a href="../img/store-en-1440.webp"><img src="../img/store-en-1440.webp" srcset="../img/store-en-720.webp 720w, ../img/store-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Trgovina s Windows programima i oznakama kompatibilnosti" loading="lazy" decoding="async"></a><figcaption>Trgovina: Windows programi s poštenim oznakama kompatibilnosti.</figcaption></figure>
-<figure><a href="../img/privacy-en-1440.webp"><img src="../img/privacy-en-1440.webp" srcset="../img/privacy-en-720.webp 720w, ../img/privacy-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Pregled privatnosti koji pokazuje koja se aplikacija s čime povezala" loading="lazy" decoding="async"></a><figcaption>Pregled privatnosti: vidi koja se aplikacija s čime povezala.</figcaption></figure>
+<div class="verhaal">
+<figure class="rij">
+<figcaption class="tekst"><h3>Radi onako kako očekuješ</h3><p>Izbornik Start, programska traka i prozori tamo gdje ih očekuješ. Rade samo usluge koje koristiš.</p></figcaption>
+<a href="../img/desktop-en-1440.webp"><img src="../img/desktop-en-720.webp" srcset="../img/desktop-en-720.webp 720w, ../img/desktop-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Dizajn: Radi onako kako očekuješ" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Tvoje datoteke tamo gdje ih očekuješ</h3><p>Dokumenti, Slike i Preuzimanja na istom mjestu kao u Windowsima.</p></figcaption>
+<a href="../img/explorer-en-1440.webp"><img src="../img/explorer-en-720.webp" srcset="../img/explorer-en-720.webp 720w, ../img/explorer-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Dizajn: Tvoje datoteke tamo gdje ih očekuješ" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Windows i Linux aplikacije u jednom sustavu</h3><p>Jedna trgovina za Windows programe, Linux aplikacije i besplatni softver, s poštenim oznakama.</p></figcaption>
+<a href="../img/store-en-1440.webp"><img src="../img/store-en-720.webp" srcset="../img/store-en-720.webp 720w, ../img/store-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Dizajn: Windows i Linux aplikacije u jednom sustavu" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Spremno za igre</h3><p>Steam, kontroleri i grafički upravljački programi, s načinom za igre za najbolje performanse.</p></figcaption>
+<a href="../img/gaming-en-1440.webp"><img src="../img/gaming-en-720.webp" srcset="../img/gaming-en-720.webp 720w, ../img/gaming-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Dizajn: Spremno za igre" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Mreža na jednom mjestu</h3><p>Wi-Fi, VPN, IP postavke, šifrirani DNS i vatrozid za svaku aplikaciju.</p></figcaption>
+<a href="../img/network-en-1440.webp"><img src="../img/network-en-720.webp" srcset="../img/network-en-720.webp 720w, ../img/network-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Dizajn: Mreža na jednom mjestu" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Za kuću i posao</h3><p>Poveži Active Directory za poslovne podatke i dodaj Microsoft 365, Google ili Yahoo.</p></figcaption>
+<a href="../img/accounts-en-1440.webp"><img src="../img/accounts-en-720.webp" srcset="../img/accounts-en-720.webp 720w, ../img/accounts-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Dizajn: Za kuću i posao" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Ništa ne odlazi bez tvog dopuštenja</h3><p>Vidi koja se aplikacija s čime povezala. Bez telemetrije, bez oglasa.</p></figcaption>
+<a href="../img/privacy-en-1440.webp"><img src="../img/privacy-en-720.webp" srcset="../img/privacy-en-720.webp 720w, ../img/privacy-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Dizajn: Ništa ne odlazi bez tvog dopuštenja" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>IT DeXt Antivirus ugrađen</h3><p>Zaštita za Linux i Windows programe, ugrađena i besplatna.</p></figcaption>
+<a href="../img/security-en-1440.webp"><img src="../img/security-en-720.webp" srcset="../img/security-en-720.webp 720w, ../img/security-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Dizajn: IT DeXt Antivirus ugrađen" loading="lazy" decoding="async"></a>
+</figure>
 </div>
 </div>
 </section>

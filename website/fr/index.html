@@ -87,7 +87,14 @@ section.blik .wrap { padding-top: 40px; padding-bottom: 8px; }
 .blik a:focus-visible, .knop:focus-visible { outline: 3px solid var(--zon); outline-offset: 3px; }
 .blik img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--rand); box-shadow: 0 10px 30px rgba(19,36,59,0.12); background: var(--bg-zacht); }
 .blik figcaption { margin-top: 10px; font-size: 14px; color: var(--tekst-zacht); }
-.raster3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 26px; }
+.verhaal { display: grid; gap: 64px; margin-top: 8px; }
+.rij { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 40px; align-items: center; margin: 0; }
+.rij:nth-child(even) { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+.rij:nth-child(even) .tekst { order: 2; }
+.rij h3 { margin: 0 0 8px; font-size: clamp(20px, 2.4vw, 26px); letter-spacing: -0.01em; line-height: 1.2; }
+.rij .tekst { margin: 0; font-size: inherit; color: inherit; }
+.rij .tekst p { margin: 0; color: var(--tekst-zacht); font-size: 17px; }
+@media (max-width: 760px) { .verhaal { gap: 44px; } .rij, .rij:nth-child(even) { grid-template-columns: 1fr; gap: 14px; } .rij:nth-child(even) .tekst { order: 0; } .rij .tekst p { font-size: 16px; } }
 section.mee .wrap { padding-top: 56px; padding-bottom: 8px; }
 .raster2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
 .mee .kaart { padding: 26px; gap: 12px; }
@@ -238,11 +245,39 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <div class="wrap">
 <h2>Un premier aperçu</h2>
 <p class="sub">Des maquettes de LuxyOS. Ce n’est pas encore le produit final ; les noms et les chiffres sont des exemples.</p>
-<figure><a href="../img/desktop-en-1440.webp"><img src="../img/desktop-en-1440.webp" srcset="../img/desktop-en-720.webp 720w, ../img/desktop-en-1440.webp 1440w" sizes="(max-width: 1100px) 100vw, 1040px" width="1440" height="900" alt="Bureau de LuxyOS avec le menu Démarrer ouvert et le panneau des services" loading="lazy" decoding="async"></a><figcaption>Bureau avec le menu Démarrer. Seuls les services que vous utilisez fonctionnent.</figcaption></figure>
-<div class="raster3">
-<figure><a href="../img/explorer-en-1440.webp"><img src="../img/explorer-en-1440.webp" srcset="../img/explorer-en-720.webp 720w, ../img/explorer-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Explorateur avec le dossier Documents ouvert : dossiers à gauche, fichiers avec date, type et taille" loading="lazy" decoding="async"></a><figcaption>Explorateur : vos dossiers et fichiers là où vous les attendez.</figcaption></figure>
-<figure><a href="../img/store-en-1440.webp"><img src="../img/store-en-1440.webp" srcset="../img/store-en-720.webp 720w, ../img/store-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Boutique avec des programmes Windows et leurs indications de compatibilité" loading="lazy" decoding="async"></a><figcaption>Boutique : des programmes Windows avec des indications de compatibilité honnêtes.</figcaption></figure>
-<figure><a href="../img/privacy-en-1440.webp"><img src="../img/privacy-en-1440.webp" srcset="../img/privacy-en-720.webp 720w, ../img/privacy-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Vue d’ensemble de la vie privée montrant quelle application s’est connectée à quoi" loading="lazy" decoding="async"></a><figcaption>Vie privée : voyez quelle application s’est connectée à quoi.</figcaption></figure>
+<div class="verhaal">
+<figure class="rij">
+<figcaption class="tekst"><h3>Fonctionne comme vous en avez l’habitude</h3><p>Menu Démarrer, barre des tâches et fenêtres là où vous les attendez. Seuls les services que vous utilisez fonctionnent.</p></figcaption>
+<a href="../img/desktop-en-1440.webp"><img src="../img/desktop-en-720.webp" srcset="../img/desktop-en-720.webp 720w, ../img/desktop-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Maquette: Fonctionne comme vous en avez l’habitude" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Vos fichiers là où vous les attendez</h3><p>Documents, Images et Téléchargements au même endroit que sous Windows.</p></figcaption>
+<a href="../img/explorer-en-1440.webp"><img src="../img/explorer-en-720.webp" srcset="../img/explorer-en-720.webp 720w, ../img/explorer-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Maquette: Vos fichiers là où vous les attendez" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Applications Windows et Linux dans un seul système</h3><p>Une boutique pour les programmes Windows, les applications Linux et les logiciels libres, avec des indications honnêtes.</p></figcaption>
+<a href="../img/store-en-1440.webp"><img src="../img/store-en-720.webp" srcset="../img/store-en-720.webp 720w, ../img/store-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Maquette: Applications Windows et Linux dans un seul système" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Prêt pour le jeu</h3><p>Steam, manettes et pilotes graphiques, avec un mode jeu pour des performances maximales.</p></figcaption>
+<a href="../img/gaming-en-1440.webp"><img src="../img/gaming-en-720.webp" srcset="../img/gaming-en-720.webp 720w, ../img/gaming-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Maquette: Prêt pour le jeu" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Le réseau au même endroit</h3><p>Wi-Fi, VPN, paramètres IP, DNS chiffré et un pare-feu par application.</p></figcaption>
+<a href="../img/network-en-1440.webp"><img src="../img/network-en-720.webp" srcset="../img/network-en-720.webp 720w, ../img/network-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Maquette: Le réseau au même endroit" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>À la maison et au travail</h3><p>Connectez Active Directory pour les données de l’entreprise et ajoutez Microsoft 365, Google ou Yahoo.</p></figcaption>
+<a href="../img/accounts-en-1440.webp"><img src="../img/accounts-en-720.webp" srcset="../img/accounts-en-720.webp 720w, ../img/accounts-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Maquette: À la maison et au travail" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Rien ne sort sans votre permission</h3><p>Voyez quelle application s’est connectée à quoi. Pas de télémétrie, pas de publicité.</p></figcaption>
+<a href="../img/privacy-en-1440.webp"><img src="../img/privacy-en-720.webp" srcset="../img/privacy-en-720.webp 720w, ../img/privacy-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Maquette: Rien ne sort sans votre permission" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>IT DeXt Antivirus intégré</h3><p>Une protection pour les programmes Linux et Windows, intégrée et gratuite.</p></figcaption>
+<a href="../img/security-en-1440.webp"><img src="../img/security-en-720.webp" srcset="../img/security-en-720.webp 720w, ../img/security-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Maquette: IT DeXt Antivirus intégré" loading="lazy" decoding="async"></a>
+</figure>
 </div>
 </div>
 </section>

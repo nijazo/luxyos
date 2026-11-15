@@ -87,7 +87,14 @@ section.blik .wrap { padding-top: 40px; padding-bottom: 8px; }
 .blik a:focus-visible, .knop:focus-visible { outline: 3px solid var(--zon); outline-offset: 3px; }
 .blik img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--rand); box-shadow: 0 10px 30px rgba(19,36,59,0.12); background: var(--bg-zacht); }
 .blik figcaption { margin-top: 10px; font-size: 14px; color: var(--tekst-zacht); }
-.raster3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 26px; }
+.verhaal { display: grid; gap: 64px; margin-top: 8px; }
+.rij { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 40px; align-items: center; margin: 0; }
+.rij:nth-child(even) { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+.rij:nth-child(even) .tekst { order: 2; }
+.rij h3 { margin: 0 0 8px; font-size: clamp(20px, 2.4vw, 26px); letter-spacing: -0.01em; line-height: 1.2; }
+.rij .tekst { margin: 0; font-size: inherit; color: inherit; }
+.rij .tekst p { margin: 0; color: var(--tekst-zacht); font-size: 17px; }
+@media (max-width: 760px) { .verhaal { gap: 44px; } .rij, .rij:nth-child(even) { grid-template-columns: 1fr; gap: 14px; } .rij:nth-child(even) .tekst { order: 0; } .rij .tekst p { font-size: 16px; } }
 section.mee .wrap { padding-top: 56px; padding-bottom: 8px; }
 .raster2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
 .mee .kaart { padding: 26px; gap: 12px; }
@@ -238,11 +245,39 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <div class="wrap">
 <h2>Ein erster Blick</h2>
 <p class="sub">Entwürfe, wie LuxyOS aussehen wird. Noch nicht das fertige Produkt; Namen und Zahlen sind Beispiele.</p>
-<figure><a href="../img/desktop-en-1440.webp"><img src="../img/desktop-en-1440.webp" srcset="../img/desktop-en-720.webp 720w, ../img/desktop-en-1440.webp 1440w" sizes="(max-width: 1100px) 100vw, 1040px" width="1440" height="900" alt="LuxyOS-Desktop mit geöffnetem Startmenü und Dienste-Übersicht" loading="lazy" decoding="async"></a><figcaption>Desktop mit Startmenü. Nur die Dienste, die du nutzt, laufen.</figcaption></figure>
-<div class="raster3">
-<figure><a href="../img/explorer-en-1440.webp"><img src="../img/explorer-en-1440.webp" srcset="../img/explorer-en-720.webp 720w, ../img/explorer-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Explorer mit geöffnetem Ordner Dokumente: Ordner links, Dateien mit Datum, Typ und Größe" loading="lazy" decoding="async"></a><figcaption>Explorer: deine Ordner und Dateien dort, wo du sie erwartest.</figcaption></figure>
-<figure><a href="../img/store-en-1440.webp"><img src="../img/store-en-1440.webp" srcset="../img/store-en-720.webp 720w, ../img/store-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Store mit Windows-Programmen und Kompatibilitätsangaben" loading="lazy" decoding="async"></a><figcaption>Store: Windows-Programme mit ehrlichen Kompatibilitätsangaben.</figcaption></figure>
-<figure><a href="../img/privacy-en-1440.webp"><img src="../img/privacy-en-1440.webp" srcset="../img/privacy-en-720.webp 720w, ../img/privacy-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Datenschutzübersicht, die zeigt, welche App sich womit verbunden hat" loading="lazy" decoding="async"></a><figcaption>Datenschutzübersicht: sieh, welche App sich womit verbunden hat.</figcaption></figure>
+<div class="verhaal">
+<figure class="rij">
+<figcaption class="tekst"><h3>Funktioniert, wie du es gewohnt bist</h3><p>Startmenü, Taskleiste und Fenster dort, wo du sie erwartest. Nur die Dienste, die du nutzt, laufen.</p></figcaption>
+<a href="../img/desktop-en-1440.webp"><img src="../img/desktop-en-720.webp" srcset="../img/desktop-en-720.webp 720w, ../img/desktop-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Entwurf: Funktioniert, wie du es gewohnt bist" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Deine Dateien dort, wo du sie erwartest</h3><p>Dokumente, Bilder und Downloads am selben Ort wie unter Windows.</p></figcaption>
+<a href="../img/explorer-en-1440.webp"><img src="../img/explorer-en-720.webp" srcset="../img/explorer-en-720.webp 720w, ../img/explorer-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Entwurf: Deine Dateien dort, wo du sie erwartest" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Windows- und Linux-Apps in einem System</h3><p>Ein Store für Windows-Programme, Linux-Apps und freie Software, mit ehrlichen Angaben.</p></figcaption>
+<a href="../img/store-en-1440.webp"><img src="../img/store-en-720.webp" srcset="../img/store-en-720.webp 720w, ../img/store-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Entwurf: Windows- und Linux-Apps in einem System" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Bereit zum Spielen</h3><p>Steam, Controller und Grafiktreiber, mit einem Spielmodus für beste Leistung.</p></figcaption>
+<a href="../img/gaming-en-1440.webp"><img src="../img/gaming-en-720.webp" srcset="../img/gaming-en-720.webp 720w, ../img/gaming-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Entwurf: Bereit zum Spielen" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Netzwerk an einem Ort</h3><p>WLAN, VPN, IP-Einstellungen, verschlüsseltes DNS und eine Firewall pro App.</p></figcaption>
+<a href="../img/network-en-1440.webp"><img src="../img/network-en-720.webp" srcset="../img/network-en-720.webp 720w, ../img/network-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Entwurf: Netzwerk an einem Ort" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Für zu Hause und die Arbeit</h3><p>Verbinde Active Directory für Firmendaten und füge Microsoft 365, Google oder Yahoo hinzu.</p></figcaption>
+<a href="../img/accounts-en-1440.webp"><img src="../img/accounts-en-720.webp" srcset="../img/accounts-en-720.webp 720w, ../img/accounts-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Entwurf: Für zu Hause und die Arbeit" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Nichts verlässt deinen Computer ohne Zustimmung</h3><p>Sieh, welche App sich womit verbunden hat. Keine Telemetrie, keine Werbung.</p></figcaption>
+<a href="../img/privacy-en-1440.webp"><img src="../img/privacy-en-720.webp" srcset="../img/privacy-en-720.webp 720w, ../img/privacy-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Entwurf: Nichts verlässt deinen Computer ohne Zustimmung" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>IT DeXt Antivirus integriert</h3><p>Schutz für Linux- und Windows-Programme, integriert und kostenlos.</p></figcaption>
+<a href="../img/security-en-1440.webp"><img src="../img/security-en-720.webp" srcset="../img/security-en-720.webp 720w, ../img/security-en-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Entwurf: IT DeXt Antivirus integriert" loading="lazy" decoding="async"></a>
+</figure>
 </div>
 </div>
 </section>

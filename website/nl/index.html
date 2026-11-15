@@ -87,7 +87,14 @@ section.blik .wrap { padding-top: 40px; padding-bottom: 8px; }
 .blik a:focus-visible, .knop:focus-visible { outline: 3px solid var(--zon); outline-offset: 3px; }
 .blik img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--rand); box-shadow: 0 10px 30px rgba(19,36,59,0.12); background: var(--bg-zacht); }
 .blik figcaption { margin-top: 10px; font-size: 14px; color: var(--tekst-zacht); }
-.raster3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 26px; }
+.verhaal { display: grid; gap: 64px; margin-top: 8px; }
+.rij { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 40px; align-items: center; margin: 0; }
+.rij:nth-child(even) { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+.rij:nth-child(even) .tekst { order: 2; }
+.rij h3 { margin: 0 0 8px; font-size: clamp(20px, 2.4vw, 26px); letter-spacing: -0.01em; line-height: 1.2; }
+.rij .tekst { margin: 0; font-size: inherit; color: inherit; }
+.rij .tekst p { margin: 0; color: var(--tekst-zacht); font-size: 17px; }
+@media (max-width: 760px) { .verhaal { gap: 44px; } .rij, .rij:nth-child(even) { grid-template-columns: 1fr; gap: 14px; } .rij:nth-child(even) .tekst { order: 0; } .rij .tekst p { font-size: 16px; } }
 section.mee .wrap { padding-top: 56px; padding-bottom: 8px; }
 .raster2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
 .mee .kaart { padding: 26px; gap: 12px; }
@@ -238,11 +245,39 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <div class="wrap">
 <h2>Een eerste blik</h2>
 <p class="sub">Ontwerpen van hoe LuxyOS eruit gaat zien. Nog niet het eindproduct; namen en getallen zijn voorbeelden.</p>
-<figure><a href="../img/desktop-nl-1440.webp"><img src="../img/desktop-nl-1440.webp" srcset="../img/desktop-nl-720.webp 720w, ../img/desktop-nl-1440.webp 1440w" sizes="(max-width: 1100px) 100vw, 1040px" width="1440" height="900" alt="Bureaublad van LuxyOS met het startmenu open en het overzicht van diensten" loading="lazy" decoding="async"></a><figcaption>Bureaublad met startmenu. Alleen de diensten die je gebruikt, draaien.</figcaption></figure>
-<div class="raster3">
-<figure><a href="../img/explorer-nl-1440.webp"><img src="../img/explorer-nl-1440.webp" srcset="../img/explorer-nl-720.webp 720w, ../img/explorer-nl-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Verkenner met Documenten open: mappen links, bestanden met datum, type en grootte" loading="lazy" decoding="async"></a><figcaption>Verkenner: je mappen en bestanden waar je ze verwacht.</figcaption></figure>
-<figure><a href="../img/store-nl-1440.webp"><img src="../img/store-nl-1440.webp" srcset="../img/store-nl-720.webp 720w, ../img/store-nl-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="App-winkel met Windows-programma’s en labels die zeggen of ze werken" loading="lazy" decoding="async"></a><figcaption>App-winkel: Windows-programma’s met eerlijke labels.</figcaption></figure>
-<figure><a href="../img/privacy-nl-1440.webp"><img src="../img/privacy-nl-1440.webp" srcset="../img/privacy-nl-720.webp 720w, ../img/privacy-nl-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Privacyoverzicht dat laat zien welke app waarmee verbinding maakte" loading="lazy" decoding="async"></a><figcaption>Privacyoverzicht: zie welke app waarmee verbinding maakte.</figcaption></figure>
+<div class="verhaal">
+<figure class="rij">
+<figcaption class="tekst"><h3>Werkt zoals je gewend bent</h3><p>Startmenu, taakbalk en vensters waar je ze verwacht. Alleen de diensten die je gebruikt, draaien.</p></figcaption>
+<a href="../img/desktop-nl-1440.webp"><img src="../img/desktop-nl-720.webp" srcset="../img/desktop-nl-720.webp 720w, ../img/desktop-nl-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Ontwerp: Werkt zoals je gewend bent" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Je bestanden waar je ze verwacht</h3><p>Documenten, Afbeeldingen en Downloads op dezelfde plek als in Windows.</p></figcaption>
+<a href="../img/explorer-nl-1440.webp"><img src="../img/explorer-nl-720.webp" srcset="../img/explorer-nl-720.webp 720w, ../img/explorer-nl-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Ontwerp: Je bestanden waar je ze verwacht" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Windows- en Linux-apps in één systeem</h3><p>Eén winkel voor Windows-programma’s, Linux-apps en gratis software, met eerlijke labels.</p></figcaption>
+<a href="../img/store-nl-1440.webp"><img src="../img/store-nl-720.webp" srcset="../img/store-nl-720.webp 720w, ../img/store-nl-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Ontwerp: Windows- en Linux-apps in één systeem" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Klaar om te gamen</h3><p>Steam, controllers en grafische drivers, met een gamemodus voor de beste prestaties.</p></figcaption>
+<a href="../img/gaming-nl-1440.webp"><img src="../img/gaming-nl-720.webp" srcset="../img/gaming-nl-720.webp 720w, ../img/gaming-nl-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Ontwerp: Klaar om te gamen" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Netwerk op één plek</h3><p>Wifi, VPN, IP-instellingen, versleutelde DNS en een firewall per app.</p></figcaption>
+<a href="../img/network-nl-1440.webp"><img src="../img/network-nl-720.webp" srcset="../img/network-nl-720.webp 720w, ../img/network-nl-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Ontwerp: Netwerk op één plek" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Voor thuis en op het werk</h3><p>Koppel Active Directory voor bedrijfsgegevens en voeg Microsoft 365, Google of Yahoo toe.</p></figcaption>
+<a href="../img/accounts-nl-1440.webp"><img src="../img/accounts-nl-720.webp" srcset="../img/accounts-nl-720.webp 720w, ../img/accounts-nl-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Ontwerp: Voor thuis en op het werk" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>Niets verlaat je computer zonder toestemming</h3><p>Zie welke app waarmee verbinding maakte. Geen telemetrie, geen advertenties.</p></figcaption>
+<a href="../img/privacy-nl-1440.webp"><img src="../img/privacy-nl-720.webp" srcset="../img/privacy-nl-720.webp 720w, ../img/privacy-nl-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Ontwerp: Niets verlaat je computer zonder toestemming" loading="lazy" decoding="async"></a>
+</figure>
+<figure class="rij">
+<figcaption class="tekst"><h3>IT DeXt Antivirus ingebouwd</h3><p>Bescherming voor Linux- en Windows-programma’s, ingebouwd en gratis.</p></figcaption>
+<a href="../img/security-nl-1440.webp"><img src="../img/security-nl-720.webp" srcset="../img/security-nl-720.webp 720w, ../img/security-nl-1440.webp 1440w" sizes="(max-width: 760px) 100vw, 620px" width="1440" height="900" alt="Ontwerp: IT DeXt Antivirus ingebouwd" loading="lazy" decoding="async"></a>
+</figure>
 </div>
 </div>
 </section>

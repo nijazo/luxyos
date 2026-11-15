@@ -25,6 +25,9 @@ Screen designs for LuxyOS. Names of apps, companies, people, numbers and times a
 | 20 | [Logo: Ring of light, with animation](20-logo-ring-of-light.png) |
 | 21 | [File Explorer: the familiar layout, so users can keep working](21-file-explorer.png) |
 | 22 | [Website: sponsor form with the choice before paying (future, needs a PayPal business account)](22-sponsor-form-example.png) |
+| 23 | [Network & internet: Wi-Fi, VPN, IP settings, encrypted DNS, firewall per app](23-network-settings.png) |
+| 24 | [Accounts: Active Directory for work, Microsoft 365, Google and Yahoo](24-accounts.png) |
+| 25 | [Security with the built-in IT DeXt Antivirus](25-security-antivirus.png) |
 
 Diagrams: [architecture](diagram-architecture.png) and [build order](diagram-build-order.png).
 

@@ -54,12 +54,6 @@ T["en"] = dict(
     free=("Free", "LuxyOS is free. Registering is always optional."),
     look="A first look",
     look_sub="Designs of what LuxyOS will look like. Not the final product; names and numbers are examples.",
-    img=dict(
-        desktop=("LuxyOS desktop with the start menu open and the services panel", "Desktop with the start menu. Only the services you use are running."),
-        explorer=("Explorer with Documents open: folders on the left, files with date, type and size", "Explorer: your folders and files where you expect them."),
-        store=("Store with Windows programs and compatibility labels", "Store: Windows programs with honest compatibility labels."),
-        privacy=("Privacy overview showing which app connected to what", "Privacy overview: see which app connected to what."),
-    ),
     join="We are looking for developers and sponsors",
     join_p="LuxyOS is a free, non-commercial project. To make it real, we need people and support.",
     dev=("Developers", "Help build LuxyOS. The plans, designs and first tasks are on GitHub.", "View on GitHub"),
@@ -86,12 +80,6 @@ T["nl"] = dict(
     free=("Gratis", "LuxyOS is gratis. Registreren is altijd vrijwillig."),
     look="Een eerste blik",
     look_sub="Ontwerpen van hoe LuxyOS eruit gaat zien. Nog niet het eindproduct; namen en getallen zijn voorbeelden.",
-    img=dict(
-        desktop=("Bureaublad van LuxyOS met het startmenu open en het overzicht van diensten", "Bureaublad met startmenu. Alleen de diensten die je gebruikt, draaien."),
-        explorer=("Verkenner met Documenten open: mappen links, bestanden met datum, type en grootte", "Verkenner: je mappen en bestanden waar je ze verwacht."),
-        store=("App-winkel met Windows-programma’s en labels die zeggen of ze werken", "App-winkel: Windows-programma’s met eerlijke labels."),
-        privacy=("Privacyoverzicht dat laat zien welke app waarmee verbinding maakte", "Privacyoverzicht: zie welke app waarmee verbinding maakte."),
-    ),
     join="We zoeken ontwikkelaars en sponsors",
     join_p="LuxyOS is een gratis, niet-commercieel project. Om het waar te maken, hebben we mensen en steun nodig.",
     dev=("Ontwikkelaars", "Help LuxyOS bouwen. De plannen, ontwerpen en eerste taken staan op GitHub.", "Bekijk op GitHub"),
@@ -118,12 +106,6 @@ T["de"] = dict(
     free=("Kostenlos", "LuxyOS ist kostenlos. Die Registrierung ist immer freiwillig."),
     look="Ein erster Blick",
     look_sub="Entwürfe, wie LuxyOS aussehen wird. Noch nicht das fertige Produkt; Namen und Zahlen sind Beispiele.",
-    img=dict(
-        desktop=("LuxyOS-Desktop mit geöffnetem Startmenü und Dienste-Übersicht", "Desktop mit Startmenü. Nur die Dienste, die du nutzt, laufen."),
-        explorer=("Explorer mit geöffnetem Ordner Dokumente: Ordner links, Dateien mit Datum, Typ und Größe", "Explorer: deine Ordner und Dateien dort, wo du sie erwartest."),
-        store=("Store mit Windows-Programmen und Kompatibilitätsangaben", "Store: Windows-Programme mit ehrlichen Kompatibilitätsangaben."),
-        privacy=("Datenschutzübersicht, die zeigt, welche App sich womit verbunden hat", "Datenschutzübersicht: sieh, welche App sich womit verbunden hat."),
-    ),
     join="Wir suchen Entwickler und Sponsoren",
     join_p="LuxyOS ist ein kostenloses, nicht-kommerzielles Projekt. Damit es Wirklichkeit wird, brauchen wir Menschen und Unterstützung.",
     dev=("Entwickler", "Hilf mit, LuxyOS zu bauen. Pläne, Entwürfe und erste Aufgaben stehen auf GitHub.", "Auf GitHub ansehen"),
@@ -151,12 +133,6 @@ T["fr"] = dict(
     free=("Gratuit", "LuxyOS est gratuit. L’inscription reste toujours facultative."),
     look="Un premier aperçu",
     look_sub=f"Des maquettes de LuxyOS. Ce n’est pas encore le produit final{NB}; les noms et les chiffres sont des exemples.",
-    img=dict(
-        desktop=("Bureau de LuxyOS avec le menu Démarrer ouvert et le panneau des services", "Bureau avec le menu Démarrer. Seuls les services que vous utilisez fonctionnent."),
-        explorer=(f"Explorateur avec le dossier Documents ouvert{NB}: dossiers à gauche, fichiers avec date, type et taille", f"Explorateur{NB}: vos dossiers et fichiers là où vous les attendez."),
-        store=("Boutique avec des programmes Windows et leurs indications de compatibilité", f"Boutique{NB}: des programmes Windows avec des indications de compatibilité honnêtes."),
-        privacy=("Vue d’ensemble de la vie privée montrant quelle application s’est connectée à quoi", f"Vie privée{NB}: voyez quelle application s’est connectée à quoi."),
-    ),
     join="Nous recherchons des développeurs et des sponsors",
     join_p="LuxyOS est un projet gratuit et non commercial. Pour le réaliser, nous avons besoin de personnes et de soutien.",
     dev=("Développeurs", "Aidez à construire LuxyOS. Les plans, les maquettes et les premières tâches sont sur GitHub.", "Voir sur GitHub"),
@@ -183,12 +159,6 @@ T["es"] = dict(
     free=("Gratuito", "LuxyOS es gratuito. Registrarse siempre es opcional."),
     look="Un primer vistazo",
     look_sub="Diseños de cómo será LuxyOS. Aún no es el producto final; los nombres y las cifras son ejemplos.",
-    img=dict(
-        desktop=("Escritorio de LuxyOS con el menú Inicio abierto y el panel de servicios", "Escritorio con el menú Inicio. Solo funcionan los servicios que usas."),
-        explorer=("Explorador con la carpeta Documentos abierta: carpetas a la izquierda, archivos con fecha, tipo y tamaño", "Explorador: tus carpetas y archivos donde los esperas."),
-        store=("Tienda con programas de Windows y etiquetas de compatibilidad", "Tienda: programas de Windows con etiquetas de compatibilidad honestas."),
-        privacy=("Resumen de privacidad que muestra qué aplicación se conectó a qué", "Resumen de privacidad: mira qué aplicación se conectó a qué."),
-    ),
     join="Buscamos desarrolladores y patrocinadores",
     join_p="LuxyOS es un proyecto gratuito y sin ánimo de lucro. Para hacerlo realidad, necesitamos personas y apoyo.",
     dev=("Desarrolladores", "Ayuda a construir LuxyOS. Los planes, los diseños y las primeras tareas están en GitHub.", "Ver en GitHub"),
@@ -215,12 +185,6 @@ T["hr"] = dict(
     free=("Besplatan", "LuxyOS je besplatan. Registracija je uvijek dobrovoljna."),
     look="Prvi pogled",
     look_sub="Dizajni izgleda LuxyOS-a. Još nije gotov proizvod; imena i brojevi su primjeri.",
-    img=dict(
-        desktop=("Radna površina LuxyOS-a s otvorenim izbornikom Start i pregledom usluga", "Radna površina s izbornikom Start. Rade samo usluge koje koristiš."),
-        explorer=("Preglednik datoteka s otvorenom mapom Dokumenti: mape lijevo, datoteke s datumom, vrstom i veličinom", "Preglednik datoteka: tvoje mape i datoteke tamo gdje ih očekuješ."),
-        store=("Trgovina s Windows programima i oznakama kompatibilnosti", "Trgovina: Windows programi s poštenim oznakama kompatibilnosti."),
-        privacy=("Pregled privatnosti koji pokazuje koja se aplikacija s čime povezala", "Pregled privatnosti: vidi koja se aplikacija s čime povezala."),
-    ),
     join="Tražimo programere i sponzore",
     join_p="LuxyOS je besplatan, nekomercijalan projekt. Da bi postao stvarnost, trebamo ljude i podršku.",
     dev=("Programeri", "Pomozi izgraditi LuxyOS. Planovi, dizajni i prvi zadaci nalaze se na GitHubu.", "Pogledaj na GitHubu"),
@@ -247,12 +211,6 @@ T["bs"] = dict(
     free=("Besplatan", "LuxyOS je besplatan. Registracija je uvijek dobrovoljna."),
     look="Prvi pogled",
     look_sub="Dizajni izgleda LuxyOS-a. Još nije gotov proizvod; imena i brojevi su primjeri.",
-    img=dict(
-        desktop=("Radna površina LuxyOS-a s otvorenim Start menijem i pregledom servisa", "Radna površina sa Start menijem. Rade samo servisi koje koristiš."),
-        explorer=("Pretraživač datoteka s otvorenim folderom Dokumenti: folderi lijevo, datoteke s datumom, vrstom i veličinom", "Pretraživač datoteka: tvoji folderi i datoteke tamo gdje ih očekuješ."),
-        store=("Prodavnica s Windows programima i oznakama kompatibilnosti", "Prodavnica: Windows programi s poštenim oznakama kompatibilnosti."),
-        privacy=("Pregled privatnosti koji pokazuje koja se aplikacija s čime povezala", "Pregled privatnosti: vidi koja se aplikacija s čime povezala."),
-    ),
     join="Tražimo programere i sponzore",
     join_p="LuxyOS je besplatan, nekomercijalan projekat. Da bi postao stvarnost, trebaju nam ljudi i podrška.",
     dev=("Programeri", "Pomozi izgraditi LuxyOS. Planovi, dizajni i prvi zadaci nalaze se na GitHubu.", "Pogledaj na GitHubu"),
@@ -279,12 +237,6 @@ T["sr"] = dict(
     free=("Бесплатан", "LuxyOS је бесплатан. Регистрација је увек добровољна."),
     look="Први поглед",
     look_sub="Дизајни изгледа LuxyOS-а. Још није готов производ; имена и бројеви су примери.",
-    img=dict(
-        desktop=("Радна површина LuxyOS-а са отвореним Старт менијем и прегледом сервиса", "Радна површина са Старт менијем. Раде само сервиси које користиш."),
-        explorer=("Претраживач датотека са отвореном фасциклом Документи: фасцикле лево, датотеке са датумом, врстом и величином", "Претраживач датотека: твоје фасцикле и датотеке тамо где их очекујеш."),
-        store=("Продавница са Windows програмима и ознакама компатибилности", "Продавница: Windows програми са поштеним ознакама компатибилности."),
-        privacy=("Преглед приватности који показује која се апликација са чим повезала", "Преглед приватности: види која се апликација са чим повезала."),
-    ),
     join="Тражимо програмере и спонзоре",
     join_p="LuxyOS је бесплатан, некомерцијалан пројекат. Да би постао стварност, потребни су нам људи и подршка.",
     dev=("Програмери", "Помози да се изгради LuxyOS. Планови, дизајни и први задаци налазе се на GitHub-у.", "Погледај на GitHub-у"),
@@ -311,12 +263,6 @@ T["sq"] = dict(
     free=("Falas", "LuxyOS është falas. Regjistrimi është gjithmonë vullnetar."),
     look="Një vështrim i parë",
     look_sub="Dizajne se si do të duket LuxyOS. Ende jo produkti përfundimtar; emrat dhe numrat janë shembuj.",
-    img=dict(
-        desktop=("Desktopi i LuxyOS me menynë Start të hapur dhe panelin e shërbimeve", "Desktopi me menynë Start. Punojnë vetëm shërbimet që përdor."),
-        explorer=("Eksploruesi me dosjen Dokumentet të hapur: dosjet majtas, skedarët me datë, lloj dhe madhësi", "Eksploruesi: dosjet dhe skedarët e tu aty ku i pret."),
-        store=("Dyqani me programe Windows dhe etiketa përputhshmërie", "Dyqani: programe Windows me etiketa të ndershme përputhshmërie."),
-        privacy=("Përmbledhja e privatësisë që tregon cili aplikacion u lidh me çfarë", "Përmbledhja e privatësisë: shih cili aplikacion u lidh me çfarë."),
-    ),
     join="Kërkojmë zhvillues dhe sponsorë",
     join_p="LuxyOS është një projekt falas dhe jofitimprurës. Për ta bërë realitet, na duhen njerëz dhe mbështetje.",
     dev=("Zhvilluesit", "Ndihmo të ndërtojmë LuxyOS. Planet, dizajnet dhe detyrat e para janë në GitHub.", "Shiko në GitHub"),
@@ -343,12 +289,6 @@ T["mk"] = dict(
     free=("Бесплатен", "LuxyOS е бесплатен. Регистрацијата е секогаш доброволна."),
     look="Прв поглед",
     look_sub="Дизајни за тоа како ќе изгледа LuxyOS. Сè уште не е конечниот производ; имињата и бројките се примери.",
-    img=dict(
-        desktop=("Работна површина на LuxyOS со отворено Старт мени и преглед на услугите", "Работна површина со Старт менито. Работат само услугите што ги користиш."),
-        explorer=("Прегледувач на датотеки со отворена папка Документи: папки лево, датотеки со датум, тип и големина", "Прегледувач на датотеки: твоите папки и датотеки таму каде што ги очекуваш."),
-        store=("Продавница со Windows програми и ознаки за компатибилност", "Продавница: Windows програми со чесни ознаки за компатибилност."),
-        privacy=("Преглед на приватноста што покажува која апликација со што се поврзала", "Преглед на приватноста: види која апликација со што се поврзала."),
-    ),
     join="Бараме програмери и спонзори",
     join_p="LuxyOS е бесплатен, некомерцијален проект. За да стане реалност, ни требаат луѓе и поддршка.",
     dev=("Програмери", "Помогни да се изгради LuxyOS. Плановите, дизајните и првите задачи се на GitHub.", "Види на GitHub"),
@@ -375,12 +315,6 @@ T["tr"] = dict(
     free=("Ücretsiz", "LuxyOS ücretsizdir. Kayıt olmak her zaman isteğe bağlıdır."),
     look="İlk bakış",
     look_sub="LuxyOS’un nasıl görüneceğine dair tasarımlar. Henüz son ürün değil; adlar ve sayılar örnektir.",
-    img=dict(
-        desktop=("Başlat menüsü ve hizmetler paneli açık LuxyOS masaüstü", "Başlat menüsüyle masaüstü. Yalnızca kullandığın hizmetler çalışır."),
-        explorer=("Belgeler klasörü açık Dosya Gezgini: solda klasörler, tarih, tür ve boyutla dosyalar", "Dosya Gezgini: klasörlerin ve dosyaların beklediğin yerde."),
-        store=("Windows programları ve uyumluluk etiketleri olan mağaza", "Mağaza: dürüst uyumluluk etiketleriyle Windows programları."),
-        privacy=("Hangi uygulamanın neye bağlandığını gösteren gizlilik özeti", "Gizlilik özeti: hangi uygulamanın neye bağlandığını gör."),
-    ),
     join="Geliştirici ve sponsor arıyoruz",
     join_p="LuxyOS ücretsiz ve ticari olmayan bir projedir. Hayata geçirmek için insanlara ve desteğe ihtiyacımız var.",
     dev=("Geliştiriciler", "LuxyOS’u birlikte inşa et. Planlar, tasarımlar ve ilk görevler GitHub’da.", "GitHub’da gör"),
@@ -449,6 +383,12 @@ HOW = {'en': {'how_h': 'How to get on the list', 'opts': [('Anonymous', 'Default
 for _c, _x in HOW.items():
     T[_c].update(_x)
 
+# The story under 'A first look': one heading, one sentence and one design per row.
+STORY_KEYS = ['desktop', 'explorer', 'store', 'gaming', 'network', 'accounts', 'privacy', 'security']
+STORY = {k: dict(word=v[0], rows=v[1]) for k, v in {'en': ('Design', [('Works the way you are used to', 'Start menu, taskbar and windows where you expect them. Only the services you use are running.'), ('Your files where you expect them', 'Documents, Pictures and Downloads in the same place as on Windows.'), ('Windows and Linux apps in one system', 'One store for Windows programs, Linux apps and free software, with honest labels.'), ('Ready for games', 'Steam, controllers and graphics drivers, with a game mode for maximum performance.'), ('Network settings in one place', 'Wi-Fi, VPN, IP settings, encrypted DNS and a firewall per app.'), ('For home and work', 'Connect to Active Directory for company data, and add Microsoft 365, Google or Yahoo.'), ('Nothing leaves without your permission', 'See which app connected to what. No telemetry, no ads.'), ('IT DeXt Antivirus built in', 'Protection for Linux and Windows programs, built in and free.')]), 'nl': ('Ontwerp', [('Werkt zoals je gewend bent', 'Startmenu, taakbalk en vensters waar je ze verwacht. Alleen de diensten die je gebruikt, draaien.'), ('Je bestanden waar je ze verwacht', 'Documenten, Afbeeldingen en Downloads op dezelfde plek als in Windows.'), ('Windows- en Linux-apps in één systeem', 'Eén winkel voor Windows-programma’s, Linux-apps en gratis software, met eerlijke labels.'), ('Klaar om te gamen', 'Steam, controllers en grafische drivers, met een gamemodus voor de beste prestaties.'), ('Netwerk op één plek', 'Wifi, VPN, IP-instellingen, versleutelde DNS en een firewall per app.'), ('Voor thuis en op het werk', 'Koppel Active Directory voor bedrijfsgegevens en voeg Microsoft 365, Google of Yahoo toe.'), ('Niets verlaat je computer zonder toestemming', 'Zie welke app waarmee verbinding maakte. Geen telemetrie, geen advertenties.'), ('IT DeXt Antivirus ingebouwd', 'Bescherming voor Linux- en Windows-programma’s, ingebouwd en gratis.')]), 'de': ('Entwurf', [('Funktioniert, wie du es gewohnt bist', 'Startmenü, Taskleiste und Fenster dort, wo du sie erwartest. Nur die Dienste, die du nutzt, laufen.'), ('Deine Dateien dort, wo du sie erwartest', 'Dokumente, Bilder und Downloads am selben Ort wie unter Windows.'), ('Windows- und Linux-Apps in einem System', 'Ein Store für Windows-Programme, Linux-Apps und freie Software, mit ehrlichen Angaben.'), ('Bereit zum Spielen', 'Steam, Controller und Grafiktreiber, mit einem Spielmodus für beste Leistung.'), ('Netzwerk an einem Ort', 'WLAN, VPN, IP-Einstellungen, verschlüsseltes DNS und eine Firewall pro App.'), ('Für zu Hause und die Arbeit', 'Verbinde Active Directory für Firmendaten und füge Microsoft 365, Google oder Yahoo hinzu.'), ('Nichts verlässt deinen Computer ohne Zustimmung', 'Sieh, welche App sich womit verbunden hat. Keine Telemetrie, keine Werbung.'), ('IT DeXt Antivirus integriert', 'Schutz für Linux- und Windows-Programme, integriert und kostenlos.')]), 'fr': ('Maquette', [('Fonctionne comme vous en avez l’habitude', 'Menu Démarrer, barre des tâches et fenêtres là où vous les attendez. Seuls les services que vous utilisez fonctionnent.'), ('Vos fichiers là où vous les attendez', 'Documents, Images et Téléchargements au même endroit que sous Windows.'), ('Applications Windows et Linux dans un seul système', 'Une boutique pour les programmes Windows, les applications Linux et les logiciels libres, avec des indications honnêtes.'), ('Prêt pour le jeu', 'Steam, manettes et pilotes graphiques, avec un mode jeu pour des performances maximales.'), ('Le réseau au même endroit', 'Wi-Fi, VPN, paramètres IP, DNS chiffré et un pare-feu par application.'), ('À la maison et au travail', 'Connectez Active Directory pour les données de l’entreprise et ajoutez Microsoft 365, Google ou Yahoo.'), ('Rien ne sort sans votre permission', 'Voyez quelle application s’est connectée à quoi. Pas de télémétrie, pas de publicité.'), ('IT DeXt Antivirus intégré', 'Une protection pour les programmes Linux et Windows, intégrée et gratuite.')]), 'es': ('Diseño', [('Funciona como estás acostumbrado', 'Menú Inicio, barra de tareas y ventanas donde las esperas. Solo funcionan los servicios que usas.'), ('Tus archivos donde los esperas', 'Documentos, Imágenes y Descargas en el mismo lugar que en Windows.'), ('Apps de Windows y Linux en un solo sistema', 'Una tienda para programas de Windows, apps de Linux y software libre, con etiquetas honestas.'), ('Listo para jugar', 'Steam, mandos y controladores gráficos, con un modo juego para el máximo rendimiento.'), ('La red en un solo lugar', 'Wi-Fi, VPN, ajustes de IP, DNS cifrado y un cortafuegos por aplicación.'), ('Para casa y para el trabajo', 'Conecta Active Directory para los datos de la empresa y añade Microsoft 365, Google o Yahoo.'), ('Nada sale sin tu permiso', 'Mira qué aplicación se conectó a qué. Sin telemetría ni anuncios.'), ('IT DeXt Antivirus integrado', 'Protección para programas de Linux y Windows, integrada y gratuita.')]), 'hr': ('Dizajn', [('Radi onako kako očekuješ', 'Izbornik Start, programska traka i prozori tamo gdje ih očekuješ. Rade samo usluge koje koristiš.'), ('Tvoje datoteke tamo gdje ih očekuješ', 'Dokumenti, Slike i Preuzimanja na istom mjestu kao u Windowsima.'), ('Windows i Linux aplikacije u jednom sustavu', 'Jedna trgovina za Windows programe, Linux aplikacije i besplatni softver, s poštenim oznakama.'), ('Spremno za igre', 'Steam, kontroleri i grafički upravljački programi, s načinom za igre za najbolje performanse.'), ('Mreža na jednom mjestu', 'Wi-Fi, VPN, IP postavke, šifrirani DNS i vatrozid za svaku aplikaciju.'), ('Za kuću i posao', 'Poveži Active Directory za poslovne podatke i dodaj Microsoft 365, Google ili Yahoo.'), ('Ništa ne odlazi bez tvog dopuštenja', 'Vidi koja se aplikacija s čime povezala. Bez telemetrije, bez oglasa.'), ('IT DeXt Antivirus ugrađen', 'Zaštita za Linux i Windows programe, ugrađena i besplatna.')]), 'bs': ('Dizajn', [('Radi onako kako očekuješ', 'Start meni, traka zadataka i prozori tamo gdje ih očekuješ. Rade samo servisi koje koristiš.'), ('Tvoje datoteke tamo gdje ih očekuješ', 'Dokumenti, Slike i Preuzimanja na istom mjestu kao u Windowsu.'), ('Windows i Linux aplikacije u jednom sistemu', 'Jedna prodavnica za Windows programe, Linux aplikacije i besplatni softver, s poštenim oznakama.'), ('Spremno za igre', 'Steam, kontroleri i grafički drajveri, s režimom za igre za najbolje performanse.'), ('Mreža na jednom mjestu', 'Wi-Fi, VPN, IP postavke, šifrovani DNS i zaštitni zid za svaku aplikaciju.'), ('Za kuću i posao', 'Poveži Active Directory za poslovne podatke i dodaj Microsoft 365, Google ili Yahoo.'), ('Ništa ne odlazi bez tvoje dozvole', 'Vidi koja se aplikacija s čime povezala. Bez telemetrije, bez reklama.'), ('IT DeXt Antivirus ugrađen', 'Zaštita za Linux i Windows programe, ugrađena i besplatna.')]), 'sr': ('Дизајн', [('Ради онако како очекујеш', 'Старт мени, трака задатака и прозори тамо где их очекујеш. Раде само сервиси које користиш.'), ('Твоје датотеке тамо где их очекујеш', 'Документи, Слике и Преузимања на истом месту као у Windows-у.'), ('Windows и Linux апликације у једном систему', 'Једна продавница за Windows програме, Linux апликације и бесплатни софтвер, са поштеним ознакама.'), ('Спремно за игре', 'Steam, контролери и графички драјвери, са режимом за игре за најбоље перформансе.'), ('Мрежа на једном месту', 'Wi-Fi, VPN, IP подешавања, шифровани DNS и заштитни зид за сваку апликацију.'), ('За кућу и посао', 'Повежи Active Directory за пословне податке и додај Microsoft 365, Google или Yahoo.'), ('Ништа не одлази без твоје дозволе', 'Види која се апликација са чим повезала. Без телеметрије, без реклама.'), ('IT DeXt Antivirus уграђен', 'Заштита за Linux и Windows програме, уграђена и бесплатна.')]), 'sq': ('Dizajn', [('Punon ashtu siç je mësuar', 'Menyja Start, shiriti i detyrave dhe dritaret aty ku i pret. Punojnë vetëm shërbimet që përdor.'), ('Skedarët e tu aty ku i pret', 'Dokumentet, Fotot dhe Shkarkimet në të njëjtin vend si në Windows.'), ('Aplikacione Windows dhe Linux në një sistem', 'Një dyqan për programe Windows, aplikacione Linux dhe softuer falas, me etiketa të ndershme.'), ('Gati për lojëra', 'Steam, kontrollues dhe drajverë grafikë, me një modalitet lojërash për performancë maksimale.'), ('Rrjeti në një vend', 'Wi-Fi, VPN, cilësimet IP, DNS i enkriptuar dhe një mur zjarri për çdo aplikacion.'), ('Për shtëpinë dhe punën', 'Lidh Active Directory për të dhënat e kompanisë dhe shto Microsoft 365, Google ose Yahoo.'), ('Asgjë nuk largohet pa lejen tënde', 'Shih cili aplikacion u lidh me çfarë. Pa telemetri, pa reklama.'), ('IT DeXt Antivirus i integruar', 'Mbrojtje për programet Linux dhe Windows, e integruar dhe falas.')]), 'mk': ('Дизајн', [('Работи како што очекуваш', 'Старт мени, лента со задачи и прозорци таму каде што ги очекуваш. Работат само услугите што ги користиш.'), ('Твоите датотеки таму каде што ги очекуваш', 'Документи, Слики и Преземања на истото место како во Windows.'), ('Windows и Linux апликации во еден систем', 'Една продавница за Windows програми, Linux апликации и бесплатен софтвер, со чесни ознаки.'), ('Подготвено за игри', 'Steam, контролери и графички драјвери, со режим за игри за најдобри перформанси.'), ('Мрежата на едно место', 'Wi-Fi, VPN, IP-поставки, шифриран DNS и заштитен ѕид за секоја апликација.'), ('За дома и за работа', 'Поврзи Active Directory за деловни податоци и додај Microsoft 365, Google или Yahoo.'), ('Ништо не заминува без твоја дозвола', 'Види која апликација со што се поврзала. Без телеметрија, без реклами.'), ('IT DeXt Antivirus вграден', 'Заштита за Linux и Windows програми, вградена и бесплатна.')]), 'tr': ('Tasarım', [('Alıştığın gibi çalışır', 'Başlat menüsü, görev çubuğu ve pencereler beklediğin yerde. Yalnızca kullandığın hizmetler çalışır.'), ('Dosyaların beklediğin yerde', 'Belgeler, Resimler ve İndirilenler, Windows’taki ile aynı yerde.'), ('Windows ve Linux uygulamaları tek sistemde', 'Windows programları, Linux uygulamaları ve ücretsiz yazılımlar için tek mağaza, dürüst etiketlerle.'), ('Oyuna hazır', 'Steam, oyun kumandaları ve ekran kartı sürücüleri; en iyi performans için oyun modu.'), ('Ağ ayarları tek yerde', 'Wi-Fi, VPN, IP ayarları, şifreli DNS ve her uygulama için ayrı güvenlik duvarı.'), ('Evde ve işte', 'Şirket verileri için Active Directory’ye bağlan; Microsoft 365, Google veya Yahoo ekle.'), ('İznin olmadan hiçbir şey dışarı çıkmaz', 'Hangi uygulamanın neye bağlandığını gör. Telemetri yok, reklam yok.'), ('IT DeXt Antivirus yerleşik', 'Linux ve Windows programları için koruma; yerleşik ve ücretsiz.')])}.items()}
+for _c, _x in STORY.items():
+    T[_c]['story'] = _x
+
 CSS = r"""
 :root {
   --zon: #F5A524; --nacht: #13243b; --hemel: #2563c9;
@@ -514,7 +454,14 @@ section.blik .wrap { padding-top: 40px; padding-bottom: 8px; }
 .blik a:focus-visible, .knop:focus-visible { outline: 3px solid var(--zon); outline-offset: 3px; }
 .blik img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--rand); box-shadow: 0 10px 30px rgba(19,36,59,0.12); background: var(--bg-zacht); }
 .blik figcaption { margin-top: 10px; font-size: 14px; color: var(--tekst-zacht); }
-.raster3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 26px; }
+.verhaal { display: grid; gap: 64px; margin-top: 8px; }
+.rij { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 40px; align-items: center; margin: 0; }
+.rij:nth-child(even) { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+.rij:nth-child(even) .tekst { order: 2; }
+.rij h3 { margin: 0 0 8px; font-size: clamp(20px, 2.4vw, 26px); letter-spacing: -0.01em; line-height: 1.2; }
+.rij .tekst { margin: 0; font-size: inherit; color: inherit; }
+.rij .tekst p { margin: 0; color: var(--tekst-zacht); font-size: 17px; }
+@media (max-width: 760px) { .verhaal { gap: 44px; } .rij, .rij:nth-child(even) { grid-template-columns: 1fr; gap: 14px; } .rij:nth-child(even) .tekst { order: 0; } .rij .tekst p { font-size: 16px; } }
 section.mee .wrap { padding-top: 56px; padding-bottom: 8px; }
 .raster2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
 .mee .kaart { padding: 26px; gap: 12px; }
@@ -640,6 +587,20 @@ def load_supporters():
     return data
 
 
+def story_html(t, root, il):
+    st = t["story"]
+    rows = []
+    for key, (h, p) in zip(STORY_KEYS, st["rows"]):
+        big = f"{root}img/{key}-{il}-1440.webp"
+        small = f"{root}img/{key}-{il}-720.webp"
+        rows.append(
+            f'<figure class="rij">\n<figcaption class="tekst"><h3>{e(h)}</h3><p>{e(p)}</p></figcaption>\n'
+            f'<a href="{big}"><img src="{small}" srcset="{small} 720w, {big} 1440w" sizes="(max-width: 760px) 100vw, 620px" '
+            f'width="1440" height="900" alt="{e(st["word"])}: {e(h)}" loading="lazy" decoding="async"></a>\n</figure>'
+        )
+    return '<div class="verhaal">\n' + "\n".join(rows) + "\n</div>"
+
+
 def mail_link():
     return f'<a href="mailto:{CONTACT}">{e(CONTACT)}</a>'
 
@@ -723,12 +684,6 @@ def page(code):
     )
     native = dict(LANGS)[code]
     il = IMG_LANG.get(code, "en")
-    def fig(key, sizes):
-        alt, cap = t["img"][key]
-        big = f"{root}img/{key}-{il}-1440.webp"
-        small = f"{root}img/{key}-{il}-720.webp"
-        return (f'<figure><a href="{big}"><img src="{big}" srcset="{small} 720w, {big} 1440w" sizes="{sizes}" '
-                f'width="1440" height="900" alt="{e(alt)}" loading="lazy" decoding="async"></a><figcaption>{e(cap)}</figcaption></figure>')
     cards = "\n".join(
         f'<article class="kaart">\n{icon(k)}\n<h3>{e(t[k][0])}</h3>\n<p>{e(t[k][1])}</p>\n</article>'
         for k in ("fast", "win", "priv", "free")
@@ -794,12 +749,7 @@ def page(code):
 <div class="wrap">
 <h2>{e(t["look"])}</h2>
 <p class="sub">{e(t["look_sub"])}</p>
-{fig("desktop", "(max-width: 1100px) 100vw, 1040px")}
-<div class="raster3">
-{fig("explorer", "(max-width: 700px) 100vw, 340px")}
-{fig("store", "(max-width: 700px) 100vw, 340px")}
-{fig("privacy", "(max-width: 700px) 100vw, 340px")}
-</div>
+{story_html(t, root, il)}
 </div>
 </section>
 

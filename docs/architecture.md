@@ -22,7 +22,7 @@ LuxyOS reuses proven open-source components and builds its own parts where LuxyO
 | Network | Printing, Bluetooth | CUPS (IPP Everywhere), BlueZ |
 | Security | Encryption | LUKS2 with TPM 2.0 |
 | Security | Sandbox | bubblewrap and Landlock |
-| Security | Antivirus, firmware | ClamAV, fwupd |
+| Security | Antivirus, firmware | IT DeXt Antivirus, built in and free (users can choose another); fwupd |
 | Security | Certificates | p11-kit, NSS, OpenSC, tpm2-pkcs11, certmonger |
 | Business | Directory and management | SSSD, realmd, Samba, Kerberos, Himmelblau (Entra ID), PowerShell 7 |
 | Business | Remote Desktop | RDP server (KRdp / GNOME Remote Desktop / FreeRDP), RDP client on FreeRDP with an own interface |
