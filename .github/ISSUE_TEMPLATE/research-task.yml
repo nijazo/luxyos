@@ -1,0 +1,23 @@
+name: Research task
+description: Claim or propose a research or prototype task
+labels: ["research"]
+body:
+  - type: input
+    id: task
+    attributes:
+      label: Task
+      description: Name of the task (from docs/good-first-tasks.md, or a new one)
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Plan
+      description: What will you investigate or build, and how?
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected result
+      description: What will you deliver (write-up, measurements, prototype)?

@@ -1,0 +1,28 @@
+name: Idea
+description: Propose a feature or improvement for LuxyOS
+labels: ["idea"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Which problem does this solve, and for whom (private users, office work, gamers, engineering)?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should LuxyOS do?
+    validations:
+      required: true
+  - type: textarea
+    id: principles
+    attributes:
+      label: Fit with the principles
+      description: How does this fit "only what is needed runs" and "nothing leaves without permission"?
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples elsewhere
+      description: Does another system already do this? Links are welcome.

@@ -1,0 +1,18 @@
+name: Design feedback
+description: Feedback on a screen design in docs/design
+labels: ["design"]
+body:
+  - type: input
+    id: screen
+    attributes:
+      label: Screen
+      description: Number and name of the design (for example "10 Device Manager")
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+      description: What works, what is unclear, what is missing? Accessibility remarks are welcome.
+    validations:
+      required: true
