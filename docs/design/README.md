@@ -24,6 +24,7 @@ Screen designs for LuxyOS. Names of apps, companies, people, numbers and times a
 | 18 | [Website: coming soon](18-website-coming-soon.png) ([mobile](19-website-coming-soon-mobile.png)) |
 | 20 | [Logo: Ring of light, with animation](20-logo-ring-of-light.png) |
 | 21 | [File Explorer: the familiar layout, so users can keep working](21-file-explorer.png) |
+| 22 | [Website: sponsor form with the choice before paying (future, needs a PayPal business account)](22-sponsor-form-example.png) |
 
 Diagrams: [architecture](diagram-architecture.png) and [build order](diagram-build-order.png).
 

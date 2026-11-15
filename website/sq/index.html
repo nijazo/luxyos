@@ -119,6 +119,15 @@ section.supporters .wrap { padding-top: 40px; padding-bottom: 8px; }
 .sup-lijst li { padding: 8px 14px; border-radius: 999px; background: var(--bg-zacht); font-weight: 600; }
 .sup-lijst li span { font-weight: 400; color: var(--tekst-zacht); margin-left: 6px; }
 .sup-leeg { font-style: italic; }
+.sup-blok h3 { margin: 6px 0 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--tekst-zacht); }
+.logos { display: flex; flex-wrap: wrap; gap: 14px; list-style: none; margin: 0; padding: 0; }
+.logos li { display: grid; gap: 6px; justify-items: center; padding: 10px; border: 1px solid var(--rand); border-radius: 12px; background: #ffffff; }
+.logos img { width: 160px; height: 64px; object-fit: contain; display: block; }
+.logos span { font-size: 13px; color: #3d4b61; }
+.hoe { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; list-style: none; margin: 0; padding: 0; }
+.hoe li { display: grid; gap: 4px; align-content: start; padding: 14px; border: 1px solid var(--rand); border-radius: 12px; font-size: 14px; color: var(--tekst-zacht); }
+.hoe strong { color: var(--tekst); font-size: 15px; }
+.betaald { margin: 0; padding: 10px 12px; border-radius: 10px; background: #e5f4e4; color: #14532d !important; font-size: 14px; font-weight: 600; }
 .sup-blok a, .mee .klein a { color: var(--hemel); }
 footer { border-top: 1px solid var(--rand); }
 footer a { color: inherit; display: inline-flex; align-items: center; gap: 6px; }
@@ -258,8 +267,15 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <h2>Faleminderit mbështetësve tanë</h2>
 <p>Të jesh në këtë listë është vullnetare. Ti zgjedh nëse emri yt dhe shuma shfaqen këtu.</p>
 <p class="sup-leeg">Ende nuk ka askënd në listë.</p>
-<p>Dëshiron të jesh në listë? Shkruaj në mesazhin e PayPal: “Shfaq: emri yt” vetëm për emrin, ose “Shfaq: emri yt + shuma” për të treguar edhe shumën. Pa mesazh, dhurimi yt mbetet anonim.</p>
-<p>Dëshiron të të heqim? Shkruaj te <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a> dhe do të të heqim në përditësimin e radhës.</p>
+<h3>Si të futesh në listë</h3>
+<ul class="hoe">
+<li><strong>Anonim</strong><span>Parazgjedhje. Mos shkruaj asgjë në mesazhin e PayPal.</span></li>
+<li><strong>Me emër</strong><span>Shkruaj në mesazhin e PayPal: “Shfaq: emri yt”.</span></li>
+<li><strong>Me emër dhe shumë</strong><span>Shkruaj: “Shfaq: emri yt + shuma”.</span></li>
+<li><strong>Me logo</strong><span>Nga 100 € në një pagesë të vetme, për 12 muaj. Shkruaj “Logo: emri yt” dhe pas pagesës dërgoje logon te <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a>.</span></li>
+</ul>
+<p class="betaald">Futesh në listë vetëm pasi pagesa jote të jetë kryer me sukses.</p>
+<p>Logot i shfaqim të vogla (deri në 160 × 64 piksela, WebP) dhe pa lidhje. Dëshiron të të heqim? Shkruaj te <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a> dhe do të të heqim në përditësimin e radhës.</p>
 </div>
 </div>
 </section>

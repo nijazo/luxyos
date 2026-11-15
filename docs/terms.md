@@ -15,10 +15,22 @@ The GPL-3.0 licence allows anyone to use the code, including companies. The non-
 
 ### Supporters list (optional)
 
-- Donors are anonymous by default. A donor appears on the supporters list on luxyos.com only if they ask for it, for example in the PayPal note: "Show: name" (name only) or "Show: name + amount".
-- We show only what they chose: the name as they wrote it (a first name or nickname is fine) and, if asked, the amount. Never e-mail addresses or payment details.
+- Donors are anonymous by default. The site only shows how many anonymous donors there are.
+- Before paying, a donor chooses how they appear and writes it in the PayPal note:
+
+  | Choice | PayPal note | Shown on luxyos.com |
+  | --- | --- | --- |
+  | Anonymous | nothing | only counted |
+  | With name | "Show: name" | the name |
+  | With name and amount | "Show: name + amount" | the name and the amount |
+  | With logo | "Logo: name", from €100 in one payment | a small logo with the name, for 12 months; after that the name stays |
+
+- A donor only appears on the list **after the payment has succeeded**.
+- Logos: the donor e-mails the logo to sponsors@luxyos.com after paying. We always convert it to a small WebP image (at most 160 × 64 pixels on screen). Logos have no link.
+- We show only what the donor chose. Never e-mail addresses or payment details.
 - The legal basis is consent (GDPR article 6(1)(a)). Anyone can withdraw at any time by e-mail to sponsors@luxyos.com; they are removed in the next update of the site.
-- The list is not stored in the public GitHub repository, because names in a public Git history cannot be fully removed. It is kept privately by the owner and used only to build the live website.
+- The list is not stored in the public GitHub repository, because names in a public Git history cannot be fully removed. It is kept privately on the server and used only to build the live website.
+- Later, with a PayPal business account, the choice can be made in a form before paying, and PayPal can confirm successful payments automatically ([design 22](design/22-sponsor-form-example.png)).
 
 ## 2. Store terms for developers
 

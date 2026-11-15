@@ -1,11 +1,13 @@
 {
   "_rules": [
-    "This public file stays EMPTY. Keep the real list in supporters.private.json next to it: that file is git-ignored, because names in a public Git history can never be fully removed.",
-    "Only add people who asked for it themselves, for example in their PayPal note ('Show: name' or 'Show: name + amount').",
-    "Show the name exactly as they wrote it (first name or nickname is fine). Never add e-mail addresses or PayPal details.",
-    "Only fill in 'amount' if they asked to show the amount, for example \"€25\". Otherwise leave it out.",
-    "Remove anyone who asks, in the next update. Newest supporters first.",
-    "Format of an entry: {\"name\": \"Sanne\", \"amount\": \"€25\"} or {\"name\": \"Mehmet\"}."
+    "This public file stays EMPTY. Keep the real list in supporters.private.json (git-ignored) or pass --supporters: names in a public Git history can never be fully removed.",
+    "Only add people after their payment has succeeded and only as they asked in the PayPal note: nothing = anonymous (only raise 'anonymous' by 1), 'Show: name', 'Show: name + amount', 'Logo: name' (one payment of at least €100).",
+    "Show names exactly as written (first name or nickname is fine). Never add e-mail addresses or payment details.",
+    "Logos: convert with src/logo.py to a small WebP (max 320 x 128 pixels, shown at 160 x 64), put it in img/sponsors/ in the webroot, and set 'until' to 12 months after the payment date. After that date the logo disappears and the name stays. No links.",
+    "Remove anyone who asks (sponsors@luxyos.com) and build again. Newest first.",
+    "Examples: sponsors: {\"name\": \"Bakkerij De Zon\", \"logo\": \"bakkerij-de-zon.webp\", \"amount\": \"€250\", \"until\": \"2027-11-16\"}; supporters: {\"name\": \"Sanne\", \"amount\": \"€25\"} or {\"name\": \"Mehmet\"}."
   ],
+  "anonymous": 0,
+  "sponsors": [],
   "supporters": []
 }

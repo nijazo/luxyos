@@ -10,7 +10,8 @@ Edit texts in `src/build.py`, then run `python3 website/src/build.py`. Translati
 | `<code>/index.html` | https://luxyos.com/&lt;code&gt;/ for nl, de, fr, es, hr, bs, sr, sq, mk, tr |
 | [img/](img/) | Design previews (WebP, 720 and 1440 px). Dutch pages use the `-nl` images, all other languages the `-en` images |
 | [src/build.py](src/build.py) | Generates all pages from one template and the texts per language |
-| [src/supporters.json](src/supporters.json) | Format of the optional supporters list. Stays empty here; the real list is `src/supporters.private.json`, which is git-ignored |
+| [src/supporters.json](src/supporters.json) | Format and rules of the optional supporters list (anonymous count, sponsors with logo, supporters). Stays empty here; the real list lives on the server |
+| [src/logo.py](src/logo.py) | Turns a sponsor logo into a small WebP (max 320 × 128, shown at 160 × 64). Logos go in `img/sponsors/` in the webroot, never in Git |
 
 - Self-contained: no external fonts, scripts, trackers or cookies. Keep it that way; the footer promises it.
 - The donate button is a plain link to PayPal (paypal.me/nijazo), with no PayPal script.
@@ -36,5 +37,6 @@ python3 /var/www/vhosts/quracom13/private/luxyos-build/build.py \
   --supporters /var/www/vhosts/quracom13/private/supporters.private.json
 ```
 
-- Add a supporter only when they asked for it; remove them when they ask (sponsors@luxyos.com). Then run the build again.
+- Add a donor only after the payment succeeded and only as they asked in the PayPal note (see `src/supporters.json`); remove them when they ask (sponsors@luxyos.com). Then run the build again.
+- Logos: `python3 logo.py <file> <name>.webp`, put the result in `<webroot>/img/sponsors/`, and set `until` to 12 months after the payment. The build stops if a logo file is missing or a name is not a plain `.webp` file name; expired logos disappear automatically, the name stays.
 - Website updates from this repository: copy `img/` and the new `src/build.py` to the server and run the build there. **Do not copy the `index.html` files from Git over the live site**: they have an empty supporters list and would remove the names.

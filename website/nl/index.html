@@ -119,6 +119,15 @@ section.supporters .wrap { padding-top: 40px; padding-bottom: 8px; }
 .sup-lijst li { padding: 8px 14px; border-radius: 999px; background: var(--bg-zacht); font-weight: 600; }
 .sup-lijst li span { font-weight: 400; color: var(--tekst-zacht); margin-left: 6px; }
 .sup-leeg { font-style: italic; }
+.sup-blok h3 { margin: 6px 0 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--tekst-zacht); }
+.logos { display: flex; flex-wrap: wrap; gap: 14px; list-style: none; margin: 0; padding: 0; }
+.logos li { display: grid; gap: 6px; justify-items: center; padding: 10px; border: 1px solid var(--rand); border-radius: 12px; background: #ffffff; }
+.logos img { width: 160px; height: 64px; object-fit: contain; display: block; }
+.logos span { font-size: 13px; color: #3d4b61; }
+.hoe { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; list-style: none; margin: 0; padding: 0; }
+.hoe li { display: grid; gap: 4px; align-content: start; padding: 14px; border: 1px solid var(--rand); border-radius: 12px; font-size: 14px; color: var(--tekst-zacht); }
+.hoe strong { color: var(--tekst); font-size: 15px; }
+.betaald { margin: 0; padding: 10px 12px; border-radius: 10px; background: #e5f4e4; color: #14532d !important; font-size: 14px; font-weight: 600; }
 .sup-blok a, .mee .klein a { color: var(--hemel); }
 footer { border-top: 1px solid var(--rand); }
 footer a { color: inherit; display: inline-flex; align-items: center; gap: 6px; }
@@ -258,8 +267,15 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <h2>Dank aan onze supporters</h2>
 <p>Op deze lijst staan is vrijwillig. Jij kiest of je naam, en het bedrag, hier komen te staan.</p>
 <p class="sup-leeg">Er staat nog niemand op de lijst.</p>
-<p>Wil je op de lijst? Schrijf in je PayPal-bericht: “Toon: je naam” voor alleen je naam, of “Toon: je naam + bedrag” om ook het bedrag te tonen. Zonder bericht blijft je donatie anoniem.</p>
-<p>Toch liever niet? Mail naar <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a>, dan halen we je weg bij de volgende update.</p>
+<h3>Zo kom je op de lijst</h3>
+<ul class="hoe">
+<li><strong>Anoniem</strong><span>Standaard. Schrijf niets in je PayPal-bericht.</span></li>
+<li><strong>Met naam</strong><span>Schrijf in je PayPal-bericht: “Toon: je naam”.</span></li>
+<li><strong>Met naam en bedrag</strong><span>Schrijf: “Toon: je naam + bedrag”.</span></li>
+<li><strong>Met logo</strong><span>Vanaf €100 in één betaling, 12 maanden lang. Schrijf “Logo: je naam” en mail na het betalen je logo naar <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a>.</span></li>
+</ul>
+<p class="betaald">Je komt pas op de lijst als je betaling gelukt is.</p>
+<p>Logo’s tonen we klein (maximaal 160 × 64 pixels, WebP) en zonder link. Toch liever niet? Mail naar <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a>, dan halen we je weg bij de volgende update.</p>
 </div>
 </div>
 </section>

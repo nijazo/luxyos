@@ -119,6 +119,15 @@ section.supporters .wrap { padding-top: 40px; padding-bottom: 8px; }
 .sup-lijst li { padding: 8px 14px; border-radius: 999px; background: var(--bg-zacht); font-weight: 600; }
 .sup-lijst li span { font-weight: 400; color: var(--tekst-zacht); margin-left: 6px; }
 .sup-leeg { font-style: italic; }
+.sup-blok h3 { margin: 6px 0 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--tekst-zacht); }
+.logos { display: flex; flex-wrap: wrap; gap: 14px; list-style: none; margin: 0; padding: 0; }
+.logos li { display: grid; gap: 6px; justify-items: center; padding: 10px; border: 1px solid var(--rand); border-radius: 12px; background: #ffffff; }
+.logos img { width: 160px; height: 64px; object-fit: contain; display: block; }
+.logos span { font-size: 13px; color: #3d4b61; }
+.hoe { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; list-style: none; margin: 0; padding: 0; }
+.hoe li { display: grid; gap: 4px; align-content: start; padding: 14px; border: 1px solid var(--rand); border-radius: 12px; font-size: 14px; color: var(--tekst-zacht); }
+.hoe strong { color: var(--tekst); font-size: 15px; }
+.betaald { margin: 0; padding: 10px 12px; border-radius: 10px; background: #e5f4e4; color: #14532d !important; font-size: 14px; font-weight: 600; }
 .sup-blok a, .mee .klein a { color: var(--hemel); }
 footer { border-top: 1px solid var(--rand); }
 footer a { color: inherit; display: inline-flex; align-items: center; gap: 6px; }
@@ -258,8 +267,15 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <h2>Merci à nos soutiens</h2>
 <p>Figurer sur cette liste est volontaire. Vous choisissez si votre nom, et le montant, apparaissent ici.</p>
 <p class="sup-leeg">Personne n’est encore sur la liste.</p>
-<p>Vous souhaitez y figurer ? Écrivez dans votre message PayPal : « Afficher : votre nom » pour votre nom seul, ou « Afficher : votre nom + montant » pour montrer aussi le montant. Sans message, votre don reste anonyme.</p>
-<p>Vous changez d’avis ? Écrivez à <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a> et nous vous retirerons lors de la prochaine mise à jour.</p>
+<h3>Comment figurer sur la liste</h3>
+<ul class="hoe">
+<li><strong>Anonyme</strong><span>Par défaut. N’écrivez rien dans votre message PayPal.</span></li>
+<li><strong>Avec nom</strong><span>Écrivez dans votre message PayPal : « Afficher : votre nom ».</span></li>
+<li><strong>Avec nom et montant</strong><span>Écrivez : « Afficher : votre nom + montant ».</span></li>
+<li><strong>Avec logo</strong><span>À partir de 100 € en un seul paiement, pendant 12 mois. Écrivez « Logo : votre nom » et envoyez votre logo à <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a> après le paiement.</span></li>
+</ul>
+<p class="betaald">Vous n’apparaissez sur la liste qu’une fois votre paiement réussi.</p>
+<p>Les logos sont affichés en petit (160 × 64 pixels maximum, WebP) et sans lien. Vous changez d’avis ? Écrivez à <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a> et nous vous retirerons lors de la prochaine mise à jour.</p>
 </div>
 </div>
 </section>

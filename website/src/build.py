@@ -13,9 +13,11 @@ supporters.private.json next to this script, or else the empty public
 supporters.json.
 """
 import argparse
+import datetime
 import html
 import json
 import os
+import re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.dirname(HERE)
@@ -395,63 +397,57 @@ T["tr"] = dict(
 EXTRA = {
     "en": dict(spon_mail="Sponsoring as a company or organisation? Email {email}.", gh="LuxyOS on GitHub", sup_h="Thank you to our supporters",
         sup_p="Being on this list is voluntary. You choose whether your name, and the amount, appear here.",
-        sup_how="Want to be listed? Write in your PayPal note: “Show: your name” for your name only, or “Show: your name + amount” to show the amount too. Without a note, your donation stays anonymous.",
         sup_remove="Changed your mind? Email {email} and we remove you in the next update.",
         sup_empty="No one is on the list yet."),
     "nl": dict(spon_mail="Sponsoren als bedrijf of organisatie? Mail naar {email}.", gh="LuxyOS op GitHub", sup_h="Dank aan onze supporters",
         sup_p="Op deze lijst staan is vrijwillig. Jij kiest of je naam, en het bedrag, hier komen te staan.",
-        sup_how="Wil je op de lijst? Schrijf in je PayPal-bericht: “Toon: je naam” voor alleen je naam, of “Toon: je naam + bedrag” om ook het bedrag te tonen. Zonder bericht blijft je donatie anoniem.",
         sup_remove="Toch liever niet? Mail naar {email}, dan halen we je weg bij de volgende update.",
         sup_empty="Er staat nog niemand op de lijst."),
     "de": dict(spon_mail="Als Unternehmen oder Organisation sponsern? Schreib an {email}.", gh="LuxyOS auf GitHub", sup_h="Danke an unsere Unterstützer",
         sup_p="Auf dieser Liste zu stehen ist freiwillig. Du entscheidest, ob dein Name und der Betrag hier erscheinen.",
-        sup_how="Möchtest du auf die Liste? Schreib in deine PayPal-Nachricht: „Zeigen: dein Name“ für nur deinen Namen oder „Zeigen: dein Name + Betrag“, um auch den Betrag zu zeigen. Ohne Nachricht bleibt deine Spende anonym.",
         sup_remove="Doch lieber nicht? Schreib an {email}, dann entfernen wir dich beim nächsten Update.",
         sup_empty="Noch steht niemand auf der Liste."),
     "fr": dict(spon_mail="Vous souhaitez sponsoriser en tant qu’entreprise ou organisation\u00a0? Écrivez à {email}.", gh="LuxyOS sur GitHub", sup_h="Merci à nos soutiens",
         sup_p="Figurer sur cette liste est volontaire. Vous choisissez si votre nom, et le montant, apparaissent ici.",
-        sup_how="Vous souhaitez y figurer ? Écrivez dans votre message PayPal : « Afficher : votre nom » pour votre nom seul, ou « Afficher : votre nom + montant » pour montrer aussi le montant. Sans message, votre don reste anonyme.",
         sup_remove="Vous changez d’avis ? Écrivez à {email} et nous vous retirerons lors de la prochaine mise à jour.",
         sup_empty="Personne n’est encore sur la liste."),
     "es": dict(spon_mail="¿Quieres patrocinar como empresa u organización? Escribe a {email}.", gh="LuxyOS en GitHub", sup_h="Gracias a quienes nos apoyan",
         sup_p="Aparecer en esta lista es voluntario. Tú eliges si tu nombre, y el importe, aparecen aquí.",
-        sup_how="¿Quieres aparecer? Escribe en tu mensaje de PayPal: «Mostrar: tu nombre» para mostrar solo tu nombre, o «Mostrar: tu nombre + importe» para mostrar también el importe. Sin mensaje, tu donación sigue siendo anónima.",
         sup_remove="¿Cambias de opinión? Escribe a {email} y te quitaremos en la próxima actualización.",
         sup_empty="Todavía no hay nadie en la lista."),
     "hr": dict(spon_mail="Želiš sponzorirati kao tvrtka ili organizacija? Piši na {email}.", gh="LuxyOS na GitHubu", sup_h="Hvala našim podržavateljima",
         sup_p="Biti na ovom popisu je dobrovoljno. Ti biraš hoće li se ovdje pojaviti tvoje ime i iznos.",
-        sup_how="Želiš li biti na popisu? U PayPal poruci napiši: „Prikaži: tvoje ime” samo za ime ili „Prikaži: tvoje ime + iznos” da se prikaže i iznos. Bez poruke tvoja donacija ostaje anonimna.",
         sup_remove="Želiš da te uklonimo? Piši na {email} i uklonit ćemo te u sljedećem ažuriranju.",
         sup_empty="Na popisu još nema nikoga."),
     "bs": dict(spon_mail="Želiš sponzorisati kao firma ili organizacija? Piši na {email}.", gh="LuxyOS na GitHubu", sup_h="Hvala našim podržavaocima",
         sup_p="Biti na ovoj listi je dobrovoljno. Ti biraš hoće li se ovdje pojaviti tvoje ime i iznos.",
-        sup_how="Želiš li biti na listi? U PayPal poruci napiši: „Prikaži: tvoje ime“ samo za ime ili „Prikaži: tvoje ime + iznos“ da se prikaže i iznos. Bez poruke tvoja donacija ostaje anonimna.",
         sup_remove="Želiš da te uklonimo? Piši na {email} i uklonit ćemo te u sljedećem ažuriranju.",
         sup_empty="Na listi još nema nikoga."),
     "sr": dict(spon_mail="Желиш да спонзоришеш као фирма или организација? Пиши на {email}.", gh="LuxyOS на GitHub-у", sup_h="Хвала нашим подржаваоцима",
         sup_p="Бити на овој листи је добровољно. Ти бираш да ли ће се овде појавити твоје име и износ.",
-        sup_how="Желиш ли да будеш на листи? У PayPal поруци напиши: „Прикажи: твоје име“ само за име или „Прикажи: твоје име + износ“ да се прикаже и износ. Без поруке твоја донација остаје анонимна.",
         sup_remove="Желиш да те уклонимо? Пиши на {email} и уклонићемо те у следећем ажурирању.",
         sup_empty="На листи још нема никога."),
     "sq": dict(spon_mail="Dëshiron të sponsorizosh si kompani ose organizatë? Shkruaj te {email}.", gh="LuxyOS në GitHub", sup_h="Faleminderit mbështetësve tanë",
         sup_p="Të jesh në këtë listë është vullnetare. Ti zgjedh nëse emri yt dhe shuma shfaqen këtu.",
-        sup_how="Dëshiron të jesh në listë? Shkruaj në mesazhin e PayPal: “Shfaq: emri yt” vetëm për emrin, ose “Shfaq: emri yt + shuma” për të treguar edhe shumën. Pa mesazh, dhurimi yt mbetet anonim.",
         sup_remove="Dëshiron të të heqim? Shkruaj te {email} dhe do të të heqim në përditësimin e radhës.",
         sup_empty="Ende nuk ka askënd në listë."),
     "mk": dict(spon_mail="Сакаш да спонзорираш како фирма или организација? Пиши на {email}.", gh="LuxyOS на GitHub", sup_h="Благодарност до нашите поддржувачи",
         sup_p="Да бидеш на оваа листа е доброволно. Ти избираш дали тука ќе се појават твоето име и износот.",
-        sup_how="Сакаш да бидеш на листата? Во пораката на PayPal напиши: „Прикажи: твоето име“ само за името или „Прикажи: твоето име + износ“ за да се прикаже и износот. Без порака, твојата донација останува анонимна.",
         sup_remove="Сакаш да те отстраниме? Пиши на {email} и ќе те отстраниме во следното ажурирање.",
         sup_empty="Сè уште нема никој на листата."),
     "tr": dict(spon_mail="Şirket ya da kuruluş olarak sponsor olmak mı istiyorsun? {email} adresine yaz.", gh="GitHub’da LuxyOS", sup_h="Destekçilerimize teşekkürler",
         sup_p="Bu listede yer almak gönüllüdür. Adının ve bağış miktarının burada görünüp görünmeyeceğine sen karar verirsin.",
-        sup_how="Listede yer almak ister misin? Yalnızca adın için PayPal mesajına “Göster: adın” yaz; miktarı da göstermek için “Göster: adın + miktar” yaz. Mesaj yazmazsan bağışın anonim kalır.",
         sup_remove="Listeden çıkmak mı istiyorsun? {email} adresine yaz, bir sonraki güncellemede seni kaldıralım.",
         sup_empty="Listede henüz kimse yok."),
 }
 for _c, _x in EXTRA.items():
     T[_c].update(_x)
 
+
+# How donors choose how they appear (PayPal note), per language.
+HOW = {'en': {'how_h': 'How to get on the list', 'opts': [('Anonymous', 'Default. Write nothing in your PayPal note.'), ('With name', 'Write in your PayPal note: “Show: your name”.'), ('With name and amount', 'Write: “Show: your name + amount”.'), ('With logo', 'From €100 in one payment, for 12 months. Write “Logo: your name” and email your logo to {email} after paying.')], 'paid': 'You only appear on the list after your payment has succeeded.', 'logo_rule': 'Logos are shown small (at most 160 × 64 pixels, WebP) and without a link.', 'sp_h': 'Sponsors', 'su_h': 'Supporters', 'anon_count': 'Anonymous donors: {n}'}, 'nl': {'how_h': 'Zo kom je op de lijst', 'opts': [('Anoniem', 'Standaard. Schrijf niets in je PayPal-bericht.'), ('Met naam', 'Schrijf in je PayPal-bericht: “Toon: je naam”.'), ('Met naam en bedrag', 'Schrijf: “Toon: je naam + bedrag”.'), ('Met logo', 'Vanaf €100 in één betaling, 12 maanden lang. Schrijf “Logo: je naam” en mail na het betalen je logo naar {email}.')], 'paid': 'Je komt pas op de lijst als je betaling gelukt is.', 'logo_rule': 'Logo’s tonen we klein (maximaal 160 × 64 pixels, WebP) en zonder link.', 'sp_h': 'Sponsors', 'su_h': 'Supporters', 'anon_count': 'Anonieme donateurs: {n}'}, 'de': {'how_h': 'So kommst du auf die Liste', 'opts': [('Anonym', 'Standard. Schreib nichts in deine PayPal-Nachricht.'), ('Mit Namen', 'Schreib in deine PayPal-Nachricht: „Zeigen: dein Name“.'), ('Mit Namen und Betrag', 'Schreib: „Zeigen: dein Name + Betrag“.'), ('Mit Logo', 'Ab 100 € in einer Zahlung, für 12 Monate. Schreib „Logo: dein Name“ und schick dein Logo nach dem Bezahlen an {email}.')], 'paid': 'Du kommst erst auf die Liste, wenn deine Zahlung erfolgreich war.', 'logo_rule': 'Logos zeigen wir klein (höchstens 160 × 64 Pixel, WebP) und ohne Link.', 'sp_h': 'Sponsoren', 'su_h': 'Unterstützer', 'anon_count': 'Anonyme Spender: {n}'}, 'fr': {'how_h': 'Comment figurer sur la liste', 'opts': [('Anonyme', 'Par défaut. N’écrivez rien dans votre message PayPal.'), ('Avec nom', 'Écrivez dans votre message PayPal\xa0: «\xa0Afficher\xa0: votre nom\xa0».'), ('Avec nom et montant', 'Écrivez\xa0: «\xa0Afficher\xa0: votre nom + montant\xa0».'), ('Avec logo', 'À partir de 100\xa0€ en un seul paiement, pendant 12\xa0mois. Écrivez «\xa0Logo\xa0: votre nom\xa0» et envoyez votre logo à {email} après le paiement.')], 'paid': 'Vous n’apparaissez sur la liste qu’une fois votre paiement réussi.', 'logo_rule': 'Les logos sont affichés en petit (160 × 64 pixels maximum, WebP) et sans lien.', 'sp_h': 'Sponsors', 'su_h': 'Soutiens', 'anon_count': 'Donateurs anonymes\xa0: {n}'}, 'es': {'how_h': 'Cómo aparecer en la lista', 'opts': [('Anónimo', 'Por defecto. No escribas nada en tu mensaje de PayPal.'), ('Con nombre', 'Escribe en tu mensaje de PayPal: «Mostrar: tu nombre».'), ('Con nombre e importe', 'Escribe: «Mostrar: tu nombre + importe».'), ('Con logotipo', 'Desde 100 € en un solo pago, durante 12 meses. Escribe «Logo: tu nombre» y envía tu logotipo a {email} después de pagar.')], 'paid': 'Solo apareces en la lista cuando tu pago se ha completado.', 'logo_rule': 'Los logotipos se muestran en pequeño (máximo 160 × 64 píxeles, WebP) y sin enlace.', 'sp_h': 'Patrocinadores', 'su_h': 'Personas que nos apoyan', 'anon_count': 'Donantes anónimos: {n}'}, 'hr': {'how_h': 'Kako doći na popis', 'opts': [('Anonimno', 'Zadano. U PayPal poruku ne piši ništa.'), ('S imenom', 'U PayPal poruku napiši: „Prikaži: tvoje ime”.'), ('S imenom i iznosom', 'Napiši: „Prikaži: tvoje ime + iznos”.'), ('S logotipom', 'Od 100 € u jednoj uplati, 12 mjeseci. Napiši „Logo: tvoje ime” i nakon plaćanja pošalji logotip na {email}.')], 'paid': 'Na popis dolaziš tek kad je tvoja uplata uspješna.', 'logo_rule': 'Logotipe prikazujemo male (najviše 160 × 64 piksela, WebP) i bez poveznice.', 'sp_h': 'Sponzori', 'su_h': 'Podržavatelji', 'anon_count': 'Anonimni donatori: {n}'}, 'bs': {'how_h': 'Kako doći na listu', 'opts': [('Anonimno', 'Standardno. U PayPal poruku ne piši ništa.'), ('S imenom', 'U PayPal poruku napiši: „Prikaži: tvoje ime“.'), ('S imenom i iznosom', 'Napiši: „Prikaži: tvoje ime + iznos“.'), ('S logom', 'Od 100 € u jednoj uplati, 12 mjeseci. Napiši „Logo: tvoje ime“ i nakon plaćanja pošalji logo na {email}.')], 'paid': 'Na listu dolaziš tek kad je tvoja uplata uspješna.', 'logo_rule': 'Logotipe prikazujemo male (najviše 160 × 64 piksela, WebP) i bez linka.', 'sp_h': 'Sponzori', 'su_h': 'Podržavaoci', 'anon_count': 'Anonimni donatori: {n}'}, 'sr': {'how_h': 'Како доћи на листу', 'opts': [('Анонимно', 'Подразумевано. У PayPal поруку не пиши ништа.'), ('Са именом', 'У PayPal поруку напиши: „Прикажи: твоје име“.'), ('Са именом и износом', 'Напиши: „Прикажи: твоје име + износ“.'), ('Са логом', 'Од 100 € у једној уплати, 12 месеци. Напиши „Лого: твоје име“ и после плаћања пошаљи лого на {email}.')], 'paid': 'На листу долазиш тек кад твоја уплата успе.', 'logo_rule': 'Логое приказујемо мале (највише 160 × 64 пиксела, WebP) и без линка.', 'sp_h': 'Спонзори', 'su_h': 'Подржаваоци', 'anon_count': 'Анонимни донатори: {n}'}, 'sq': {'how_h': 'Si të futesh në listë', 'opts': [('Anonim', 'Parazgjedhje. Mos shkruaj asgjë në mesazhin e PayPal.'), ('Me emër', 'Shkruaj në mesazhin e PayPal: “Shfaq: emri yt”.'), ('Me emër dhe shumë', 'Shkruaj: “Shfaq: emri yt + shuma”.'), ('Me logo', 'Nga 100 € në një pagesë të vetme, për 12 muaj. Shkruaj “Logo: emri yt” dhe pas pagesës dërgoje logon te {email}.')], 'paid': 'Futesh në listë vetëm pasi pagesa jote të jetë kryer me sukses.', 'logo_rule': 'Logot i shfaqim të vogla (deri në 160 × 64 piksela, WebP) dhe pa lidhje.', 'sp_h': 'Sponsorët', 'su_h': 'Mbështetësit', 'anon_count': 'Dhurues anonimë: {n}'}, 'mk': {'how_h': 'Како да дојдеш на листата', 'opts': [('Анонимно', 'Стандардно. Не пишувај ништо во пораката на PayPal.'), ('Со име', 'Во пораката на PayPal напиши: „Прикажи: твоето име“.'), ('Со име и износ', 'Напиши: „Прикажи: твоето име + износ“.'), ('Со лого', 'Од 100 € во една уплата, 12 месеци. Напиши „Лого: твоето име“ и по плаќањето испрати го логото на {email}.')], 'paid': 'На листата доаѓаш дури откако уплатата ќе биде успешна.', 'logo_rule': 'Логата ги прикажуваме мали (најмногу 160 × 64 пиксели, WebP) и без линк.', 'sp_h': 'Спонзори', 'su_h': 'Поддржувачи', 'anon_count': 'Анонимни донатори: {n}'}, 'tr': {'how_h': 'Listeye nasıl girilir', 'opts': [('Anonim', 'Varsayılan. PayPal mesajına hiçbir şey yazma.'), ('Adla', 'PayPal mesajına “Göster: adın” yaz.'), ('Ad ve miktarla', '“Göster: adın + miktar” yaz.'), ('Logoyla', 'Tek ödemede 100 € ve üzeri, 12 ay boyunca. “Logo: adın” yaz ve ödemeden sonra logonu {email} adresine gönder.')], 'paid': 'Listeye ancak ödemen başarıyla tamamlandıktan sonra girersin.', 'logo_rule': 'Logoları küçük (en fazla 160 × 64 piksel, WebP) ve bağlantısız gösteririz.', 'sp_h': 'Sponsorlar', 'su_h': 'Destekçiler', 'anon_count': 'Anonim bağışçılar: {n}'}}
+for _c, _x in HOW.items():
+    T[_c].update(_x)
 
 CSS = r"""
 :root {
@@ -550,6 +546,15 @@ section.supporters .wrap { padding-top: 40px; padding-bottom: 8px; }
 .sup-lijst li { padding: 8px 14px; border-radius: 999px; background: var(--bg-zacht); font-weight: 600; }
 .sup-lijst li span { font-weight: 400; color: var(--tekst-zacht); margin-left: 6px; }
 .sup-leeg { font-style: italic; }
+.sup-blok h3 { margin: 6px 0 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--tekst-zacht); }
+.logos { display: flex; flex-wrap: wrap; gap: 14px; list-style: none; margin: 0; padding: 0; }
+.logos li { display: grid; gap: 6px; justify-items: center; padding: 10px; border: 1px solid var(--rand); border-radius: 12px; background: #ffffff; }
+.logos img { width: 160px; height: 64px; object-fit: contain; display: block; }
+.logos span { font-size: 13px; color: #3d4b61; }
+.hoe { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; list-style: none; margin: 0; padding: 0; }
+.hoe li { display: grid; gap: 4px; align-content: start; padding: 14px; border: 1px solid var(--rand); border-radius: 12px; font-size: 14px; color: var(--tekst-zacht); }
+.hoe strong { color: var(--tekst); font-size: 15px; }
+.betaald { margin: 0; padding: 10px 12px; border-radius: 10px; background: #e5f4e4; color: #14532d !important; font-size: 14px; font-weight: 600; }
 .sup-blok a, .mee .klein a { color: var(--hemel); }
 footer { border-top: 1px solid var(--rand); }
 footer a { color: inherit; display: inline-flex; align-items: center; gap: 6px; }
@@ -601,6 +606,7 @@ def icon(key):
 
 
 SUPPORTERS_FILE = None  # set by --supporters
+OUT_DIR = OUT  # set by --out
 
 
 def load_supporters():
@@ -613,7 +619,15 @@ def load_supporters():
     else:
         path = private if os.path.exists(private) else os.path.join(HERE, "supporters.json")
     with open(path, encoding="utf-8") as f:
-        return json.load(f)["supporters"]
+        data = json.load(f)
+    data.setdefault("anonymous", 0)
+    data.setdefault("sponsors", [])
+    data.setdefault("supporters", [])
+    for sp in data["sponsors"]:
+        if not re.fullmatch(r"[a-z0-9][a-z0-9-]*\.webp", sp.get("logo", "")):
+            raise SystemExit(f"logo must be a WebP file name like name.webp: {sp!r}")
+        datetime.date.fromisoformat(sp["until"])  # must be a valid date
+    return data
 
 
 def mail_link():
@@ -626,20 +640,45 @@ def mail_line(t):
     return '<p class="klein">' + e(t["spon_mail"]).replace("{email}", mail_link()) + "</p>"
 
 
-def supporters_html(t):
+def supporters_html(t, root, out):
     """The supporters block; empty until CONTACT is filled in."""
     if not CONTACT:
         return ""
-    people = load_supporters()
-    if people:
+    data = load_supporters()
+    today = datetime.date.today()
+    logos, names = [], []
+    for sp in data["sponsors"]:
+        if datetime.date.fromisoformat(sp["until"]) >= today:
+            if not os.path.exists(os.path.join(out, "img", "sponsors", sp["logo"])):
+                raise SystemExit(f"logo file missing: img/sponsors/{sp['logo']}")
+            logos.append(sp)
+        else:
+            names.append(sp)  # after 12 months the logo goes, the name stays
+    names = names + data["supporters"]
+
+    def amount(p):
+        return f'<span>{e(p["amount"])}</span>' if p.get("amount") else ""
+
+    parts = []
+    if logos:
         items = "\n".join(
-            f'<li>{e(p["name"])}' + (f'<span>{e(p["amount"])}</span>' if p.get("amount") else "") + "</li>"
-            for p in people
+            f'<li><img src="{root}img/sponsors/{sp["logo"]}" width="160" height="64" alt="{e(sp["name"])}" loading="lazy">'
+            f'<span>{e(sp["name"])}{(" · " + e(sp["amount"])) if sp.get("amount") else ""}</span></li>'
+            for sp in logos
         )
-        lijst = f'<ul class="sup-lijst">\n{items}\n</ul>'
-    else:
-        lijst = f'<p class="sup-leeg">{e(t["sup_empty"])}</p>'
-    mail = f'<a href="mailto:{CONTACT}">{e(CONTACT)}</a>'
+        parts.append(f'<h3>{e(t["sp_h"])}</h3>\n<ul class="logos">\n{items}\n</ul>')
+    if names:
+        items = "\n".join(f'<li>{e(p["name"])}{amount(p)}</li>' for p in names)
+        parts.append(f'<h3>{e(t["su_h"])}</h3>\n<ul class="sup-lijst">\n{items}\n</ul>')
+    if data["anonymous"]:
+        parts.append(f'<p>{e(t["anon_count"]).replace("{n}", str(int(data["anonymous"])))}</p>')
+    if not parts:
+        parts.append(f'<p class="sup-leeg">{e(t["sup_empty"])}</p>')
+    lijst = "\n".join(parts)
+    mail = mail_link()
+    hoe = "\n".join(
+        f'<li><strong>{e(a)}</strong><span>{e(b).replace("{email}", mail)}</span></li>' for a, b in t["opts"]
+    )
     remove = e(t["sup_remove"]).replace("{email}", mail)
     return f"""<section class="supporters" id="supporters">
 <div class="wrap">
@@ -647,8 +686,12 @@ def supporters_html(t):
 <h2>{e(t["sup_h"])}</h2>
 <p>{e(t["sup_p"])}</p>
 {lijst}
-<p>{e(t["sup_how"])}</p>
-<p>{remove}</p>
+<h3>{e(t["how_h"])}</h3>
+<ul class="hoe">
+{hoe}
+</ul>
+<p class="betaald">{e(t["paid"])}</p>
+<p>{e(t["logo_rule"])} {remove}</p>
 </div>
 </div>
 </section>
@@ -774,7 +817,7 @@ def page(code):
 </div>
 </section>
 
-{supporters_html(t)}<section class="status">
+{supporters_html(t, root, OUT_DIR)}<section class="status">
 <div class="wrap">
 <div class="status-blok">
 <div>
@@ -810,7 +853,9 @@ def main():
     ap.add_argument("--out", default=OUT, help="output folder (the webroot)")
     ap.add_argument("--supporters", help="JSON file with the supporters list")
     args = ap.parse_args()
+    global OUT_DIR
     out = os.path.abspath(args.out)
+    OUT_DIR = out
     if args.supporters:
         SUPPORTERS_FILE = os.path.abspath(args.supporters)
         load_supporters()  # fail early on a missing or broken file

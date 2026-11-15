@@ -119,6 +119,15 @@ section.supporters .wrap { padding-top: 40px; padding-bottom: 8px; }
 .sup-lijst li { padding: 8px 14px; border-radius: 999px; background: var(--bg-zacht); font-weight: 600; }
 .sup-lijst li span { font-weight: 400; color: var(--tekst-zacht); margin-left: 6px; }
 .sup-leeg { font-style: italic; }
+.sup-blok h3 { margin: 6px 0 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--tekst-zacht); }
+.logos { display: flex; flex-wrap: wrap; gap: 14px; list-style: none; margin: 0; padding: 0; }
+.logos li { display: grid; gap: 6px; justify-items: center; padding: 10px; border: 1px solid var(--rand); border-radius: 12px; background: #ffffff; }
+.logos img { width: 160px; height: 64px; object-fit: contain; display: block; }
+.logos span { font-size: 13px; color: #3d4b61; }
+.hoe { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; list-style: none; margin: 0; padding: 0; }
+.hoe li { display: grid; gap: 4px; align-content: start; padding: 14px; border: 1px solid var(--rand); border-radius: 12px; font-size: 14px; color: var(--tekst-zacht); }
+.hoe strong { color: var(--tekst); font-size: 15px; }
+.betaald { margin: 0; padding: 10px 12px; border-radius: 10px; background: #e5f4e4; color: #14532d !important; font-size: 14px; font-weight: 600; }
 .sup-blok a, .mee .klein a { color: var(--hemel); }
 footer { border-top: 1px solid var(--rand); }
 footer a { color: inherit; display: inline-flex; align-items: center; gap: 6px; }
@@ -258,8 +267,15 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <h2>Hvala našim podržavaocima</h2>
 <p>Biti na ovoj listi je dobrovoljno. Ti biraš hoće li se ovdje pojaviti tvoje ime i iznos.</p>
 <p class="sup-leeg">Na listi još nema nikoga.</p>
-<p>Želiš li biti na listi? U PayPal poruci napiši: „Prikaži: tvoje ime“ samo za ime ili „Prikaži: tvoje ime + iznos“ da se prikaže i iznos. Bez poruke tvoja donacija ostaje anonimna.</p>
-<p>Želiš da te uklonimo? Piši na <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a> i uklonit ćemo te u sljedećem ažuriranju.</p>
+<h3>Kako doći na listu</h3>
+<ul class="hoe">
+<li><strong>Anonimno</strong><span>Standardno. U PayPal poruku ne piši ništa.</span></li>
+<li><strong>S imenom</strong><span>U PayPal poruku napiši: „Prikaži: tvoje ime“.</span></li>
+<li><strong>S imenom i iznosom</strong><span>Napiši: „Prikaži: tvoje ime + iznos“.</span></li>
+<li><strong>S logom</strong><span>Od 100 € u jednoj uplati, 12 mjeseci. Napiši „Logo: tvoje ime“ i nakon plaćanja pošalji logo na <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a>.</span></li>
+</ul>
+<p class="betaald">Na listu dolaziš tek kad je tvoja uplata uspješna.</p>
+<p>Logotipe prikazujemo male (najviše 160 × 64 piksela, WebP) i bez linka. Želiš da te uklonimo? Piši na <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a> i uklonit ćemo te u sljedećem ažuriranju.</p>
 </div>
 </div>
 </section>

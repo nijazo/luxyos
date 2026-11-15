@@ -2,3 +2,4 @@
 Thumbs.db
 *.swp
 website/src/supporters.private.json
+__pycache__/
