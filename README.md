@@ -81,7 +81,7 @@ The project language is **English**. LuxyOS itself starts with English (default)
 
 LuxyOS is free and non-commercial. It is paid for by donations, grants and sponsors, never by users, ads or data.
 
-<p><a href="https://paypal.me/nijazo"><strong>Donate with PayPal</strong></a> · paypal.me/nijazo</p>
+<p><a href="https://paypal.me/nijazo"><strong>Donate to LuxyOS</strong></a> · via PayPal (paypal.me/nijazo)</p>
 
 - Donations pay for servers, test hardware, development and legal advice (trademark, CRA, privacy).
 - Donating is voluntary and gives no rights or influence over the product ([LEGAL.md](LEGAL.md)).
