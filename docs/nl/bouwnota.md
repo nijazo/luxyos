@@ -623,8 +623,8 @@ optioneel: netwerk
 3. De winkel ondertekent de app.
 4. De gebruiker installeert met één klik. Updates gaan vanzelf.
 
-- Betalingen via Mollie of Stripe. Btw per EU-land via een merchant of record, zoals Paddle.
-- Lagere commissie dan Apple en Google (15–30%).
+- Plaatsen in de winkel is gratis, zonder commissie. De winkel regelt geen betalingen.
+- Betaalde apps verkoopt de ontwikkelaar via de eigen website; de winkelpagina toont de prijs en linkt daarheen.
 - Windows-programma's ook in de winkel aanbieden.
 - De techniek van Flathub hergebruiken.
 - Voorwaarden voor ontwikkelaars, klachten en terugbetalingen regelen.
@@ -872,7 +872,7 @@ Keuzescherm bij de eerste start:
 | --- | --- | --- |
 | Antivirus | De eigen AV of een andere | Basis: ClamAV. Belangrijk, omdat Windows-virussen via Wine kunnen draaien |
 | Webbrowser | Firefox, Chrome, Edge, Brave, Vivaldi, Opera | Downloaden van de officiële site. Chrome mag je niet zelf meeleveren |
-| Zoekmachine | Google, Bing, DuckDuckGo, Ecosia, Startpage, Qwant | Kan inkomsten per zoekopdracht opleveren |
+| Zoekmachine | Google, Bing, DuckDuckGo, Ecosia, Startpage, Qwant | Neutraal aangeboden, zonder afspraken over inkomsten |
 
 ## Privacy: niets verlaat het systeem zonder toestemming
 
@@ -984,23 +984,41 @@ Een eigen certificaatbeheer zoals bij Windows: één centrale plek voor alle cer
 
 Basis: p11-kit en ca-certificates (vertrouwde certificaten), NSS (browsers), OpenSC (smartcards), tpm2-pkcs11 (sleutels in de TPM) en certmonger (aanvragen en vernieuwen).
 
-## Updates, registratie en verdienmodel
+## Gratis en niet-commercieel
+
+LuxyOS is een gratis besturingssysteem voor iedere persoon en geen commercieel product. Het project maakt geen winst.
+
+- **Gratis voor iedereen:** particulieren, scholen, verenigingen, overheden en bedrijven. Geen betaalde versies, geen abonnementen, geen advertenties en geen verkoop van gegevens.
+- **Kosten** worden betaald uit donaties, subsidies voor open source (EU en nationaal) en sponsors. Sponsors krijgen geen invloed op het product en geen gegevens.
+- **Niemand mag geld vragen voor LuxyOS zelf** onder de naam LuxyOS (merkbeleid). Geld vragen voor eigen werk mag wel: installatiehulp, ondersteuning, training of hardware, als de klant hoort dat LuxyOS zelf gratis is.
+- De GPL-licentie verbiedt geen commercieel gebruik, en dat kan ook niet omdat LuxyOS op Linux en Wine draait. Het niet-commerciële karakter beschermen we daarom met de voorwaarden en het merkbeleid.
+
+**Voorwaarden voor ontwikkelaars in de app-winkel**
+
+- Iedere ontwikkelaar kan met de gratis SDK eigen software maken en een plek in de winkel aanvragen.
+- Plaatsen is gratis: geen inschrijfgeld, geen jaarbijdrage en geen commissie.
+- De winkel verkoopt niets en regelt geen betalingen. Bij een betaalde app toont de winkel de prijs en een link naar de eigen website van de ontwikkelaar. Daar regelt de ontwikkelaar betaling, factuur, btw, terugbetaling en het herroepingsrecht van 14 dagen.
+- Aanvraag: gratis ontwikkelaarsaccount (bij betaalde apps met de verkopersgegevens die de DSA vraagt), app met manifest indienen, automatische controle en beoordeling, besluit met uitleg en de mogelijkheid tot bezwaar.
+- Regels: eerlijke beschrijving, AVG volgen, niets verzamelen of volgen zonder toestemming, geen malware, AI-functies herkenbaar, en de EU-wet volgen.
+- De ontwikkelaar houdt alle rechten op de eigen app.
+
+## Updates, registratie en financiering
 
 Het OS is gratis. Registratie is altijd vrijwillig en geeft extra's, maar beveiligingsupdates krijgt iedereen. Ubuntu Pro werkt op dezelfde manier.
 
-| Wat | Iedereen | Geregistreerd (gratis) | Bedrijven (betaald) |
+| Wat | Iedereen | Geregistreerd (gratis) | Bedrijven (gratis) |
 | --- | --- | --- | --- |
 | Beveiligingsupdates | Ja | Ja | Ja |
 | Nieuwe functies automatisch | Nee | Ja | Ja |
 | App-winkel en synchroniseren | Nee | Ja | Ja |
 | Back-up in de cloud | Nee | Ja | Ja |
-| Ondersteuning | Nee | Ja | Ja, uitgebreid |
+| Ondersteuning | Nee | Ja | Ja, plus hulp via IT-partners |
 | Centraal beheer en AD-koppeling | Nee | Nee | Ja |
 
 - Techniek: account, dan een apparaatsleutel, dan controleert de updatedienst die sleutel.
 - Veilige updates: een mislukte update draai je met één klik terug.
 - Update-kanalen: Stabiel voor gewone gebruikers, Beta voor testers.
-- Inkomsten: bedrijfsabonnementen, commissie in de app-winkel en zoekmachinepartners.
+- Geen inkomsten uit gebruikers, de app-winkel of zoekmachines: LuxyOS is niet-commercieel. Kosten worden betaald uit donaties, subsidies voor open source en sponsors zonder invloed op het product.
 - GPL: de Linux-onderdelen deel je met broncode, en kopiëren mag je niet verbieden. Registratie voor de updatedienst mag wel.
 - AVG: vraag alleen het e-mailadres en zeg duidelijk wat je opslaat.
 

@@ -2,6 +2,10 @@
 
 "LuxyOS" and the Ring of light logo identify the official LuxyOS project. The code is free under its licences ([LICENSING.md](LICENSING.md)); the name and logo are protected so that people can trust that something called LuxyOS really is LuxyOS and follows its promises: privacy, no telemetry, and EU law as the baseline.
 
+## LuxyOS is always free
+
+Nobody may charge money for LuxyOS itself, or for downloading it, under the LuxyOS name. Charging for your own work is fine (installation help, support, training, hardware), as long as customers are told that LuxyOS itself is free. See [docs/terms.md](docs/terms.md).
+
 ## Allowed without asking
 
 - Referring to LuxyOS in articles, reviews, videos, talks and teaching material.
@@ -12,7 +16,7 @@
 ## Needs written permission
 
 - Distributing a **modified** version under the LuxyOS name. Modified versions are welcome, but under a different name and logo, unless they are approved.
-- Selling devices with LuxyOS preinstalled, or offering LuxyOS as a managed service, under the LuxyOS name.
+- Selling devices with LuxyOS preinstalled, or offering LuxyOS as a managed service, under the LuxyOS name. LuxyOS itself may never be charged for separately.
 - Using the name or logo in a product name, company name or domain name.
 - Changing the logo or making merchandise.
 

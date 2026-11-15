@@ -65,6 +65,8 @@ A Windows `.exe` "migration assistant": check report → collect data → full W
 - One store for Windows apps, Linux apps and open-source apps from GitHub (imported automatically when the licence allows it).
 - Labels: *Verified* or *From GitHub*. Permissions from the manifest are shown before installation.
 - Developer mode, SDK, emulator, manifest per app.
+- Listing is free: no fees, no commission. The store handles no payments; a paid app's page shows the price and links to the developer's own website ([store terms](terms.md#2-store-terms-for-developers)).
+- Developer portal: request a listing, automatic checks, review with reasons, appeal.
 
 ## Europe and law
 
@@ -76,8 +78,8 @@ A Windows `.exe` "migration assistant": check report → collect data → full W
 - Digital Services Act for the store: traceable sellers, reporting of illegal apps, reasons for removals.
 - Online services (updates, store, registration, backup) run in the EU.
 
-## Updates and business model
+## Updates and funding
 
-- Free; registration optional. Security updates for everyone.
-- Atomic A/B updates with one-click rollback; Stable and Beta channels; LTS edition for business and government.
-- Income: business subscriptions, store commission, search engine partners.
+- Free and non-commercial for everyone, including businesses ([terms.md](terms.md), [decision 0011](decisions/0011-free-non-commercial-and-free-store.md)). Registration optional. Security updates for everyone.
+- Atomic A/B updates with one-click rollback; Stable and Beta channels; a free LTS edition for business and government.
+- Funding: donations, open-source grants and sponsors without influence on the product. No income from users, the store or search engines.

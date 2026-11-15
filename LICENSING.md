@@ -26,6 +26,10 @@ LuxyOS uses three licences, one for each kind of work. All three are free and op
 - Every new source file starts with an SPDX header, for example `// SPDX-License-Identifier: GPL-3.0-or-later` or `# SPDX-License-Identifier: Apache-2.0`.
 - Sign off your commits (`git commit -s`, Developer Certificate of Origin). See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Free and non-commercial
+
+LuxyOS is free for everyone and the project is non-commercial ([docs/terms.md](docs/terms.md)). GPL-3.0 does not allow a ban on commercial use, and LuxyOS builds on GPL software (Linux, Wine), so the licence cannot add one. Companies may use LuxyOS freely. What is protected is the name: nobody may charge for LuxyOS itself under the LuxyOS name ([TRADEMARKS.md](TRADEMARKS.md)).
+
 ## EU rules
 
 LuxyOS follows EU law in every country ([docs/europe.md](docs/europe.md)). An open-source licence cannot require users to follow EU law, so the rules for partners (distributors, device makers, store developers and managed service providers) are set in the store terms, partner agreements and the [trademark policy](TRADEMARKS.md).

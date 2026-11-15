@@ -16,7 +16,8 @@ It only starts what you use, runs your Windows programs, and sends nothing witho
 | **Fast (on-demand)** | At boot only a small *broker* runs. Services and drivers start when an app asks for them and stop when nobody uses them. Closing a program really closes it. |
 | **Windows programs** | `.exe` files install with a double click, via Wine and Proton. Honest compatibility labels show what works. |
 | **Privacy** | No telemetry, no advertising ID, no ads. Nothing leaves the computer without the user's permission. |
-| **Free** | LuxyOS is free. Registration is always optional; security updates are for everyone. |
+| **Free and non-commercial** | LuxyOS is free for everyone: no paid editions, no ads, no data sales. Registration is optional; security updates are for everyone. |
+| **Free store for developers** | Developers list their apps for free, with no commission. Paid apps are sold on the developer's own website. See [docs/terms.md](docs/terms.md). |
 | **Choice** | The user picks browser, search engine and antivirus. Administrators decide whether AI is allowed, local only, or blocked. |
 | **Business ready** | Active Directory, Remote Desktop (server and client), certificates, PowerShell, a winget-like package manager and remote management. |
 | **Familiar** | A desktop layout that Windows users recognise, with its own look. Easy to use without a command line. |
@@ -59,6 +60,7 @@ LuxyOS is built on the **Linux kernel**, with its own on-demand **broker** (Rust
 | [docs/architecture.md](docs/architecture.md) | Layers, components and how on-demand works |
 | [docs/requirements.md](docs/requirements.md) | What must work, per area and per target group |
 | [docs/roadmap.md](docs/roadmap.md) | Phases and the first build steps |
+| [docs/terms.md](docs/terms.md) | Terms: free and non-commercial, and the store terms for developers |
 | [docs/europe.md](docs/europe.md) | Made for Europe: EU law as the baseline and what it means for LuxyOS |
 | [docs/languages.md](docs/languages.md) | Languages, regions and translation |
 | [docs/brand.md](docs/brand.md) | Logo, colours and animation |

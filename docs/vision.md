@@ -8,7 +8,7 @@ LuxyOS is a fast, free and honest operating system for people and businesses who
 2. **Closing means closing.** When the last window of a program closes, all its processes stop. Running in the background requires the user's permission.
 3. **Nothing leaves without permission.** No telemetry, no advertising ID, no selling of data. Every connection is visible in a privacy overview.
 4. **Familiar and easy.** A desktop layout Windows users recognise. No command line needed for normal use. Clear error messages with a solution.
-5. **Free and voluntary.** Free to use. Registration is optional. Security updates for everyone.
+5. **Free and non-commercial.** Free for every person and every organisation. No paid editions, no ads, no data sales, no store commission. Registration is optional; security updates are for everyone. See [terms.md](terms.md).
 6. **Choice.** Browser, search engine and antivirus are chosen by the user. Administrators choose whether AI is allowed.
 7. **Honest.** Never promise that everything works. Compatibility labels say what works, what partly works and what does not.
 8. **Made for Europe.** EU law (privacy, security, accessibility, AI) is the minimum standard, in every country. One version for everyone; online services run in the EU. See [europe.md](europe.md).
