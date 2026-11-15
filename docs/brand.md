@@ -31,6 +31,7 @@ LinkedIn uses its own sizes. On covers and banners, the company logo or profile 
 | File | Size | Use |
 | --- | --- | --- |
 | [linkedin-logo-300.png](../brand/social/linkedin/linkedin-logo-300.png), [light](../brand/social/linkedin/linkedin-logo-300-light.png) | 300 × 300 | Logo of the LuxyOS company page |
+| [linkedin-logo-300-domain.png](../brand/social/linkedin/linkedin-logo-300-domain.png), [light](../brand/social/linkedin/linkedin-logo-300-domain-light.png) | 300 × 300 | Logo with luxyos.com underneath. The plain logo reads better when LinkedIn shows it very small |
 | [linkedin-company-cover-1128x191.png](../brand/social/linkedin/linkedin-company-cover-1128x191.png) | 1128 × 191 | Cover image of the company page |
 | [linkedin-profile-banner-1584x396.png](../brand/social/linkedin/linkedin-profile-banner-1584x396.png) | 1584 × 396 | Background banner of a personal profile |
 | [linkedin-post-1200x1200-en.png](../brand/social/linkedin/linkedin-post-1200x1200-en.png), [nl](../brand/social/linkedin/linkedin-post-1200x1200-nl.png) | 1200 × 1200 | Image for a post |
