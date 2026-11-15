@@ -2,7 +2,7 @@
 
 Stand: 15 november 2026
 
-**Steun LuxyOS: [Donatie LuxyOS](https://paypal.me/nijazo)** via PayPal (paypal.me/nijazo). LuxyOS is gratis en niet-commercieel; donaties betalen servers, testapparatuur en ontwikkeling.
+**Steun LuxyOS: [Donatie LuxyOS](https://paypal.me/NOmanovic)** via PayPal (paypal.me/NOmanovic). LuxyOS is gratis en niet-commercieel; donaties betalen servers, testapparatuur en ontwikkeling.
 
 ## Visie en uitgangspunten
 
@@ -992,7 +992,7 @@ LuxyOS is een gratis besturingssysteem voor iedere persoon en geen commercieel p
 
 - **Gratis voor iedereen:** particulieren, scholen, verenigingen, overheden en bedrijven. Geen betaalde versies, geen abonnementen, geen advertenties en geen verkoop van gegevens.
 - **Kosten** worden betaald uit donaties, subsidies voor open source (EU en nationaal) en sponsors. Sponsors krijgen geen invloed op het product en geen gegevens.
-- **Doneren** kan via PayPal: [paypal.me/nijazo](https://paypal.me/nijazo). Een donatie is vrijwillig en geeft geen rechten of invloed. Elk jaar komt er een overzicht van wat binnenkomt en waaraan het wordt besteed. De knop staat ook op de website ("Donate to LuxyOS" in het Engels, "Donatie LuxyOS" in het Nederlands) en op GitHub.
+- **Doneren** kan via PayPal: [paypal.me/NOmanovic](https://paypal.me/NOmanovic). Een donatie is vrijwillig en geeft geen rechten of invloed. Elk jaar komt er een overzicht van wat binnenkomt en waaraan het wordt besteed. De knop staat ook op de website ("Donate to LuxyOS" in het Engels, "Donatie LuxyOS" in het Nederlands) en op GitHub.
 - **Supporterslijst (vrijwillig).** Donateurs zijn standaard anoniem; de site toont alleen hoeveel anonieme donateurs er zijn. Vóór het betalen kiest de donateur in het PayPal-bericht: niets (anoniem), "Toon: naam", "Toon: naam + bedrag" of "Logo: naam" (vanaf €100 in één betaling). Een logo staat 12 maanden op de site, altijd als kleine WebP-afbeelding (maximaal 160 × 64 pixels) en zonder link; daarna blijft de naam staan. Op de lijst komt iemand pas als de betaling gelukt is. We tonen alleen wat de donateur koos, nooit e-mail of betaalgegevens. Intrekken kan altijd per e-mail; bij de volgende update gaat de naam eraf. De lijst staat niet op GitHub, omdat namen daar nooit helemaal te wissen zijn.
 - **Contact.** sponsors@luxyos.com voor sponsors en voor wie van de supporterslijst af wil; security@luxyos.com voor het melden van beveiligingslekken.
 - **Niemand mag geld vragen voor LuxyOS zelf** onder de naam LuxyOS (merkbeleid). Geld vragen voor eigen werk mag wel: installatiehulp, ondersteuning, training of hardware, als de klant hoort dat LuxyOS zelf gratis is.

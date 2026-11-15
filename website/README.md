@@ -14,7 +14,7 @@ Edit texts in `src/build.py`, then run `python3 website/src/build.py`. Translati
 | [src/logo.py](src/logo.py) | Turns a sponsor logo into a small WebP (max 320 × 128, shown at 160 × 64). Logos go in `img/sponsors/` in the webroot, never in Git |
 
 - Self-contained: no external fonts, scripts, trackers or cookies. Keep it that way; the footer promises it.
-- The donate button is a plain link to PayPal (paypal.me/nijazo), with no PayPal script. On screens wider than 760 px a PayPal QR code (`img/paypal-qr.webp`, 280 px, checked to scan) is shown next to it; phones do not load it.
+- The donate button is a plain link to PayPal (paypal.me/NOmanovic), with no PayPal script. On screens wider than 760 px a PayPal QR code (`img/paypal-qr.webp`, 280 px, checked to scan) is shown next to it; phones do not load it.
 - Images are served from luxyos.com itself, so the page still loads nothing from other websites. `SHA256SUMS` lists every file for checking after upload.
 - Supporters list: shown on every page; removal requests go to `CONTACT` (sponsors@luxyos.com) in `src/build.py`. Donors opt in themselves; see [docs/terms.md](../docs/terms.md).
 - GitHub is linked in the top bar, the developers block and the footer.

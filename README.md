@@ -5,7 +5,7 @@
 <p align="center"><strong>A fast, free and honest operating system.</strong><br>
 It only starts what you use, runs your Windows programs, and sends nothing without your permission.</p>
 
-<p align="center"><a href="https://luxyos.com"><strong>luxyos.com</strong></a> · <a href="https://luxyos.com/nl/">Nederlands</a> · <a href="#how-to-help">Help build it</a> · <a href="https://paypal.me/nijazo">Donate to LuxyOS</a></p>
+<p align="center"><a href="https://luxyos.com"><strong>luxyos.com</strong></a> · <a href="https://luxyos.com/nl/">Nederlands</a> · <a href="#how-to-help">Help build it</a> · <a href="https://paypal.me/NOmanovic">Donate to LuxyOS</a></p>
 
 ---
 
@@ -84,7 +84,7 @@ The project language is **English**. LuxyOS itself starts with English (default)
 
 LuxyOS is free and non-commercial. It is paid for by donations, grants and sponsors, never by users, ads or data.
 
-<p><a href="https://paypal.me/nijazo"><strong>Donate to LuxyOS</strong></a> · via PayPal (paypal.me/nijazo)</p>
+<p><a href="https://paypal.me/NOmanovic"><strong>Donate to LuxyOS</strong></a> · via PayPal (paypal.me/NOmanovic)</p>
 
 - Donations pay for servers, test hardware, development and legal advice (trademark, CRA, privacy).
 - Donating is voluntary and gives no rights or influence over the product ([LEGAL.md](LEGAL.md)).

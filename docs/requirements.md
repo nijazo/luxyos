@@ -83,4 +83,4 @@ A Windows `.exe` "migration assistant": check report → collect data → full W
 
 - Free and non-commercial for everyone, including businesses ([terms.md](terms.md), [decision 0011](decisions/0011-free-non-commercial-and-free-store.md)). Registration optional. Security updates for everyone.
 - Atomic A/B updates with one-click rollback; Stable and Beta channels; a free LTS edition for business and government.
-- Funding: donations (PayPal: [paypal.me/nijazo](https://paypal.me/nijazo)), open-source grants and sponsors without influence on the product. No income from users, the store or search engines.
+- Funding: donations (PayPal: [paypal.me/NOmanovic](https://paypal.me/NOmanovic)), open-source grants and sponsors without influence on the product. No income from users, the store or search engines.
