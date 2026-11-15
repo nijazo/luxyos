@@ -107,7 +107,22 @@ section.status .wrap { padding-top: 40px; padding-bottom: 72px; }
 .stappen li { padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,0.1); font-size: 14px; font-weight: 600; }
 .stappen li.nu { background: var(--zon); color: #13243b; }
 .stappen li.doel { box-shadow: inset 0 0 0 2px var(--zon); }
+.gh { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 999px; border: 1px solid var(--rand); color: var(--tekst); }
+.gh svg { width: 18px; height: 18px; }
+.gh:hover { background: var(--bg-zacht); }
+.gh:focus-visible, footer a:focus-visible { outline: 3px solid var(--zon); outline-offset: 2px; }
+section.supporters .wrap { padding-top: 40px; padding-bottom: 8px; }
+.sup-blok { border: 1px solid var(--rand); border-radius: 16px; background: var(--kaart); padding: 26px; display: flex; flex-direction: column; gap: 12px; }
+.sup-blok h2 { margin: 0; }
+.sup-blok p { margin: 0; color: var(--tekst-zacht); max-width: 760px; }
+.sup-lijst { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.sup-lijst li { padding: 8px 14px; border-radius: 999px; background: var(--bg-zacht); font-weight: 600; }
+.sup-lijst li span { font-weight: 400; color: var(--tekst-zacht); margin-left: 6px; }
+.sup-leeg { font-style: italic; }
+.sup-blok a { color: var(--hemel); }
 footer { border-top: 1px solid var(--rand); }
+footer a { color: inherit; display: inline-flex; align-items: center; gap: 6px; }
+footer a svg { width: 16px; height: 16px; }
 footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; color: var(--tekst-zacht); font-size: 14px; }
 @media (max-width: 560px) {
   header .wrap { gap: 8px; }
@@ -121,6 +136,7 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
   .zon { width: 80px; height: 80px; right: 8%; bottom: 90px; }
   .status-blok { padding: 24px; }
   .mee .kaart { padding: 22px; }
+  .rechts .gh { display: none; }
 }
 @media (max-width: 380px) { header .label { display: none; } }
 </style>
@@ -134,6 +150,7 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <span class="woordmerk">Luxy<span>OS</span></span>
 </a>
 <div class="rechts">
+<a class="gh" href="https://github.com/nijazo/luxyos" rel="noopener" aria-label="LuxyOS op GitHub" title="LuxyOS op GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a>
 <span class="label"><i aria-hidden="true"></i>Binnenkort</span>
 <details class="talen">
 <summary aria-label="Taal: Nederlands">NL</summary>
@@ -254,7 +271,7 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 
 <footer>
 <div class="wrap">
-<span>© 2026 LuxyOS</span>
+<span>© 2026 LuxyOS · <a href="https://github.com/nijazo/luxyos" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>LuxyOS op GitHub</a></span>
 <span>Deze website gebruikt geen cookies en volgt je niet.</span>
 </div>
 </footer>

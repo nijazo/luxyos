@@ -7,6 +7,7 @@ Writes website/index.html (English) and website/<code>/index.html for the
 other languages. The pages load nothing from other websites.
 """
 import html
+import json
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -14,6 +15,9 @@ OUT = os.path.dirname(HERE)
 SITE = "https://luxyos.com/"
 GITHUB = "https://github.com/nijazo/luxyos"
 PAYPAL = "https://paypal.me/nijazo"
+# Address donors write to when they want to be removed from the supporters list.
+# The supporters block only appears on the site once this is filled in.
+CONTACT = ""
 
 # Order of the language menu: code, native name. English is the default at /.
 LANGS = [
@@ -380,6 +384,68 @@ T["tr"] = dict(
     foot="Bu web sitesi çerez kullanmaz ve seni izlemez.",
 )
 
+# Supporters list and GitHub link, per language. {email} is filled in from CONTACT.
+EXTRA = {
+    "en": dict(gh="LuxyOS on GitHub", sup_h="Thank you to our supporters",
+        sup_p="Being on this list is voluntary. You choose whether your name, and the amount, appear here.",
+        sup_how="Want to be listed? Write in your PayPal note: “Show: your name” for your name only, or “Show: your name + amount” to show the amount too. Without a note, your donation stays anonymous.",
+        sup_remove="Changed your mind? Email {email} and we remove you in the next update.",
+        sup_empty="No one is on the list yet."),
+    "nl": dict(gh="LuxyOS op GitHub", sup_h="Dank aan onze supporters",
+        sup_p="Op deze lijst staan is vrijwillig. Jij kiest of je naam, en het bedrag, hier komen te staan.",
+        sup_how="Wil je op de lijst? Schrijf in je PayPal-bericht: “Toon: je naam” voor alleen je naam, of “Toon: je naam + bedrag” om ook het bedrag te tonen. Zonder bericht blijft je donatie anoniem.",
+        sup_remove="Toch liever niet? Mail naar {email}, dan halen we je weg bij de volgende update.",
+        sup_empty="Er staat nog niemand op de lijst."),
+    "de": dict(gh="LuxyOS auf GitHub", sup_h="Danke an unsere Unterstützer",
+        sup_p="Auf dieser Liste zu stehen ist freiwillig. Du entscheidest, ob dein Name und der Betrag hier erscheinen.",
+        sup_how="Möchtest du auf die Liste? Schreib in deine PayPal-Nachricht: „Zeigen: dein Name“ für nur deinen Namen oder „Zeigen: dein Name + Betrag“, um auch den Betrag zu zeigen. Ohne Nachricht bleibt deine Spende anonym.",
+        sup_remove="Doch lieber nicht? Schreib an {email}, dann entfernen wir dich beim nächsten Update.",
+        sup_empty="Noch steht niemand auf der Liste."),
+    "fr": dict(gh="LuxyOS sur GitHub", sup_h="Merci à nos soutiens",
+        sup_p="Figurer sur cette liste est volontaire. Vous choisissez si votre nom, et le montant, apparaissent ici.",
+        sup_how="Vous souhaitez y figurer ? Écrivez dans votre message PayPal : « Afficher : votre nom » pour votre nom seul, ou « Afficher : votre nom + montant » pour montrer aussi le montant. Sans message, votre don reste anonyme.",
+        sup_remove="Vous changez d’avis ? Écrivez à {email} et nous vous retirerons lors de la prochaine mise à jour.",
+        sup_empty="Personne n’est encore sur la liste."),
+    "es": dict(gh="LuxyOS en GitHub", sup_h="Gracias a quienes nos apoyan",
+        sup_p="Aparecer en esta lista es voluntario. Tú eliges si tu nombre, y el importe, aparecen aquí.",
+        sup_how="¿Quieres aparecer? Escribe en tu mensaje de PayPal: «Mostrar: tu nombre» para mostrar solo tu nombre, o «Mostrar: tu nombre + importe» para mostrar también el importe. Sin mensaje, tu donación sigue siendo anónima.",
+        sup_remove="¿Cambias de opinión? Escribe a {email} y te quitaremos en la próxima actualización.",
+        sup_empty="Todavía no hay nadie en la lista."),
+    "hr": dict(gh="LuxyOS na GitHubu", sup_h="Hvala našim podržavateljima",
+        sup_p="Biti na ovom popisu je dobrovoljno. Ti biraš hoće li se ovdje pojaviti tvoje ime i iznos.",
+        sup_how="Želiš li biti na popisu? U PayPal poruci napiši: „Prikaži: tvoje ime” samo za ime ili „Prikaži: tvoje ime + iznos” da se prikaže i iznos. Bez poruke tvoja donacija ostaje anonimna.",
+        sup_remove="Želiš da te uklonimo? Piši na {email} i uklonit ćemo te u sljedećem ažuriranju.",
+        sup_empty="Na popisu još nema nikoga."),
+    "bs": dict(gh="LuxyOS na GitHubu", sup_h="Hvala našim podržavaocima",
+        sup_p="Biti na ovoj listi je dobrovoljno. Ti biraš hoće li se ovdje pojaviti tvoje ime i iznos.",
+        sup_how="Želiš li biti na listi? U PayPal poruci napiši: „Prikaži: tvoje ime“ samo za ime ili „Prikaži: tvoje ime + iznos“ da se prikaže i iznos. Bez poruke tvoja donacija ostaje anonimna.",
+        sup_remove="Želiš da te uklonimo? Piši na {email} i uklonit ćemo te u sljedećem ažuriranju.",
+        sup_empty="Na listi još nema nikoga."),
+    "sr": dict(gh="LuxyOS на GitHub-у", sup_h="Хвала нашим подржаваоцима",
+        sup_p="Бити на овој листи је добровољно. Ти бираш да ли ће се овде појавити твоје име и износ.",
+        sup_how="Желиш ли да будеш на листи? У PayPal поруци напиши: „Прикажи: твоје име“ само за име или „Прикажи: твоје име + износ“ да се прикаже и износ. Без поруке твоја донација остаје анонимна.",
+        sup_remove="Желиш да те уклонимо? Пиши на {email} и уклонићемо те у следећем ажурирању.",
+        sup_empty="На листи још нема никога."),
+    "sq": dict(gh="LuxyOS në GitHub", sup_h="Faleminderit mbështetësve tanë",
+        sup_p="Të jesh në këtë listë është vullnetare. Ti zgjedh nëse emri yt dhe shuma shfaqen këtu.",
+        sup_how="Dëshiron të jesh në listë? Shkruaj në mesazhin e PayPal: “Shfaq: emri yt” vetëm për emrin, ose “Shfaq: emri yt + shuma” për të treguar edhe shumën. Pa mesazh, dhurimi yt mbetet anonim.",
+        sup_remove="Dëshiron të të heqim? Shkruaj te {email} dhe do të të heqim në përditësimin e radhës.",
+        sup_empty="Ende nuk ka askënd në listë."),
+    "mk": dict(gh="LuxyOS на GitHub", sup_h="Благодарност до нашите поддржувачи",
+        sup_p="Да бидеш на оваа листа е доброволно. Ти избираш дали тука ќе се појават твоето име и износот.",
+        sup_how="Сакаш да бидеш на листата? Во пораката на PayPal напиши: „Прикажи: твоето име“ само за името или „Прикажи: твоето име + износ“ за да се прикаже и износот. Без порака, твојата донација останува анонимна.",
+        sup_remove="Сакаш да те отстраниме? Пиши на {email} и ќе те отстраниме во следното ажурирање.",
+        sup_empty="Сè уште нема никој на листата."),
+    "tr": dict(gh="GitHub’da LuxyOS", sup_h="Destekçilerimize teşekkürler",
+        sup_p="Bu listede yer almak gönüllüdür. Adının ve bağış miktarının burada görünüp görünmeyeceğine sen karar verirsin.",
+        sup_how="Listede yer almak ister misin? Yalnızca adın için PayPal mesajına “Göster: adın” yaz; miktarı da göstermek için “Göster: adın + miktar” yaz. Mesaj yazmazsan bağışın anonim kalır.",
+        sup_remove="Listeden çıkmak mı istiyorsun? {email} adresine yaz, bir sonraki güncellemede seni kaldıralım.",
+        sup_empty="Listede henüz kimse yok."),
+}
+for _c, _x in EXTRA.items():
+    T[_c].update(_x)
+
+
 CSS = r"""
 :root {
   --zon: #F5A524; --nacht: #13243b; --hemel: #2563c9;
@@ -465,7 +531,22 @@ section.status .wrap { padding-top: 40px; padding-bottom: 72px; }
 .stappen li { padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,0.1); font-size: 14px; font-weight: 600; }
 .stappen li.nu { background: var(--zon); color: #13243b; }
 .stappen li.doel { box-shadow: inset 0 0 0 2px var(--zon); }
+.gh { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 999px; border: 1px solid var(--rand); color: var(--tekst); }
+.gh svg { width: 18px; height: 18px; }
+.gh:hover { background: var(--bg-zacht); }
+.gh:focus-visible, footer a:focus-visible { outline: 3px solid var(--zon); outline-offset: 2px; }
+section.supporters .wrap { padding-top: 40px; padding-bottom: 8px; }
+.sup-blok { border: 1px solid var(--rand); border-radius: 16px; background: var(--kaart); padding: 26px; display: flex; flex-direction: column; gap: 12px; }
+.sup-blok h2 { margin: 0; }
+.sup-blok p { margin: 0; color: var(--tekst-zacht); max-width: 760px; }
+.sup-lijst { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.sup-lijst li { padding: 8px 14px; border-radius: 999px; background: var(--bg-zacht); font-weight: 600; }
+.sup-lijst li span { font-weight: 400; color: var(--tekst-zacht); margin-left: 6px; }
+.sup-leeg { font-style: italic; }
+.sup-blok a { color: var(--hemel); }
 footer { border-top: 1px solid var(--rand); }
+footer a { color: inherit; display: inline-flex; align-items: center; gap: 6px; }
+footer a svg { width: 16px; height: 16px; }
 footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; color: var(--tekst-zacht); font-size: 14px; }
 @media (max-width: 560px) {
   header .wrap { gap: 8px; }
@@ -479,6 +560,7 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
   .zon { width: 80px; height: 80px; right: 8%; bottom: 90px; }
   .status-blok { padding: 24px; }
   .mee .kaart { padding: 22px; }
+  .rechts .gh { display: none; }
 }
 @media (max-width: 380px) { header .label { display: none; } }
 """
@@ -509,6 +591,46 @@ def e(s):
 
 def icon(key):
     return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICON[key]}</svg>'
+
+
+def load_supporters():
+    """The real list lives in supporters.private.json, which is never committed
+    (names in a public Git history cannot be erased). The public supporters.json
+    stays empty and only documents the format."""
+    private = os.path.join(HERE, "supporters.private.json")
+    path = private if os.path.exists(private) else os.path.join(HERE, "supporters.json")
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)["supporters"]
+
+
+def supporters_html(t):
+    """The supporters block; empty until CONTACT is filled in."""
+    if not CONTACT:
+        return ""
+    people = load_supporters()
+    if people:
+        items = "\n".join(
+            f'<li>{e(p["name"])}' + (f'<span>{e(p["amount"])}</span>' if p.get("amount") else "") + "</li>"
+            for p in people
+        )
+        lijst = f'<ul class="sup-lijst">\n{items}\n</ul>'
+    else:
+        lijst = f'<p class="sup-leeg">{e(t["sup_empty"])}</p>'
+    mail = f'<a href="mailto:{CONTACT}">{e(CONTACT)}</a>'
+    remove = e(t["sup_remove"]).replace("{email}", mail)
+    return f"""<section class="supporters" id="supporters">
+<div class="wrap">
+<div class="sup-blok">
+<h2>{e(t["sup_h"])}</h2>
+<p>{e(t["sup_p"])}</p>
+{lijst}
+<p>{e(t["sup_how"])}</p>
+<p>{remove}</p>
+</div>
+</div>
+</section>
+
+"""
 
 
 def page(code):
@@ -560,6 +682,7 @@ def page(code):
 <span class="woordmerk">Luxy<span>OS</span></span>
 </a>
 <div class="rechts">
+<a class="gh" href="{GITHUB}" rel="noopener" aria-label="{e(t["gh"])}" title="{e(t["gh"])}">{GH}</a>
 <span class="label"><i aria-hidden="true"></i>{e(t["soon"])}</span>
 <details class="talen">
 <summary aria-label="{e(t["lang"])}: {e(native)}">{code.upper()}</summary>
@@ -627,7 +750,7 @@ def page(code):
 </div>
 </section>
 
-<section class="status">
+{supporters_html(t)}<section class="status">
 <div class="wrap">
 <div class="status-blok">
 <div>
@@ -647,7 +770,7 @@ def page(code):
 
 <footer>
 <div class="wrap">
-<span>© 2026 LuxyOS</span>
+<span>© 2026 LuxyOS · <a href="{GITHUB}" rel="noopener">{GH}{e(t["gh"])}</a></span>
 <span>{e(t["foot"])}</span>
 </div>
 </footer>

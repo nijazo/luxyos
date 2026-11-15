@@ -1,3 +1,4 @@
 .DS_Store
 Thumbs.db
 *.swp
+website/src/supporters.private.json

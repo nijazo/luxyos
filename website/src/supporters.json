@@ -1,0 +1,11 @@
+{
+  "_rules": [
+    "This public file stays EMPTY. Keep the real list in supporters.private.json next to it: that file is git-ignored, because names in a public Git history can never be fully removed.",
+    "Only add people who asked for it themselves, for example in their PayPal note ('Show: name' or 'Show: name + amount').",
+    "Show the name exactly as they wrote it (first name or nickname is fine). Never add e-mail addresses or PayPal details.",
+    "Only fill in 'amount' if they asked to show the amount, for example \"€25\". Otherwise leave it out.",
+    "Remove anyone who asks, in the next update. Newest supporters first.",
+    "Format of an entry: {\"name\": \"Sanne\", \"amount\": \"€25\"} or {\"name\": \"Mehmet\"}."
+  ],
+  "supporters": []
+}

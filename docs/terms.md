@@ -13,6 +13,13 @@
 
 The GPL-3.0 licence allows anyone to use the code, including companies. The non-commercial character of LuxyOS is protected by these terms and the trademark policy, not by the licence ([LICENSING.md](../LICENSING.md)).
 
+### Supporters list (optional)
+
+- Donors are anonymous by default. A donor appears on the supporters list on luxyos.com only if they ask for it, for example in the PayPal note: "Show: name" (name only) or "Show: name + amount".
+- We show only what they chose: the name as they wrote it (a first name or nickname is fine) and, if asked, the amount. Never e-mail addresses or payment details.
+- The legal basis is consent (GDPR article 6(1)(a)). Anyone can withdraw at any time by e-mail; they are removed in the next update of the site.
+- The list is not stored in the public GitHub repository, because names in a public Git history cannot be fully removed. It is kept privately by the owner and used only to build the live website.
+
 ## 2. Store terms for developers
 
 ### Free to list
