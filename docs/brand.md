@@ -10,6 +10,8 @@ A ring that is almost closed, with a small sun in the opening. The ring only loa
 | [luxyos-logo-white.svg](../brand/luxyos-logo-white.svg) | Logo on dark backgrounds |
 | [luxyos-app-icon.svg](../brand/luxyos-app-icon.svg), [512 px PNG](../brand/luxyos-app-icon-512.png) | App icon |
 | [luxyos-logo-animated.svg](../brand/luxyos-logo-animated.svg) | Animation |
+| [luxyos-logo-1024.png](../brand/luxyos-logo-1024.png), [white](../brand/luxyos-logo-white-1024.png) | Logo as PNG, 1024 × 1024, transparent background |
+| [luxyos-wordmark.png](../brand/luxyos-wordmark.png), [white](../brand/luxyos-wordmark-white.png) | Logo with the name "LuxyOS", transparent background |
 
 ![Logo sheet](design/20-logo-ring-of-light.png)
 
