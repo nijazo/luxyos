@@ -395,7 +395,7 @@ for _c, _x in QR.items():
     T[_c].update(_x)
 
 # Button in the top bar that scrolls to the donation box.
-HELP = {'en': 'Help us', 'nl': 'Help ons', 'de': 'Hilf uns', 'fr': 'Aidez-nous', 'es': 'Ayúdanos', 'hr': 'Pomozi nam', 'bs': 'Pomozi nam', 'sr': 'Помози нам', 'sq': 'Na ndihmo', 'mk': 'Помогни ни', 'tr': 'Yardım et'}
+HELP = {'en': 'Support us', 'nl': 'Steun ons', 'de': 'Unterstütze uns', 'fr': 'Soutenez-nous', 'es': 'Apóyanos', 'hr': 'Podrži nas', 'bs': 'Podrži nas', 'sr': 'Подржи нас', 'sq': 'Na mbështet', 'mk': 'Поддржи нѐ', 'tr': 'Bizi destekle'}
 for _c, _x in HELP.items():
     T[_c]['help'] = _x
 
@@ -544,7 +544,18 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
   .rechts .gh { display: none; }
 }
 @media (max-width: 560px) { header .label { display: none; } .help { padding: 5px 12px; font-size: 13px; } }
-@media (max-width: 380px) { h1 { font-size: 30px; } .help svg { display: none; } }
+@media (max-width: 380px) {
+  h1 { font-size: 30px; }
+  header .wrap { padding-left: 14px; padding-right: 14px; gap: 6px; }
+  .merk { gap: 6px; }
+  .merk svg { width: 28px; height: 28px; }
+  .woordmerk { font-size: 17px; }
+  .rechts { gap: 4px; }
+  .help { padding: 5px 10px; font-size: 12.5px; }
+  .help svg { display: none; }
+  .talen summary { padding: 5px 8px; }
+}
+@media (max-width: 380px) and (pointer: coarse) { .help { padding: 0 10px; } .talen summary { padding: 0 9px; } }
 /* Touch screens: every tap target at least 44 x 44 pixels */
 @media (pointer: coarse) {
   .talen summary { min-height: 44px; padding: 0 14px; }
