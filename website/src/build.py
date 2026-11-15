@@ -516,10 +516,14 @@ section.supporters .wrap { padding-top: 40px; padding-bottom: 8px; }
 .sup-lijst li span { font-weight: 400; color: var(--tekst-zacht); margin-left: 6px; }
 .sup-leeg { font-style: italic; }
 .sup-blok h3 { margin: 6px 0 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--tekst-zacht); }
-.logos { display: flex; flex-wrap: wrap; gap: 14px; list-style: none; margin: 0; padding: 0; }
-.logos li { display: grid; gap: 6px; justify-items: center; padding: 10px; border: 1px solid var(--rand); border-radius: 12px; background: #ffffff; }
-.logos img { width: 160px; height: 64px; object-fit: contain; display: block; }
-.logos span { font-size: 13px; color: #3d4b61; }
+.logos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; list-style: none; margin: 0; padding: 0; }
+.logos li { display: grid; gap: 6px; justify-items: center; align-content: center; padding: 10px; border: 1px solid var(--rand); border-radius: 12px; background: #ffffff; min-width: 0; }
+.logos img { width: 100%; max-width: 160px; height: auto; aspect-ratio: 160 / 64; object-fit: contain; display: block; }
+.logos span { font-size: 13px; color: #3d4b61; text-align: center; overflow-wrap: anywhere; }
+.logos li { gap: 2px; }
+.logos img { margin-bottom: 4px; }
+.logos .bedrag { font-weight: 600; color: #13243b; }
+@media (max-width: 760px) { .logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .logos li { padding: 8px; } .logos span { font-size: 12px; } }
 .betaald { margin: 0; padding: 10px 12px; border-radius: 10px; background: #e5f4e4; color: #14532d !important; font-size: 14px; font-weight: 600; }
 .sup-blok a, .mee .klein a { color: var(--hemel); }
 footer { border-top: 1px solid var(--rand); }
@@ -665,7 +669,7 @@ def supporters_html(t, root, out):
     if logos:
         items = "\n".join(
             f'<li><img src="{root}img/sponsors/{sp["logo"]}" width="160" height="64" alt="{e(sp["name"])}" loading="lazy">'
-            f'<span>{e(sp["name"])}{(" · " + e(sp["amount"])) if sp.get("amount") else ""}</span></li>'
+            f'<span>{e(sp["name"])}</span>{("<span class=" + chr(34) + "bedrag" + chr(34) + ">" + e(sp["amount"]) + "</span>") if sp.get("amount") else ""}</li>'
             for sp in logos
         )
         parts.append(f'<h3>{e(t["sp_h"])}</h3>\n<ul class="logos">\n{items}\n</ul>')
