@@ -104,6 +104,10 @@ section.mee .wrap { padding-top: 56px; padding-bottom: 8px; }
 .knop { display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 12px; background: var(--hemel); color: #ffffff; font-weight: 700; font-size: 16px; text-decoration: none; }
 .knop.tweede { background: var(--nacht); }
 .knop:hover { filter: brightness(1.08); }
+.qr { display: none; margin: 4px 0 0; }
+.qr img { display: block; width: 280px; height: 280px; border-radius: 12px; border: 1px solid var(--rand); background: #ffffff; }
+.qr figcaption { margin-top: 8px; font-size: 14px; color: var(--tekst-zacht); }
+@media (min-width: 761px) { .qr { display: block; } }
 .knop svg { width: 20px; height: 20px; flex-shrink: 0; }
 @media (prefers-color-scheme: dark) { .knop { color: #0e1828; } .knop.tweede { background: #ffffff; } }
 section.status .wrap { padding-top: 40px; padding-bottom: 72px; }
@@ -299,6 +303,7 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <p>Unterstütze das Projekt finanziell. Sponsoren erhalten keinen Einfluss auf das Produkt und keine Nutzerdaten.</p>
 <p class="vrijwillig">Eine freiwillige Spende für LuxyOS: Das Geld geht an das Projekt LuxyOS.</p>
 <a class="knop" href="https://paypal.me/nijazo" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>An LuxyOS spenden</a>
+<figure class="qr"><img src="../img/paypal-qr.webp" width="280" height="280" alt="PayPal-QR-Code zum Spenden an LuxyOS" loading="lazy" decoding="async"><figcaption>Oder scanne mit deinem Handy, um über PayPal zu spenden.</figcaption></figure>
 <p class="klein">Über PayPal (paypal.me/nijazo). Eine Spende ist freiwillig und gibt keine Rechte und keinen Einfluss.</p>
 <p class="klein">Als Unternehmen oder Organisation sponsern? Schreib an <a href="mailto:sponsors@luxyos.com">sponsors@luxyos.com</a>.</p>
 </article>

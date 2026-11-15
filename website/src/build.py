@@ -389,6 +389,11 @@ STORY = {k: dict(word=v[0], rows=v[1]) for k, v in {'en': ('Design', [('Works th
 for _c, _x in STORY.items():
     T[_c]['story'] = _x
 
+# PayPal QR code next to the donate button (shown on larger screens only).
+QR = {'en': {'qr_scan': 'Or scan with your phone to donate via PayPal.', 'qr_alt': 'PayPal QR code for donating to LuxyOS'}, 'nl': {'qr_scan': 'Of scan met je telefoon om te doneren via PayPal.', 'qr_alt': 'PayPal-QR-code om te doneren aan LuxyOS'}, 'de': {'qr_scan': 'Oder scanne mit deinem Handy, um über PayPal zu spenden.', 'qr_alt': 'PayPal-QR-Code zum Spenden an LuxyOS'}, 'fr': {'qr_scan': 'Ou scannez avec votre téléphone pour faire un don via PayPal.', 'qr_alt': 'Code QR PayPal pour faire un don à LuxyOS'}, 'es': {'qr_scan': 'O escanea con tu móvil para donar a través de PayPal.', 'qr_alt': 'Código QR de PayPal para donar a LuxyOS'}, 'hr': {'qr_scan': 'Ili skeniraj mobitelom i doniraj putem PayPala.', 'qr_alt': 'PayPal QR kod za donaciju LuxyOS-u'}, 'bs': {'qr_scan': 'Ili skeniraj telefonom i doniraj putem PayPala.', 'qr_alt': 'PayPal QR kod za donaciju LuxyOS-u'}, 'sr': {'qr_scan': 'Или скенирај телефоном и донирај преко PayPal-а.', 'qr_alt': 'PayPal QR код за донацију LuxyOS-у'}, 'sq': {'qr_scan': 'Ose skano me telefon për të dhuruar përmes PayPal.', 'qr_alt': 'Kodi QR i PayPal për të dhuruar për LuxyOS'}, 'mk': {'qr_scan': 'Или скенирај со телефонот и донирај преку PayPal.', 'qr_alt': 'PayPal QR-код за донација за LuxyOS'}, 'tr': {'qr_scan': 'Ya da PayPal ile bağış yapmak için telefonunla tara.', 'qr_alt': 'LuxyOS’a bağış için PayPal QR kodu'}}
+for _c, _x in QR.items():
+    T[_c].update(_x)
+
 CSS = r"""
 :root {
   --zon: #F5A524; --nacht: #13243b; --hemel: #2563c9;
@@ -471,6 +476,10 @@ section.mee .wrap { padding-top: 56px; padding-bottom: 8px; }
 .knop { display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 12px; background: var(--hemel); color: #ffffff; font-weight: 700; font-size: 16px; text-decoration: none; }
 .knop.tweede { background: var(--nacht); }
 .knop:hover { filter: brightness(1.08); }
+.qr { display: none; margin: 4px 0 0; }
+.qr img { display: block; width: 280px; height: 280px; border-radius: 12px; border: 1px solid var(--rand); background: #ffffff; }
+.qr figcaption { margin-top: 8px; font-size: 14px; color: var(--tekst-zacht); }
+@media (min-width: 761px) { .qr { display: block; } }
 .knop svg { width: 20px; height: 20px; flex-shrink: 0; }
 @media (prefers-color-scheme: dark) { .knop { color: #0e1828; } .knop.tweede { background: #ffffff; } }
 section.status .wrap { padding-top: 40px; padding-bottom: 72px; }
@@ -770,6 +779,7 @@ def page(code):
 <p>{e(t["spon"][1])}</p>
 <p class="vrijwillig">{e(t["vol"])}</p>
 <a class="knop" href="{PAYPAL}" rel="noopener">{HEART}{e(t["spon"][2])}</a>
+<figure class="qr"><img src="{root}img/paypal-qr.webp" width="280" height="280" alt="{e(t["qr_alt"])}" loading="lazy" decoding="async"><figcaption>{e(t["qr_scan"])}</figcaption></figure>
 <p class="klein">{e(t["vol_small"])}</p>
 {mail_line(t)}
 </article>
