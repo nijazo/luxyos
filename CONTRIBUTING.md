@@ -1,5 +1,7 @@
 # Contributing to LuxyOS
 
+Website: [luxyos.com](https://luxyos.com)
+
 Thank you for wanting to help. LuxyOS is in the **design phase**: there is no source code yet. The most valuable help right now is research, small prototypes and review.
 
 ## Ways to help now

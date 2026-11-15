@@ -5,6 +5,8 @@
 <p align="center"><strong>A fast, free and honest operating system.</strong><br>
 It only starts what you use, runs your Windows programs, and sends nothing without your permission.</p>
 
+<p align="center"><a href="https://luxyos.com"><strong>luxyos.com</strong></a> · <a href="https://luxyos.com/nl/">Nederlands</a> · <a href="#how-to-help">Help build it</a> · <a href="https://paypal.me/nijazo">Donate to LuxyOS</a></p>
+
 ---
 
 > **Status: design phase.** There is no source code yet. This repository holds the plan, the designs and the decisions, so that developers can help shape and build the first version. **Our goal is a first test version in 2027.** We are looking for developers and sponsors; see [How to help](#how-to-help) and [Support LuxyOS](#support-luxyos).
@@ -64,6 +66,7 @@ LuxyOS is built on the **Linux kernel**, with its own on-demand **broker** (Rust
 | [docs/europe.md](docs/europe.md) | Made for Europe: EU law as the baseline and what it means for LuxyOS |
 | [docs/languages.md](docs/languages.md) | Languages, regions and translation |
 | [docs/brand.md](docs/brand.md) | Logo, colours and animation |
+| [website/](website/) | The website [luxyos.com](https://luxyos.com) in 11 languages, and how it is built |
 | [docs/design/](docs/design/) | Screen designs (desktop, store, privacy, device manager, Remote Desktop and more) |
 | [docs/decisions/](docs/decisions/) | Architecture decision records (ADRs) |
 | [docs/good-first-tasks.md](docs/good-first-tasks.md) | Research and prototype tasks you can pick up now |
@@ -103,4 +106,4 @@ The LuxyOS name and logo are trademarks ([TRADEMARKS.md](TRADEMARKS.md)). Detail
 
 ---
 
-<p align="center">luxyos.com · luxyos.nl · luxyos.eu</p>
+<p align="center">Website: <a href="https://luxyos.com">luxyos.com</a> (11 languages)</p>
