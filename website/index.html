@@ -62,6 +62,14 @@ section.doneer .wrap { padding-top: 0; padding-bottom: 72px; }
 .knop:hover { filter: brightness(1.08); }
 .knop:focus-visible { outline: 3px solid var(--zon); outline-offset: 3px; }
 @media (prefers-color-scheme: dark) { .knop { color: #0e1828; } }
+section.blik .wrap { padding-top: 40px; padding-bottom: 8px; }
+.blik .sub { margin: -14px 0 22px; color: var(--tekst-zacht); max-width: 680px; }
+.blik figure { margin: 0; }
+.blik a { display: block; border-radius: 12px; }
+.blik a:focus-visible { outline: 3px solid var(--zon); outline-offset: 3px; }
+.blik img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--rand); box-shadow: 0 10px 30px rgba(19,36,59,0.12); background: var(--bg-zacht); }
+.blik figcaption { margin-top: 10px; font-size: 14px; color: var(--tekst-zacht); }
+.raster3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 26px; }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -172,6 +180,19 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <h3>Free</h3>
 <p>LuxyOS is free. Registering is always optional.</p>
 </article>
+</div>
+</div>
+</section>
+
+<section class="blik">
+<div class="wrap">
+<h2>A first look</h2>
+<p class="sub">Designs of what LuxyOS will look like. Not the final product; names and numbers are examples.</p>
+<figure><a href="img/desktop-en-1440.webp"><img src="img/desktop-en-1440.webp" srcset="img/desktop-en-720.webp 720w, img/desktop-en-1440.webp 1440w" sizes="(max-width: 1100px) 100vw, 1040px" width="1440" height="900" alt="LuxyOS desktop with the start menu open and the services panel" loading="lazy" decoding="async"></a><figcaption>Desktop with the start menu. Only the services you use are running.</figcaption></figure>
+<div class="raster3">
+<figure><a href="img/explorer-en-1440.webp"><img src="img/explorer-en-1440.webp" srcset="img/explorer-en-720.webp 720w, img/explorer-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Explorer with Documents open: folders on the left, files with date, type and size" loading="lazy" decoding="async"></a><figcaption>Explorer: your folders and files where you expect them.</figcaption></figure>
+<figure><a href="img/store-en-1440.webp"><img src="img/store-en-1440.webp" srcset="img/store-en-720.webp 720w, img/store-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Store with Windows programs and compatibility labels" loading="lazy" decoding="async"></a><figcaption>Store: Windows programs with honest compatibility labels.</figcaption></figure>
+<figure><a href="img/privacy-en-1440.webp"><img src="img/privacy-en-1440.webp" srcset="img/privacy-en-720.webp 720w, img/privacy-en-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Privacy overview showing which app connected to what" loading="lazy" decoding="async"></a><figcaption>Privacy overview: see which app connected to what.</figcaption></figure>
 </div>
 </div>
 </section>

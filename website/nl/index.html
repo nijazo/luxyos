@@ -62,6 +62,14 @@ section.doneer .wrap { padding-top: 0; padding-bottom: 72px; }
 .knop:hover { filter: brightness(1.08); }
 .knop:focus-visible { outline: 3px solid var(--zon); outline-offset: 3px; }
 @media (prefers-color-scheme: dark) { .knop { color: #0e1828; } }
+section.blik .wrap { padding-top: 40px; padding-bottom: 8px; }
+.blik .sub { margin: -14px 0 22px; color: var(--tekst-zacht); max-width: 680px; }
+.blik figure { margin: 0; }
+.blik a { display: block; border-radius: 12px; }
+.blik a:focus-visible { outline: 3px solid var(--zon); outline-offset: 3px; }
+.blik img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--rand); box-shadow: 0 10px 30px rgba(19,36,59,0.12); background: var(--bg-zacht); }
+.blik figcaption { margin-top: 10px; font-size: 14px; color: var(--tekst-zacht); }
+.raster3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 26px; }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -172,6 +180,19 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
 <h3>Gratis</h3>
 <p>LuxyOS is gratis. Registreren is altijd vrijwillig.</p>
 </article>
+</div>
+</div>
+</section>
+
+<section class="blik">
+<div class="wrap">
+<h2>Een eerste blik</h2>
+<p class="sub">Ontwerpen van hoe LuxyOS eruit gaat zien. Nog niet het eindproduct; namen en getallen zijn voorbeelden.</p>
+<figure><a href="../img/desktop-nl-1440.webp"><img src="../img/desktop-nl-1440.webp" srcset="../img/desktop-nl-720.webp 720w, ../img/desktop-nl-1440.webp 1440w" sizes="(max-width: 1100px) 100vw, 1040px" width="1440" height="900" alt="Bureaublad van LuxyOS met het startmenu open en het overzicht van diensten" loading="lazy" decoding="async"></a><figcaption>Bureaublad met startmenu. Alleen de diensten die je gebruikt, draaien.</figcaption></figure>
+<div class="raster3">
+<figure><a href="../img/explorer-nl-1440.webp"><img src="../img/explorer-nl-1440.webp" srcset="../img/explorer-nl-720.webp 720w, ../img/explorer-nl-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Verkenner met Documenten open: mappen links, bestanden met datum, type en grootte" loading="lazy" decoding="async"></a><figcaption>Verkenner: je mappen en bestanden waar je ze verwacht.</figcaption></figure>
+<figure><a href="../img/store-nl-1440.webp"><img src="../img/store-nl-1440.webp" srcset="../img/store-nl-720.webp 720w, ../img/store-nl-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="App-winkel met Windows-programma’s en labels die zeggen of ze werken" loading="lazy" decoding="async"></a><figcaption>App-winkel: Windows-programma’s met eerlijke labels.</figcaption></figure>
+<figure><a href="../img/privacy-nl-1440.webp"><img src="../img/privacy-nl-1440.webp" srcset="../img/privacy-nl-720.webp 720w, ../img/privacy-nl-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 340px" width="1440" height="900" alt="Privacyoverzicht dat laat zien welke app waarmee verbinding maakte" loading="lazy" decoding="async"></a><figcaption>Privacyoverzicht: zie welke app waarmee verbinding maakte.</figcaption></figure>
 </div>
 </div>
 </section>
