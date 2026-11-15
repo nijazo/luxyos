@@ -1084,6 +1084,8 @@ De grootste gaten zitten niet in functies, maar in software van andere makers, h
 
 ## Bouwvolgorde
 
+**Doel: een eerste testversie in 2027.** Dat is een doel, geen belofte: het hangt af van ontwikkelaars en sponsors. De website luxyos.com (live, in 11 talen) en GitHub zeggen dat we ontwikkelaars en sponsors zoeken.
+
 ![Bouwvolgorde in 4 fasen](design/diagram-bouwvolgorde.png)
 
 Fase 1 bewijst het on-demand idee in een virtuele machine. Pas als dat stabiel werkt, gaat het systeem naar echte computers. De tijden zijn schattingen voor één persoon.
