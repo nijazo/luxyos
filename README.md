@@ -77,7 +77,13 @@ The project language is **English**. LuxyOS itself starts with English (default)
 
 ## Licence
 
-To be decided before the first code is published. See [LICENSE.md](LICENSE.md).
+| What | Licence |
+| --- | --- |
+| The operating system | [GPL-3.0-or-later](LICENSE) |
+| The SDK for app developers | [Apache-2.0](LICENSE-APACHE) |
+| Documentation and designs | [CC BY 4.0](LICENSE-CC-BY) |
+
+The LuxyOS name and logo are trademarks ([TRADEMARKS.md](TRADEMARKS.md)). Details: [LICENSING.md](LICENSING.md).
 
 ---
 

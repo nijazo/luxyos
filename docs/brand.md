@@ -34,4 +34,6 @@ Used on the boot screen, login screen, Start button, app icon, favicon and websi
 
 "Luxy" bold, "OS" regular in Sky blue.
 
+The name and logo are trademarks and are not covered by CC BY 4.0. See [TRADEMARKS.md](../TRADEMARKS.md) for what is allowed.
+
 To do: check for similarity with existing logos before registering the trademark.

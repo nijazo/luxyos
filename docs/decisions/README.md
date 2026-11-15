@@ -13,5 +13,6 @@ Each file records one decision: the context, what was decided, and the consequen
 | [0007](0007-english-default-language.md) | English as default and project language | Proposed |
 | [0008](0008-read-only-system-with-ab-updates.md) | Read-only system image with A/B updates | Proposed |
 | [0009](0009-eu-law-as-baseline.md) | EU law as the baseline, in every country | Proposed |
+| [0010](0010-licences.md) | Licences: GPL-3.0 for the system, Apache-2.0 for the SDK, CC BY 4.0 for documents | Accepted |
 
 To propose a new decision, copy the format of an existing record and open a pull request.

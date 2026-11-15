@@ -40,5 +40,5 @@ This table is a starting point, not legal advice. Before the first release, a la
 ## Open points
 
 - Choose the EU member state and legal form of the organisation.
-- Check which licence fits (see [LICENSE.md](../LICENSE.md)). An open-source licence cannot require users to follow EU law. The rules for partners are set through store terms, partner agreements and the trademark policy for the LuxyOS name.
+- Licences are chosen ([LICENSING.md](../LICENSING.md)). An open-source licence cannot require users to follow EU law, so the rules for partners are set through store terms, partner agreements and the [trademark policy](../TRADEMARKS.md).
 - Plan the CRA conformity assessment for the first release.

@@ -1073,7 +1073,9 @@ Deze beslissingen staan nog open voordat de bouw begint.
 
 - [ ] Naam: LuxyOS gekozen, domeinen .com, .nl en .eu vastgelegd. Nog doen: merk registreren bij EUIPO.
 - [ ] Logo: Ring van licht gekozen en uitgewerkt, met animatie. Nog doen: controleren op gelijkenis met bestaande logo's.
-- [ ] Licentie kiezen voor de eigen code, passend bij GPL en LGPL van Linux en Wine.
+- [x] Licentie kiezen voor de eigen code, passend bij GPL en LGPL van Linux en Wine.
 - [ ] Team vormen: ontwikkelaars en testers.
 - [ ] Financiering zoeken: subsidie, crowdfunding of investeerders.
 - [ ] Website, documentatie en community opzetten.
+
+**Licentie gekozen:** GPL-3.0 voor het besturingssysteem zelf, Apache-2.0 voor de SDK waarmee app-makers bouwen, en CC BY 4.0 voor documentatie en ontwerpen. De naam LuxyOS en het logo zijn merken en vallen daar niet onder; daarvoor is er een merkbeleid.

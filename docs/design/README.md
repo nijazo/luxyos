@@ -29,4 +29,6 @@ Diagrams: [architecture](diagram-architecture.png) and [build order](diagram-bui
 
 English is the standard language for designs in this repository. The original Dutch versions are in [../nl/design/](../nl/design/).
 
+The designs are licensed under [CC BY 4.0](../../LICENSE-CC-BY); the LuxyOS name and logo are excluded ([TRADEMARKS.md](../../TRADEMARKS.md)).
+
 Feedback on a design? Use the *Design feedback* issue template, or pick up [#12](https://github.com/nijazo/luxyos/issues/12).

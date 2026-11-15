@@ -17,7 +17,7 @@ Thank you for wanting to help. LuxyOS is in the **design phase**: there is no so
 - **No telemetry, trackers or ads** in any proposal or prototype.
 - **No copied proprietary designs, code or assets** (for example Microsoft's look and icons). Own designs only.
 - Keep pull requests small and focused. Describe what changed and why.
-- By contributing you agree that your contribution may be published under the project licence once it is chosen (see [LICENSE.md](LICENSE.md)).
+- Your contribution is licensed under the licence of the part it changes: GPL-3.0-or-later for the system, Apache-2.0 for the SDK, CC BY 4.0 for documentation and designs. New source files start with an SPDX header, for example `// SPDX-License-Identifier: GPL-3.0-or-later`. See [LICENSING.md](LICENSING.md).
 
 ## Pull requests
 
