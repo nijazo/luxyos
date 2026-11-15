@@ -77,6 +77,16 @@ Right now we need research, prototypes and review, not production code. Read [CO
 
 The project language is **English**. LuxyOS itself starts with English (default), Dutch, Croatian, Bosnian, Serbian, Albanian, Macedonian, Turkish, German, French and Spanish, followed by all official EU languages. See [docs/languages.md](docs/languages.md).
 
+## Support LuxyOS
+
+LuxyOS is free and non-commercial. It is paid for by donations, grants and sponsors, never by users, ads or data.
+
+<p><a href="https://paypal.me/nijazo"><strong>Donate with PayPal</strong></a> · paypal.me/nijazo</p>
+
+- Donations pay for servers, test hardware, development and legal advice (trademark, CRA, privacy).
+- Donating is voluntary and gives no rights or influence over the product ([LEGAL.md](LEGAL.md)).
+- We plan to publish a yearly overview of what comes in and what it is spent on.
+
 ## Ownership
 
 LuxyOS is a project founded and owned by **Nijaz Omanovic**. It is an own design: nothing is copied from other operating systems; it is built from what users say they want, so some familiar functions can resemble well-known systems. No rights can be derived from the plans and designs. See [LEGAL.md](LEGAL.md).

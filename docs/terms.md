@@ -7,6 +7,7 @@
 - LuxyOS is a free operating system for every person. There is no price, no paid edition, no subscription, no advertising and no selling of data.
 - Everyone may use it free of charge: private users, schools, associations, governments and businesses.
 - The LuxyOS project does not aim to make a profit. Its costs (servers, development, legal advice) are paid from donations, grants for open source (EU and national) and sponsors. Sponsors get no influence on the product and no user data.
+- Donations are welcome via PayPal: [paypal.me/nijazo](https://paypal.me/nijazo). A donation is voluntary and gives no rights or influence.
 - Security updates are free for everyone, always. Registration stays optional.
 - Nobody may charge money for LuxyOS itself, or for downloading it, under the LuxyOS name ([trademark policy](../TRADEMARKS.md)). Charging for your own work is allowed, such as installation help, support, training or hardware, as long as customers are told that LuxyOS itself is free.
 
