@@ -469,10 +469,11 @@ CSS = r"""
 @media (prefers-reduced-motion: reduce) { .lx-ring, .lx-sun, .lx-glow { animation: none; } }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
+a, summary, button { -webkit-tap-highlight-color: transparent; }
 body { margin: 0; background: var(--bg); color: var(--tekst); font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif; line-height: 1.5; }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
 header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 22px; padding-bottom: 22px; }
-.merk { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--tekst); }
+.merk { display: flex; align-items: center; gap: 10px; min-height: 44px; text-decoration: none; color: var(--tekst); }
 .merk svg { width: 44px; height: 44px; color: var(--ring); }
 .woordmerk { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
 .woordmerk span { font-weight: 400; color: var(--hemel); }
@@ -492,9 +493,9 @@ header .wrap { display: flex; align-items: center; justify-content: space-betwee
 .talen a:hover { background: var(--bg-zacht); }
 .talen a[aria-current] { font-weight: 700; background: var(--bg-zacht); }
 .hero { position: relative; overflow: hidden; background: var(--bg-zacht); }
-.hero .label { background: var(--kaart); border: 1px solid var(--rand); }
+.hero .label { background: var(--kaart); border: 1px solid var(--rand); white-space: normal; max-width: 100%; line-height: 1.35; }
 .hero .wrap { position: relative; z-index: 1; padding-top: 72px; padding-bottom: 200px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
-h1 { margin: 0; font-size: clamp(34px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 800; max-width: 860px; overflow-wrap: break-word; hyphens: auto; }
+h1 { margin: 0; font-size: clamp(34px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 800; max-width: 860px; overflow-wrap: break-word; }
 h1 em { font-style: normal; color: var(--hemel); }
 .intro { margin: 0; max-width: 640px; font-size: clamp(17px, 2.2vw, 20px); color: var(--tekst-zacht); }
 .heuvels { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 180px; display: block; }
@@ -557,7 +558,7 @@ section.supporters .wrap { padding-top: 40px; padding-bottom: 8px; }
 .betaald { margin: 0; padding: 10px 12px; border-radius: 10px; background: #e5f4e4; color: #14532d !important; font-size: 14px; font-weight: 600; }
 .sup-blok a, .mee .klein a { color: var(--hemel); }
 footer { border-top: 1px solid var(--rand); }
-footer a { color: inherit; display: inline-flex; align-items: center; gap: 6px; }
+footer a { color: inherit; display: inline-flex; align-items: center; gap: 6px; padding: 12px 0; margin: -12px 0; }
 footer a svg { width: 16px; height: 16px; }
 footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; color: var(--tekst-zacht); font-size: 14px; }
 @media (max-width: 560px) {
@@ -568,13 +569,22 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
   .rechts { gap: 6px; }
   header .label { padding: 5px 10px; font-size: 13px; }
   .talen summary { padding: 5px 10px; font-size: 12px; }
+  .talen ul { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; min-width: 0; width: min(300px, calc(100vw - 32px)); }
+  .talen a { padding-left: 10px; padding-right: 10px; }
   .hero .wrap { padding-top: 48px; padding-bottom: 170px; }
   .zon { width: 80px; height: 80px; right: 8%; bottom: 90px; }
   .status-blok { padding: 24px; }
   .mee .kaart { padding: 22px; }
+  .sup-blok { padding: 20px; }
   .rechts .gh { display: none; }
 }
-@media (max-width: 380px) { header .label { display: none; } }
+@media (max-width: 380px) { header .label { display: none; } h1 { font-size: 30px; } }
+/* Touch screens: every tap target at least 44 x 44 pixels */
+@media (pointer: coarse) {
+  .talen summary { min-height: 44px; padding: 0 14px; }
+  .talen a { padding: 13px 12px; }
+  .gh { width: 44px; height: 44px; }
+}
 """
 
 FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2313243b'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round' stroke-dasharray='89 30' transform='rotate(-30 32 32)'/%3E%3Ccircle cx='36.9' cy='13.6' r='5.5' fill='%23F5A524'/%3E%3C/svg%3E"
