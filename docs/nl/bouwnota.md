@@ -2,6 +2,8 @@
 
 Stand: 15 november 2026
 
+**Steun LuxyOS: [Donatie LuxyOS](https://paypal.me/nijazo)** via PayPal (paypal.me/nijazo). LuxyOS is gratis en niet-commercieel; donaties betalen servers, testapparatuur en ontwikkeling.
+
 ## Visie en uitgangspunten
 
 LuxyOS is een snel besturingssysteem dat alleen start wat de gebruiker vraagt, Windows-programma's draait en makkelijk te bedienen is.
@@ -990,7 +992,7 @@ LuxyOS is een gratis besturingssysteem voor iedere persoon en geen commercieel p
 
 - **Gratis voor iedereen:** particulieren, scholen, verenigingen, overheden en bedrijven. Geen betaalde versies, geen abonnementen, geen advertenties en geen verkoop van gegevens.
 - **Kosten** worden betaald uit donaties, subsidies voor open source (EU en nationaal) en sponsors. Sponsors krijgen geen invloed op het product en geen gegevens.
-- **Doneren** kan via PayPal: [paypal.me/nijazo](https://paypal.me/nijazo). Een donatie is vrijwillig en geeft geen rechten of invloed. Elk jaar komt er een overzicht van wat binnenkomt en waaraan het wordt besteed.
+- **Doneren** kan via PayPal: [paypal.me/nijazo](https://paypal.me/nijazo). Een donatie is vrijwillig en geeft geen rechten of invloed. Elk jaar komt er een overzicht van wat binnenkomt en waaraan het wordt besteed. De knop staat ook op de website ("Donate to LuxyOS" in het Engels, "Donatie LuxyOS" in het Nederlands) en op GitHub.
 - **Niemand mag geld vragen voor LuxyOS zelf** onder de naam LuxyOS (merkbeleid). Geld vragen voor eigen werk mag wel: installatiehulp, ondersteuning, training of hardware, als de klant hoort dat LuxyOS zelf gratis is.
 - De GPL-licentie verbiedt geen commercieel gebruik, en dat kan ook niet omdat LuxyOS op Linux en Wine draait. Het niet-commerciële karakter beschermen we daarom met de voorwaarden en het merkbeleid.
 
