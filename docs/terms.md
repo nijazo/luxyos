@@ -1,6 +1,6 @@
 # Terms: free for everyone, free store for developers
 
-**Draft.** A lawyer checks these terms before the first release.
+**Draft.** A lawyer checks these terms before the first release. LuxyOS is a project of Nijaz Omanovic; no rights can be derived from these terms before release ([LEGAL.md](../LEGAL.md)).
 
 ## 1. LuxyOS is free and non-commercial
 

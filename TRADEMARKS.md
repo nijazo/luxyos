@@ -1,6 +1,6 @@
 # Trademark policy
 
-"LuxyOS" and the Ring of light logo identify the official LuxyOS project. The code is free under its licences ([LICENSING.md](LICENSING.md)); the name and logo are protected so that people can trust that something called LuxyOS really is LuxyOS and follows its promises: privacy, no telemetry, and EU law as the baseline.
+"LuxyOS" and the Ring of light logo are trademarks of Nijaz Omanovic and identify the official LuxyOS project ([LEGAL.md](LEGAL.md)). The code is free under its licences ([LICENSING.md](LICENSING.md)); the name and logo are protected so that people can trust that something called LuxyOS really is LuxyOS and follows its promises: privacy, no telemetry, and EU law as the baseline.
 
 ## LuxyOS is always free
 

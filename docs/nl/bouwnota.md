@@ -1097,3 +1097,13 @@ Deze beslissingen staan nog open voordat de bouw begint.
 - [ ] Website, documentatie en community opzetten.
 
 **Licentie gekozen:** GPL-3.0 voor het besturingssysteem zelf, Apache-2.0 voor de SDK waarmee app-makers bouwen, en CC BY 4.0 voor documentatie en ontwerpen. De naam LuxyOS en het logo zijn merken en vallen daar niet onder; daarvoor is er een merkbeleid.
+
+## Eigendom en originaliteit
+
+LuxyOS is een project van Nijaz Omanovic, die het heeft opgericht en eigenaar is.
+
+- **Eigendom.** De naam LuxyOS, het logo en de domeinnamen luxyos.com, luxyos.nl en luxyos.eu zijn van Nijaz Omanovic. Auteursrecht op de oorspronkelijke plannen, teksten en ontwerpen: © 2026 Nijaz Omanovic, gedeeld onder de gekozen licenties. Bijdragen van anderen blijven van hun makers. Nijaz Omanovic beslist uiteindelijk over de richting, de naam en het logo.
+- **Geen rechten.** Plannen, ontwerpen en planning zijn voornemens, geen beloftes. Er kunnen geen rechten aan worden ontleend, zoals recht op een functie, een releasedatum, werking met een bepaald programma of ondersteuning.
+- **Eigen ontwerp, geen kopie.** LuxyOS is zelf bedacht. Er wordt geen code, ontwerp, pictogram, afbeelding of tekst van anderen gekopieerd. Het uiterlijk en de werking komen voort uit wat gebruikers willen en prettig vinden. Omdat we maken wat gebruikers vragen, kunnen sommige functies lijken op die van bekende besturingssystemen, zoals een taakbalk, startmenu, verkenner of bekende sneltoetsen. Dat zijn algemene ideeën, gebouwd op een eigen manier en met een eigen ontwerp.
+- **Merken van anderen.** Namen zoals Windows, Microsoft Word, Steam en Adobe zijn van hun eigenaars en noemen we alleen om te zeggen waarmee LuxyOS werkt. LuxyOS is niet verbonden aan deze bedrijven.
+- **Bezwaar.** Denkt iemand dat iets inbreuk maakt op zijn of haar rechten, dan bekijken we het en passen het aan of halen het weg.

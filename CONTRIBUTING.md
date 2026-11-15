@@ -30,6 +30,10 @@ Thank you for wanting to help. LuxyOS is in the **design phase**: there is no so
 
 Prototypes live in their own branch or fork until the code structure is decided ([docs/roadmap.md](docs/roadmap.md)). Include how to build and run it, and what you measured.
 
+## Who decides
+
+LuxyOS is a project of Nijaz Omanovic, who leads it and has the final say on direction, the name and the logo. Your contributions stay yours and are shared under the project licences ([LEGAL.md](LEGAL.md)).
+
 ## Behaviour
 
 Everyone is welcome. See the [Code of Conduct](CODE_OF_CONDUCT.md).

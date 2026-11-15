@@ -12,7 +12,7 @@ LuxyOS uses three licences, one for each kind of work. All three are free and op
 
 - **GPL-3.0 for the system.** Anyone may use, study, change and share LuxyOS. Anyone who distributes a changed version must publish their changes under the same licence, so improvements stay open for everyone.
 - **Apache-2.0 for the SDK.** App developers, including companies with closed-source apps, can build for LuxyOS without having to open their own code. Apache-2.0 also includes a patent grant.
-- **CC BY 4.0 for documents and designs.** Anyone may reuse and adapt them, as long as they credit "The LuxyOS contributors" and link to this repository.
+- **CC BY 4.0 for documents and designs.** Anyone may reuse and adapt them, as long as they credit "Nijaz Omanovic and the LuxyOS contributors" and link to this repository.
 
 ## Not covered by these licences
 
@@ -34,4 +34,4 @@ LuxyOS is free for everyone and the project is non-commercial ([docs/terms.md](d
 
 LuxyOS follows EU law in every country ([docs/europe.md](docs/europe.md)). An open-source licence cannot require users to follow EU law, so the rules for partners (distributors, device makers, store developers and managed service providers) are set in the store terms, partner agreements and the [trademark policy](TRADEMARKS.md).
 
-Copyright © 2026 The LuxyOS contributors.
+Copyright © 2026 Nijaz Omanovic and the LuxyOS contributors. Ownership and disclaimer: [LEGAL.md](LEGAL.md).
