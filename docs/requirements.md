@@ -5,6 +5,14 @@ What LuxyOS must do, per area. Designs for many of these screens are in [design/
 ## Desktop and usability
 
 - Familiar layout: taskbar, Start button, two-column start menu, Explorer, system tray. Own look, not a copy of Windows.
+- Explorer works the way Windows users expect ([design 21](design/21-file-explorer.png)):
+    - the same user folders with the same names: Desktop, Downloads, Documents, Pictures, Music, Videos; files from Windows land in the same place;
+    - navigation pane with Quick access, This PC with drive letters (C:, D:, E:), network shares (S:) and cloud storage;
+    - tabs, back/forward/up, an address bar with breadcrumbs that also accepts Windows paths such as `C:\Users\Name\Documents`;
+    - command bar (New, Cut, Copy, Paste, Rename, Share, Delete, Sort, View) and a details pane with preview;
+    - details view with Name, Date modified, Type and Size; familiar type names (Word document, Excel spreadsheet);
+    - right-click menu with the usual items and shortcuts (Enter, Ctrl+X, Ctrl+C, Ctrl+Shift+C, F2, Del, Alt+Enter); "Open with" lists Windows and Linux apps side by side;
+    - drag and drop, Recycle Bin, ZIP built in.
 - No command line needed for normal use. Installation in at most 5 steps.
 - One settings app; advanced options behind "Advanced".
 - Familiar shortcuts: Win+E, Win+L, Win+D, Win+V, Win+Shift+S, Ctrl+Shift+Esc.

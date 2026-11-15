@@ -28,6 +28,8 @@ These designs show the end result we are building towards. Names, numbers and ap
 
 <p align="center"><img src="docs/design/01-desktop-start-menu.png" width="860" alt="LuxyOS desktop with the start menu open"></p>
 
+<p align="center"><img src="docs/design/21-file-explorer.png" width="860" alt="LuxyOS Explorer with the familiar Windows layout: folders on the left, files with date, type and size, right-click menu"><br><sub>Explorer: the layout Windows users know, so they find their documents and pictures straight away</sub></p>
+
 <table>
 <tr>
 <td width="50%"><img src="docs/design/06-store-windows-programs.png" alt="Store with Windows programs and compatibility labels"><br><sub>Store: Windows programs with honest compatibility labels</sub></td>

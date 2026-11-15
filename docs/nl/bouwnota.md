@@ -354,6 +354,17 @@ Een .exe op de website zet een Windows-pc in één keer over. Gegevens, programm
 
 De indeling lijkt op Windows XP, maar het uiterlijk is eigen. Het XP-ontwerp zelf is van Microsoft. Voorbeeld: [Bureaublad-ontwerp](design/01-bureaublad-startmenu.png).
 
+**Verkenner zoals gebruikers gewend zijn.** Na de overstap werkt iedereen gewoon door en vindt meteen documenten en afbeeldingen terug:
+
+- Dezelfde mappen met dezelfde namen: Bureaublad, Downloads, Documenten, Afbeeldingen, Muziek, Video's. Bestanden van Windows staan op dezelfde plek.
+- Links Snelle toegang, Deze pc met stationsletters (C:, D:, E:), netwerkschijven (S:) en cloudopslag.
+- Tabbladen, adresbalk met kruimelpad die ook Windows-paden zoals C:\Users\Naam\Documents begrijpt, en zoeken rechtsboven.
+- Knoppen voor Nieuw, Knippen, Kopiëren, Plakken, Naam wijzigen, Delen en Verwijderen, plus een detailvenster met voorbeeld.
+- Lijst met Naam, Gewijzigd op, Type en Grootte, met bekende typenamen zoals Word-document en Excel-werkblad.
+- Rechtsklikmenu met de bekende opdrachten en sneltoetsen (Ctrl+C, F2, Del, Alt+Enter). Bij "Openen met" staan Windows- en Linux-apps naast elkaar.
+
+Ontwerp: [Verkenner](design/21-verkenner.png).
+
 - Taakbalk onderaan: Start-knop, snelkoppelingen, open vensters, systeemvak met klok.
 - Startmenu met twee kolommen: programma's en zoekbalk links, mappen en instellingen rechts.
 - Verkenner, rechtermuisknopmenu's en bureaubladpictogrammen.
