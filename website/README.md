@@ -20,3 +20,21 @@ Edit texts in `src/build.py`, then run `python3 website/src/build.py`. Translati
 - Redirects: luxyos.nl → https://luxyos.com/nl/ and luxyos.eu → https://luxyos.com/.
 
 Licence: CC BY 4.0, except the LuxyOS name and logo ([TRADEMARKS.md](../TRADEMARKS.md)).
+
+## Live site with the supporters list (server)
+
+The real supporters list never goes into Git. On the server it is kept outside the webroot, and the pages are built there:
+
+```sh
+# one time: a private folder outside the webroot
+/var/www/vhosts/quracom13/private/supporters.private.json   # {"supporters": []}
+/var/www/vhosts/quracom13/private/luxyos-build/build.py     # copy of website/src/build.py
+
+# every update
+python3 /var/www/vhosts/quracom13/private/luxyos-build/build.py \
+  --out <webroot of luxyos.com> \
+  --supporters /var/www/vhosts/quracom13/private/supporters.private.json
+```
+
+- Add a supporter only when they asked for it; remove them when they ask (sponsors@luxyos.com). Then run the build again.
+- Website updates from this repository: copy `img/` and the new `src/build.py` to the server and run the build there. **Do not copy the `index.html` files from Git over the live site**: they have an empty supporters list and would remove the names.

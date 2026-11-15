@@ -2,10 +2,17 @@
 # SPDX-License-Identifier: CC-BY-4.0
 """Builds the luxyos.com coming-soon pages for every language.
 
-Usage: python3 website/src/build.py
-Writes website/index.html (English) and website/<code>/index.html for the
-other languages. The pages load nothing from other websites.
+Usage:
+  python3 website/src/build.py
+  python3 build.py --out /path/to/webroot --supporters /private/supporters.private.json
+
+Writes index.html (English) and <code>/index.html for the other languages into
+the output folder (default: website/). The pages load nothing from other
+websites. The supporters list is read from --supporters, or else from
+supporters.private.json next to this script, or else the empty public
+supporters.json.
 """
+import argparse
 import html
 import json
 import os
@@ -593,12 +600,18 @@ def icon(key):
     return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICON[key]}</svg>'
 
 
+SUPPORTERS_FILE = None  # set by --supporters
+
+
 def load_supporters():
     """The real list lives in supporters.private.json, which is never committed
     (names in a public Git history cannot be erased). The public supporters.json
     stays empty and only documents the format."""
     private = os.path.join(HERE, "supporters.private.json")
-    path = private if os.path.exists(private) else os.path.join(HERE, "supporters.json")
+    if SUPPORTERS_FILE:
+        path = SUPPORTERS_FILE
+    else:
+        path = private if os.path.exists(private) else os.path.join(HERE, "supporters.json")
     with open(path, encoding="utf-8") as f:
         return json.load(f)["supporters"]
 
@@ -792,15 +805,24 @@ def page(code):
 
 
 def main():
+    global SUPPORTERS_FILE
+    ap = argparse.ArgumentParser(description="Build the luxyos.com pages.")
+    ap.add_argument("--out", default=OUT, help="output folder (the webroot)")
+    ap.add_argument("--supporters", help="JSON file with the supporters list")
+    args = ap.parse_args()
+    out = os.path.abspath(args.out)
+    if args.supporters:
+        SUPPORTERS_FILE = os.path.abspath(args.supporters)
+        load_supporters()  # fail early on a missing or broken file
     keys = set(T["en"])
     for code, _ in LANGS:
         missing = keys - set(T[code])
         assert not missing, (code, missing)
-        path = os.path.join(OUT, "index.html") if code == "en" else os.path.join(OUT, code, "index.html")
+        path = os.path.join(out, "index.html") if code == "en" else os.path.join(out, code, "index.html")
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "w", encoding="utf-8") as f:
             f.write(page(code))
-        print("wrote", os.path.relpath(path, OUT))
+        print("wrote", path)
 
 
 if __name__ == "__main__":
