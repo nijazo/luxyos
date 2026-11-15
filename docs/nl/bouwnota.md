@@ -994,6 +994,7 @@ LuxyOS is een gratis besturingssysteem voor iedere persoon en geen commercieel p
 - **Kosten** worden betaald uit donaties, subsidies voor open source (EU en nationaal) en sponsors. Sponsors krijgen geen invloed op het product en geen gegevens.
 - **Doneren** kan via PayPal: [paypal.me/nijazo](https://paypal.me/nijazo). Een donatie is vrijwillig en geeft geen rechten of invloed. Elk jaar komt er een overzicht van wat binnenkomt en waaraan het wordt besteed. De knop staat ook op de website ("Donate to LuxyOS" in het Engels, "Donatie LuxyOS" in het Nederlands) en op GitHub.
 - **Supporterslijst (vrijwillig).** Donateurs zijn standaard anoniem. Wie op luxyos.com wil staan, schrijft in het PayPal-bericht "Toon: naam" of "Toon: naam + bedrag". We tonen alleen wat de donateur koos, nooit e-mail of betaalgegevens. Intrekken kan altijd per e-mail; bij de volgende update gaat de naam eraf. De lijst staat niet op GitHub, omdat namen daar nooit helemaal te wissen zijn.
+- **Contact.** sponsors@luxyos.com voor sponsors en voor wie van de supporterslijst af wil; security@luxyos.com voor het melden van beveiligingslekken.
 - **Niemand mag geld vragen voor LuxyOS zelf** onder de naam LuxyOS (merkbeleid). Geld vragen voor eigen werk mag wel: installatiehulp, ondersteuning, training of hardware, als de klant hoort dat LuxyOS zelf gratis is.
 - De GPL-licentie verbiedt geen commercieel gebruik, en dat kan ook niet omdat LuxyOS op Linux en Wine draait. Het niet-commerciële karakter beschermen we daarom met de voorwaarden en het merkbeleid.
 
