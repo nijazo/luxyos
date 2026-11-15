@@ -80,7 +80,7 @@ Start met de kale Linux-kernel en bouw alles daarboven zelf. Een eigen kernel ka
 
 Ook bekeken: ReactOS (NT-kloon, nog alpha) en een eigen microkernel zoals Redox of seL4 (veel jaren werk).
 
-![Opbouw van het systeem in 6 lagen](../design/diagram-opbouw-systeem.png)
+![Opbouw van het systeem in 6 lagen](design/diagram-opbouw-systeem.png)
 
 Apps vragen een dienst aan de broker. De broker start die dienst en stopt hem weer als niemand hem gebruikt.
 
@@ -321,7 +321,7 @@ Zelfs Valve kreeg Call of Duty en Battlefield niet op SteamOS. Daarom: gaming is
 
 ## Overstap-tool vanuit Windows
 
-Een .exe op de website zet een Windows-pc in één keer over. Gegevens, programma's en licenties gaan mee, en er is altijd een weg terug. Voorbeelden: Wubi (Ubuntu installeren vanuit Windows), Migratie-assistent van Apple en PCmover van Laplink. Ontwerp: [Overstap-assistent](../design/).
+Een .exe op de website zet een Windows-pc in één keer over. Gegevens, programma's en licenties gaan mee, en er is altijd een weg terug. Voorbeelden: Wubi (Ubuntu installeren vanuit Windows), Migratie-assistent van Apple en PCmover van Laplink. Ontwerp: [Overstap-assistent](design/07-overstap-controlerapport.png).
 
 1. De gebruiker downloadt "Overstappen.exe" en start hem in Windows.
 2. Controlerapport: werkt de hardware, en welke programma's werken? Er verandert nog niets.
@@ -352,7 +352,7 @@ Een .exe op de website zet een Windows-pc in één keer over. Gegevens, programm
 
 ## Bureaublad en bediening
 
-De indeling lijkt op Windows XP, maar het uiterlijk is eigen. Het XP-ontwerp zelf is van Microsoft. Voorbeeld: [Bureaublad-ontwerp](../design/).
+De indeling lijkt op Windows XP, maar het uiterlijk is eigen. Het XP-ontwerp zelf is van Microsoft. Voorbeeld: [Bureaublad-ontwerp](design/01-bureaublad-startmenu.png).
 
 - Taakbalk onderaan: Start-knop, snelkoppelingen, open vensters, systeemvak met klok.
 - Startmenu met twee kolommen: programma's en zoekbalk links, mappen en instellingen rechts.
@@ -389,6 +389,31 @@ Het logo van LuxyOS is de Ring van licht: een ring die bijna rond is, met een zo
 - Woordmerk: "Luxy" vet, "OS" dun in Hemel-blauw.
 - Bestanden staan in de GitHub-map `luxyos/logo`: logo, witte versie, app-icoon en de animatie.
 - Nog doen: controleren op gelijkenis met bestaande logo's, en het logo laten vastleggen bij het merk.
+
+## Gemaakt voor Europa
+
+LuxyOS wordt gemaakt in en voor de EU, en de Europese wetten zijn de basis, in elk land. Mensen en bedrijven buiten de EU mogen LuxyOS gebruiken en krijgen dezelfde Europese bescherming.
+
+- **Eén versie, één standaard.** Er komt geen zwakkere versie voor andere landen.
+- **EU-wet is het minimum.** Vraagt een land meer bescherming, dan kan LuxyOS meer, maar nooit minder.
+- **Gegevens blijven in Europa.** Updates, app-winkel, registratie en back-up draaien in de EU. Niets gaat buiten de EU zonder toestemming.
+- **Partners volgen EU-regels.** Wie LuxyOS verspreidt, apparaten ermee verkoopt, apps in de winkel aanbiedt of beheer doet, houdt zich aan de EU-regels, waar die partij ook zit.
+- **Europese organisatie.** De organisatie achter LuxyOS zit in een EU-land.
+
+| Wet | Wat het betekent voor LuxyOS |
+| --- | --- |
+| AVG (GDPR) | Privacy standaard aan; gegevens inzien, exporteren en wissen; registratie alleen met toestemming |
+| ePrivacy-richtlijn | Niets lezen of opslaan op het apparaat zonder toestemming |
+| Cyber Resilience Act | Besturingssystemen zijn een "belangrijk product": standaard veilig, beveiligingsupdates voor de hele ondersteuningsperiode, softwarelijst (SBOM), lekken melden, CE-markering |
+| Europese toegankelijkheidswet (EAA) | Schermlezer, alles met toetsenbord, hoog contrast, grote tekst |
+| AI-verordening (AI Act) | AI is altijd herkenbaar; de beheerder kan AI blokkeren |
+| Digital Services Act | App-winkel: bekende verkopers, illegale apps melden, uitleg bij verwijderen |
+| Digital Markets Act (als voorbeeld) | Keuzescherm, standaardapps wijzigen en verwijderen, geen voorrang voor eigen apps |
+| eIDAS 2 | Gekwalificeerde certificaten, smartcards, Europese digitale identiteitswallet |
+| NIS2 | Hulp voor bedrijven: logging, centraal beheer, updaterapporten |
+| Ecodesign-regels voor telefoons | Later voor de telefoonversie: minstens 5 jaar updates |
+
+Een open-source licentie kan gebruikers niet verplichten EU-wetten te volgen. De regels voor partners komen daarom in de voorwaarden van de app-winkel, in partnercontracten en in het merkbeleid voor de naam LuxyOS. Voor de eerste release controleert een jurist in Europees digitaal recht dit plan.
 
 ## Talen en regio
 
@@ -652,7 +677,7 @@ Aanmelden op AD werkt met bestaande open-source onderdelen.
 
 ## Gebruikers, groepen en aanmelden
 
-Meerdere gebruikers met eigen rechten, en een aanmeldscherm zoals bij Windows: lokaal, met Active Directory of met een werk- of schoolaccount. E-mailaccounts zoals Gmail, Outlook en Yahoo koppel je aan je gebruiker. Ontwerp van het aanmeldscherm: [Aanmelden](../design/).
+Meerdere gebruikers met eigen rechten, en een aanmeldscherm zoals bij Windows: lokaal, met Active Directory of met een werk- of schoolaccount. E-mailaccounts zoals Gmail, Outlook en Yahoo koppel je aan je gebruiker. Ontwerp van het aanmeldscherm: [Aanmelden](design/11-aanmeldscherm.png).
 
 **Soorten gebruikers**
 
@@ -1027,7 +1052,7 @@ De grootste gaten zitten niet in functies, maar in software van andere makers, h
 
 ## Bouwvolgorde
 
-![Bouwvolgorde in 4 fasen](../design/diagram-bouwvolgorde.png)
+![Bouwvolgorde in 4 fasen](design/diagram-bouwvolgorde.png)
 
 Fase 1 bewijst het on-demand idee in een virtuele machine. Pas als dat stabiel werkt, gaat het systeem naar echte computers. De tijden zijn schattingen voor één persoon.
 

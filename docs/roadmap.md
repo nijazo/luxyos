@@ -1,6 +1,6 @@
 # Roadmap
 
-![Build order in four phases](design/diagram-bouwvolgorde.png)
+![Build order in four phases](design/diagram-build-order.png)
 
 | Phase | Goal | Gate |
 | --- | --- | --- |

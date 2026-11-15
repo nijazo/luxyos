@@ -58,6 +58,16 @@ A Windows `.exe` "migration assistant": check report → collect data → full W
 - Labels: *Verified* or *From GitHub*. Permissions from the manifest are shown before installation.
 - Developer mode, SDK, emulator, manifest per app.
 
+## Europe and law
+
+- EU law is the minimum standard in every country; one version for everyone ([europe.md](europe.md), [decision 0009](decisions/0009-eu-law-as-baseline.md)).
+- GDPR and ePrivacy: privacy by design and by default, data export and deletion, consent before anything is sent.
+- Cyber Resilience Act: secure by default, SBOM per release, vulnerability handling and reporting, security updates for the stated support period, CE marking.
+- European Accessibility Act: screen reader, keyboard-only use, high contrast, scalable text in every screen.
+- AI Act: AI use is always labelled; administrators can block AI.
+- Digital Services Act for the store: traceable sellers, reporting of illegal apps, reasons for removals.
+- Online services (updates, store, registration, backup) run in the EU.
+
 ## Updates and business model
 
 - Free; registration optional. Security updates for everyone.

@@ -1,6 +1,6 @@
 # Vision
 
-LuxyOS is a fast, free and honest operating system for people and businesses who want to leave Windows but need things to simply work.
+LuxyOS is a fast, free and honest operating system for people and businesses who want to leave Windows but need things to simply work. It is made in and for the European Union; people in other countries are welcome to use it, with the same European protection.
 
 ## Principles
 
@@ -11,6 +11,7 @@ LuxyOS is a fast, free and honest operating system for people and businesses who
 5. **Free and voluntary.** Free to use. Registration is optional. Security updates for everyone.
 6. **Choice.** Browser, search engine and antivirus are chosen by the user. Administrators choose whether AI is allowed.
 7. **Honest.** Never promise that everything works. Compatibility labels say what works, what partly works and what does not.
+8. **Made for Europe.** EU law (privacy, security, accessibility, AI) is the minimum standard, in every country. One version for everyone; online services run in the EU. See [europe.md](europe.md).
 
 ## Target groups and launch rule
 

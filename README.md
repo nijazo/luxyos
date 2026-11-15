@@ -20,12 +20,34 @@ It only starts what you use, runs your Windows programs, and sends nothing witho
 | **Choice** | The user picks browser, search engine and antivirus. Administrators decide whether AI is allowed, local only, or blocked. |
 | **Business ready** | Active Directory, Remote Desktop (server and client), certificates, PowerShell, a winget-like package manager and remote management. |
 | **Familiar** | A desktop layout that Windows users recognise, with its own look. Easy to use without a command line. |
+| **Made for Europe** | Built in and for the EU. EU law (GDPR, Cyber Resilience Act, Accessibility Act, AI Act) is the baseline in every country. Anyone may use LuxyOS; partners must follow EU rules. See [docs/europe.md](docs/europe.md). |
+
+## What it will look like
+
+These designs show the end result we are building towards. Names, numbers and apps are examples. All screens: [docs/design/](docs/design/).
+
+<p align="center"><img src="docs/design/01-desktop-start-menu.png" width="860" alt="LuxyOS desktop with the start menu open"></p>
+
+<table>
+<tr>
+<td width="50%"><img src="docs/design/06-store-windows-programs.png" alt="Store with Windows programs and compatibility labels"><br><sub>Store: Windows programs with honest compatibility labels</sub></td>
+<td width="50%"><img src="docs/design/04-privacy-overview.png" alt="Privacy overview with per-app connections"><br><sub>Privacy overview: which app connected to what</sub></td>
+</tr>
+<tr>
+<td><img src="docs/design/10-device-manager.png" alt="Device Manager"><br><sub>Device Manager: drivers in plain language</sub></td>
+<td><img src="docs/design/11-sign-in-screen.png" alt="Sign-in screen with local users"><br><sub>Sign-in screen: local, Active Directory or Entra ID</sub></td>
+</tr>
+<tr>
+<td><img src="docs/design/02-first-start-choices.png" alt="First start: choose browser, search engine and security"><br><sub>First start: the user chooses browser, search engine and antivirus</sub></td>
+<td><img src="docs/design/16-remote-desktop-app.png" alt="Remote Desktop app"><br><sub>Built-in Remote Desktop app for Windows servers</sub></td>
+</tr>
+</table>
 
 ## Technical direction
 
 LuxyOS is built on the **Linux kernel**, with its own on-demand **broker** (Rust), a desktop built with **Qt 6** on **Wayland**, and **Wine / DXVK / VKD3D-Proton** for Windows software. See [docs/architecture.md](docs/architecture.md) and the [decision records](docs/decisions/).
 
-<p align="center"><img src="docs/design/diagram-opbouw-systeem.png" width="640" alt="LuxyOS architecture: apps, Wine, broker, services, Linux kernel and hardware"></p>
+<p align="center"><img src="docs/design/diagram-architecture.png" width="640" alt="LuxyOS architecture: apps, Wine, broker, services, Linux kernel and hardware"></p>
 
 ## Documentation
 
@@ -35,6 +57,7 @@ LuxyOS is built on the **Linux kernel**, with its own on-demand **broker** (Rust
 | [docs/architecture.md](docs/architecture.md) | Layers, components and how on-demand works |
 | [docs/requirements.md](docs/requirements.md) | What must work, per area and per target group |
 | [docs/roadmap.md](docs/roadmap.md) | Phases and the first build steps |
+| [docs/europe.md](docs/europe.md) | Made for Europe: EU law as the baseline and what it means for LuxyOS |
 | [docs/languages.md](docs/languages.md) | Languages, regions and translation |
 | [docs/brand.md](docs/brand.md) | Logo, colours and animation |
 | [docs/design/](docs/design/) | Screen designs (desktop, store, privacy, device manager, Remote Desktop and more) |

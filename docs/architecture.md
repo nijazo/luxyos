@@ -2,7 +2,7 @@
 
 LuxyOS reuses proven open-source components and builds its own parts where LuxyOS is different: the broker, the store, settings, the migration assistant and the privacy overview.
 
-![Architecture](design/diagram-opbouw-systeem.png)
+![Architecture](design/diagram-architecture.png)
 
 ## Layers
 

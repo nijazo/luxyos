@@ -40,6 +40,7 @@ Each task already has an issue, linked below and grouped under [#1 Start here](h
 | [#16](https://github.com/nijazo/luxyos/issues/16) | Test joining an Active Directory domain with realmd and SSSD on a minimal system | Step-by-step notes |
 | [#17](https://github.com/nijazo/luxyos/issues/17) | Test certificate auto-enrolment from AD CS with Samba | Notes and limitations |
 | [#18](https://github.com/nijazo/luxyos/issues/18) | Test the RDP server (KRdp or GNOME Remote Desktop) with the Windows Remote Desktop client | Feature table: clipboard, drives, printers, multi-monitor |
+| [#21](https://github.com/nijazo/luxyos/issues/21) | Map EU law (CRA, Accessibility Act, GDPR, AI Act, DSA) to LuxyOS features, see [europe.md](europe.md) | Checklist in `docs/research/` with open questions for a lawyer |
 
 ## Languages
 

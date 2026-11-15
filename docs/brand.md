@@ -11,7 +11,7 @@ A ring that is almost closed, with a small sun in the opening. The ring only loa
 | [luxyos-app-icon.svg](../brand/luxyos-app-icon.svg), [512 px PNG](../brand/luxyos-app-icon-512.png) | App icon |
 | [luxyos-logo-animated.svg](../brand/luxyos-logo-animated.svg) | Animation |
 
-![Logo sheet](design/20-logo-ring-van-licht.png)
+![Logo sheet](design/20-logo-ring-of-light.png)
 
 ## Colours
 
