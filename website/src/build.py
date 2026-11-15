@@ -394,6 +394,11 @@ QR = {'en': {'qr_scan': 'Or scan with your phone to donate via PayPal.', 'qr_alt
 for _c, _x in QR.items():
     T[_c].update(_x)
 
+# Button in the top bar that scrolls to the donation box.
+HELP = {'en': 'Help us', 'nl': 'Help ons', 'de': 'Hilf uns', 'fr': 'Aidez-nous', 'es': 'Ayúdanos', 'hr': 'Pomozi nam', 'bs': 'Pomozi nam', 'sr': 'Помози нам', 'sq': 'Na ndihmo', 'mk': 'Помогни ни', 'tr': 'Yardım et'}
+for _c, _x in HELP.items():
+    T[_c]['help'] = _x
+
 CSS = r"""
 :root {
   --zon: #F5A524; --nacht: #13243b; --hemel: #2563c9;
@@ -415,6 +420,13 @@ CSS = r"""
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 a, summary, button { -webkit-tap-highlight-color: transparent; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+#doneren { scroll-margin-top: 20px; }
+.help { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; background: var(--hemel); color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.help svg { width: 16px; height: 16px; flex-shrink: 0; }
+.help:hover { filter: brightness(1.08); }
+.help:focus-visible { outline: 3px solid var(--zon); outline-offset: 2px; }
+@media (prefers-color-scheme: dark) { .help { color: #0e1828; } }
 body { margin: 0; background: var(--bg); color: var(--tekst); font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif; line-height: 1.5; }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
 header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 22px; padding-bottom: 22px; }
@@ -531,12 +543,14 @@ footer .wrap { padding-top: 24px; padding-bottom: 32px; display: flex; flex-wrap
   .sup-blok { padding: 20px; }
   .rechts .gh { display: none; }
 }
-@media (max-width: 380px) { header .label { display: none; } h1 { font-size: 30px; } }
+@media (max-width: 560px) { header .label { display: none; } .help { padding: 5px 12px; font-size: 13px; } }
+@media (max-width: 380px) { h1 { font-size: 30px; } .help svg { display: none; } }
 /* Touch screens: every tap target at least 44 x 44 pixels */
 @media (pointer: coarse) {
   .talen summary { min-height: 44px; padding: 0 14px; }
   .talen a { padding: 13px 12px; }
   .gh { width: 44px; height: 44px; }
+  .help { min-height: 44px; }
 }
 """
 
@@ -714,6 +728,7 @@ def page(code):
 <div class="rechts">
 <a class="gh" href="{GITHUB}" rel="noopener" aria-label="{e(t["gh"])}" title="{e(t["gh"])}">{GH}</a>
 <span class="label"><i aria-hidden="true"></i>{e(t["soon"])}</span>
+<a class="help" href="#doneren">{HEART}{e(t["help"])}</a>
 <details class="talen">
 <summary aria-label="{e(t["lang"])}: {e(native)}">{code.upper()}</summary>
 <ul>
@@ -763,7 +778,7 @@ def page(code):
 <p>{e(t["dev"][1])}</p>
 <a class="knop tweede" href="{GITHUB}" rel="noopener">{GH}{e(t["dev"][2])}</a>
 </article>
-<article class="kaart">
+<article class="kaart" id="doneren">
 {icon("spon")}
 <h3>{e(t["spon"][0])}</h3>
 <p>{e(t["spon"][1])}</p>
