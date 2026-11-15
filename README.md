@@ -44,7 +44,7 @@ LuxyOS is built on the **Linux kernel**, with its own on-demand **broker** (Rust
 
 ## How to help
 
-Right now we need research, prototypes and review, not production code. Read [CONTRIBUTING.md](CONTRIBUTING.md) and pick a task from [docs/good-first-tasks.md](docs/good-first-tasks.md).
+Right now we need research, prototypes and review, not production code. Read [CONTRIBUTING.md](CONTRIBUTING.md) and pick a task from [issue #1: Start here](https://github.com/nijazo/luxyos/issues/1) or [docs/good-first-tasks.md](docs/good-first-tasks.md).
 
 ## Languages
 

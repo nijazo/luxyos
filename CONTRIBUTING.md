@@ -4,7 +4,7 @@ Thank you for wanting to help. LuxyOS is in the **design phase**: there is no so
 
 ## Ways to help now
 
-1. **Pick a task** from [docs/good-first-tasks.md](docs/good-first-tasks.md). Open an issue with the *Research task* template first, so work is not duplicated.
+1. **Pick a task** from [issue #1: Start here](https://github.com/nijazo/luxyos/issues/1) or [docs/good-first-tasks.md](docs/good-first-tasks.md), and comment on its issue first, so work is not duplicated. For a new task, use the *Research task* template.
 2. **Share an idea** with the *Idea* issue template. Explain the problem it solves for users.
 3. **Review the designs** in [docs/design/](docs/design/) with the *Design feedback* template.
 4. **Propose an architecture decision** by adding a record to [docs/decisions/](docs/decisions/) in a pull request.
