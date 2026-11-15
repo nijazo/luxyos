@@ -21,8 +21,21 @@ A ring that is almost closed, with a small sun in the opening. The ring only loa
 | --- | --- | --- |
 | [luxyos-profile-dark.png](../brand/social/luxyos-profile-dark.png) | 1024 × 1024 | Profile picture (dark). Safe when cut to a circle |
 | [luxyos-profile-light.png](../brand/social/luxyos-profile-light.png) | 1024 × 1024 | Profile picture (light) |
-| [luxyos-banner.png](../brand/social/luxyos-banner.png) | 1500 × 500 | Banner / header (X, LinkedIn, YouTube). Text sits to the right, clear of the profile picture |
+| [luxyos-banner.png](../brand/social/luxyos-banner.png) | 1500 × 500 | Banner / header (X, YouTube). Text sits to the right, clear of the profile picture |
 | [luxyos-share-en.png](../brand/social/luxyos-share-en.png), [nl](../brand/social/luxyos-share-nl.png) | 1200 × 630 | Link preview. luxyos.com uses it automatically (Open Graph) |
+
+### LinkedIn
+
+LinkedIn uses its own sizes. On covers and banners, the company logo or profile photo overlaps the bottom left, so the text sits to the right.
+
+| File | Size | Use |
+| --- | --- | --- |
+| [linkedin-logo-300.png](../brand/social/linkedin/linkedin-logo-300.png), [light](../brand/social/linkedin/linkedin-logo-300-light.png) | 300 × 300 | Logo of the LuxyOS company page |
+| [linkedin-company-cover-1128x191.png](../brand/social/linkedin/linkedin-company-cover-1128x191.png) | 1128 × 191 | Cover image of the company page |
+| [linkedin-profile-banner-1584x396.png](../brand/social/linkedin/linkedin-profile-banner-1584x396.png) | 1584 × 396 | Background banner of a personal profile |
+| [linkedin-post-1200x1200-en.png](../brand/social/linkedin/linkedin-post-1200x1200-en.png), [nl](../brand/social/linkedin/linkedin-post-1200x1200-nl.png) | 1200 × 1200 | Image for a post |
+
+![LinkedIn profile banner](../brand/social/linkedin/linkedin-profile-banner-1584x396.png)
 
 ## Colours
 
