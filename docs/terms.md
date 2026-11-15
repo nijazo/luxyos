@@ -7,7 +7,7 @@
 - LuxyOS is a free operating system for every person. There is no price, no paid edition, no subscription, no advertising and no selling of data.
 - Everyone may use it free of charge: private users, schools, associations, governments and businesses.
 - The LuxyOS project does not aim to make a profit. Its costs (servers, development, legal advice) are paid from donations, grants for open source (EU and national) and sponsors. Sponsors get no influence on the product and no user data.
-- Donations are welcome via PayPal: [paypal.me/nijazo](https://paypal.me/nijazo). A donation is voluntary and gives no rights or influence.
+- Donations are welcome via PayPal: [paypal.me/nijazo](https://paypal.me/nijazo). A donation is voluntary and gives no rights or influence. Sponsors can write to sponsors@luxyos.com.
 - Security updates are free for everyone, always. Registration stays optional.
 - Nobody may charge money for LuxyOS itself, or for downloading it, under the LuxyOS name ([trademark policy](../TRADEMARKS.md)). Charging for your own work is allowed, such as installation help, support, training or hardware, as long as customers are told that LuxyOS itself is free.
 
@@ -17,7 +17,7 @@ The GPL-3.0 licence allows anyone to use the code, including companies. The non-
 
 - Donors are anonymous by default. A donor appears on the supporters list on luxyos.com only if they ask for it, for example in the PayPal note: "Show: name" (name only) or "Show: name + amount".
 - We show only what they chose: the name as they wrote it (a first name or nickname is fine) and, if asked, the amount. Never e-mail addresses or payment details.
-- The legal basis is consent (GDPR article 6(1)(a)). Anyone can withdraw at any time by e-mail; they are removed in the next update of the site.
+- The legal basis is consent (GDPR article 6(1)(a)). Anyone can withdraw at any time by e-mail to sponsors@luxyos.com; they are removed in the next update of the site.
 - The list is not stored in the public GitHub repository, because names in a public Git history cannot be fully removed. It is kept privately by the owner and used only to build the live website.
 
 ## 2. Store terms for developers

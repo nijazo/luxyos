@@ -17,7 +17,7 @@ GITHUB = "https://github.com/nijazo/luxyos"
 PAYPAL = "https://paypal.me/nijazo"
 # Address donors write to when they want to be removed from the supporters list.
 # The supporters block only appears on the site once this is filled in.
-CONTACT = ""
+CONTACT = "sponsors@luxyos.com"
 
 # Order of the language menu: code, native name. English is the default at /.
 LANGS = [
@@ -386,57 +386,57 @@ T["tr"] = dict(
 
 # Supporters list and GitHub link, per language. {email} is filled in from CONTACT.
 EXTRA = {
-    "en": dict(gh="LuxyOS on GitHub", sup_h="Thank you to our supporters",
+    "en": dict(spon_mail="Sponsoring as a company or organisation? Email {email}.", gh="LuxyOS on GitHub", sup_h="Thank you to our supporters",
         sup_p="Being on this list is voluntary. You choose whether your name, and the amount, appear here.",
         sup_how="Want to be listed? Write in your PayPal note: “Show: your name” for your name only, or “Show: your name + amount” to show the amount too. Without a note, your donation stays anonymous.",
         sup_remove="Changed your mind? Email {email} and we remove you in the next update.",
         sup_empty="No one is on the list yet."),
-    "nl": dict(gh="LuxyOS op GitHub", sup_h="Dank aan onze supporters",
+    "nl": dict(spon_mail="Sponsoren als bedrijf of organisatie? Mail naar {email}.", gh="LuxyOS op GitHub", sup_h="Dank aan onze supporters",
         sup_p="Op deze lijst staan is vrijwillig. Jij kiest of je naam, en het bedrag, hier komen te staan.",
         sup_how="Wil je op de lijst? Schrijf in je PayPal-bericht: “Toon: je naam” voor alleen je naam, of “Toon: je naam + bedrag” om ook het bedrag te tonen. Zonder bericht blijft je donatie anoniem.",
         sup_remove="Toch liever niet? Mail naar {email}, dan halen we je weg bij de volgende update.",
         sup_empty="Er staat nog niemand op de lijst."),
-    "de": dict(gh="LuxyOS auf GitHub", sup_h="Danke an unsere Unterstützer",
+    "de": dict(spon_mail="Als Unternehmen oder Organisation sponsern? Schreib an {email}.", gh="LuxyOS auf GitHub", sup_h="Danke an unsere Unterstützer",
         sup_p="Auf dieser Liste zu stehen ist freiwillig. Du entscheidest, ob dein Name und der Betrag hier erscheinen.",
         sup_how="Möchtest du auf die Liste? Schreib in deine PayPal-Nachricht: „Zeigen: dein Name“ für nur deinen Namen oder „Zeigen: dein Name + Betrag“, um auch den Betrag zu zeigen. Ohne Nachricht bleibt deine Spende anonym.",
         sup_remove="Doch lieber nicht? Schreib an {email}, dann entfernen wir dich beim nächsten Update.",
         sup_empty="Noch steht niemand auf der Liste."),
-    "fr": dict(gh="LuxyOS sur GitHub", sup_h="Merci à nos soutiens",
+    "fr": dict(spon_mail="Vous souhaitez sponsoriser en tant qu’entreprise ou organisation\u00a0? Écrivez à {email}.", gh="LuxyOS sur GitHub", sup_h="Merci à nos soutiens",
         sup_p="Figurer sur cette liste est volontaire. Vous choisissez si votre nom, et le montant, apparaissent ici.",
         sup_how="Vous souhaitez y figurer ? Écrivez dans votre message PayPal : « Afficher : votre nom » pour votre nom seul, ou « Afficher : votre nom + montant » pour montrer aussi le montant. Sans message, votre don reste anonyme.",
         sup_remove="Vous changez d’avis ? Écrivez à {email} et nous vous retirerons lors de la prochaine mise à jour.",
         sup_empty="Personne n’est encore sur la liste."),
-    "es": dict(gh="LuxyOS en GitHub", sup_h="Gracias a quienes nos apoyan",
+    "es": dict(spon_mail="¿Quieres patrocinar como empresa u organización? Escribe a {email}.", gh="LuxyOS en GitHub", sup_h="Gracias a quienes nos apoyan",
         sup_p="Aparecer en esta lista es voluntario. Tú eliges si tu nombre, y el importe, aparecen aquí.",
         sup_how="¿Quieres aparecer? Escribe en tu mensaje de PayPal: «Mostrar: tu nombre» para mostrar solo tu nombre, o «Mostrar: tu nombre + importe» para mostrar también el importe. Sin mensaje, tu donación sigue siendo anónima.",
         sup_remove="¿Cambias de opinión? Escribe a {email} y te quitaremos en la próxima actualización.",
         sup_empty="Todavía no hay nadie en la lista."),
-    "hr": dict(gh="LuxyOS na GitHubu", sup_h="Hvala našim podržavateljima",
+    "hr": dict(spon_mail="Želiš sponzorirati kao tvrtka ili organizacija? Piši na {email}.", gh="LuxyOS na GitHubu", sup_h="Hvala našim podržavateljima",
         sup_p="Biti na ovom popisu je dobrovoljno. Ti biraš hoće li se ovdje pojaviti tvoje ime i iznos.",
         sup_how="Želiš li biti na popisu? U PayPal poruci napiši: „Prikaži: tvoje ime” samo za ime ili „Prikaži: tvoje ime + iznos” da se prikaže i iznos. Bez poruke tvoja donacija ostaje anonimna.",
         sup_remove="Želiš da te uklonimo? Piši na {email} i uklonit ćemo te u sljedećem ažuriranju.",
         sup_empty="Na popisu još nema nikoga."),
-    "bs": dict(gh="LuxyOS na GitHubu", sup_h="Hvala našim podržavaocima",
+    "bs": dict(spon_mail="Želiš sponzorisati kao firma ili organizacija? Piši na {email}.", gh="LuxyOS na GitHubu", sup_h="Hvala našim podržavaocima",
         sup_p="Biti na ovoj listi je dobrovoljno. Ti biraš hoće li se ovdje pojaviti tvoje ime i iznos.",
         sup_how="Želiš li biti na listi? U PayPal poruci napiši: „Prikaži: tvoje ime“ samo za ime ili „Prikaži: tvoje ime + iznos“ da se prikaže i iznos. Bez poruke tvoja donacija ostaje anonimna.",
         sup_remove="Želiš da te uklonimo? Piši na {email} i uklonit ćemo te u sljedećem ažuriranju.",
         sup_empty="Na listi još nema nikoga."),
-    "sr": dict(gh="LuxyOS на GitHub-у", sup_h="Хвала нашим подржаваоцима",
+    "sr": dict(spon_mail="Желиш да спонзоришеш као фирма или организација? Пиши на {email}.", gh="LuxyOS на GitHub-у", sup_h="Хвала нашим подржаваоцима",
         sup_p="Бити на овој листи је добровољно. Ти бираш да ли ће се овде појавити твоје име и износ.",
         sup_how="Желиш ли да будеш на листи? У PayPal поруци напиши: „Прикажи: твоје име“ само за име или „Прикажи: твоје име + износ“ да се прикаже и износ. Без поруке твоја донација остаје анонимна.",
         sup_remove="Желиш да те уклонимо? Пиши на {email} и уклонићемо те у следећем ажурирању.",
         sup_empty="На листи још нема никога."),
-    "sq": dict(gh="LuxyOS në GitHub", sup_h="Faleminderit mbështetësve tanë",
+    "sq": dict(spon_mail="Dëshiron të sponsorizosh si kompani ose organizatë? Shkruaj te {email}.", gh="LuxyOS në GitHub", sup_h="Faleminderit mbështetësve tanë",
         sup_p="Të jesh në këtë listë është vullnetare. Ti zgjedh nëse emri yt dhe shuma shfaqen këtu.",
         sup_how="Dëshiron të jesh në listë? Shkruaj në mesazhin e PayPal: “Shfaq: emri yt” vetëm për emrin, ose “Shfaq: emri yt + shuma” për të treguar edhe shumën. Pa mesazh, dhurimi yt mbetet anonim.",
         sup_remove="Dëshiron të të heqim? Shkruaj te {email} dhe do të të heqim në përditësimin e radhës.",
         sup_empty="Ende nuk ka askënd në listë."),
-    "mk": dict(gh="LuxyOS на GitHub", sup_h="Благодарност до нашите поддржувачи",
+    "mk": dict(spon_mail="Сакаш да спонзорираш како фирма или организација? Пиши на {email}.", gh="LuxyOS на GitHub", sup_h="Благодарност до нашите поддржувачи",
         sup_p="Да бидеш на оваа листа е доброволно. Ти избираш дали тука ќе се појават твоето име и износот.",
         sup_how="Сакаш да бидеш на листата? Во пораката на PayPal напиши: „Прикажи: твоето име“ само за името или „Прикажи: твоето име + износ“ за да се прикаже и износот. Без порака, твојата донација останува анонимна.",
         sup_remove="Сакаш да те отстраниме? Пиши на {email} и ќе те отстраниме во следното ажурирање.",
         sup_empty="Сè уште нема никој на листата."),
-    "tr": dict(gh="GitHub’da LuxyOS", sup_h="Destekçilerimize teşekkürler",
+    "tr": dict(spon_mail="Şirket ya da kuruluş olarak sponsor olmak mı istiyorsun? {email} adresine yaz.", gh="GitHub’da LuxyOS", sup_h="Destekçilerimize teşekkürler",
         sup_p="Bu listede yer almak gönüllüdür. Adının ve bağış miktarının burada görünüp görünmeyeceğine sen karar verirsin.",
         sup_how="Listede yer almak ister misin? Yalnızca adın için PayPal mesajına “Göster: adın” yaz; miktarı da göstermek için “Göster: adın + miktar” yaz. Mesaj yazmazsan bağışın anonim kalır.",
         sup_remove="Listeden çıkmak mı istiyorsun? {email} adresine yaz, bir sonraki güncellemede seni kaldıralım.",
@@ -543,7 +543,7 @@ section.supporters .wrap { padding-top: 40px; padding-bottom: 8px; }
 .sup-lijst li { padding: 8px 14px; border-radius: 999px; background: var(--bg-zacht); font-weight: 600; }
 .sup-lijst li span { font-weight: 400; color: var(--tekst-zacht); margin-left: 6px; }
 .sup-leeg { font-style: italic; }
-.sup-blok a { color: var(--hemel); }
+.sup-blok a, .mee .klein a { color: var(--hemel); }
 footer { border-top: 1px solid var(--rand); }
 footer a { color: inherit; display: inline-flex; align-items: center; gap: 6px; }
 footer a svg { width: 16px; height: 16px; }
@@ -601,6 +601,16 @@ def load_supporters():
     path = private if os.path.exists(private) else os.path.join(HERE, "supporters.json")
     with open(path, encoding="utf-8") as f:
         return json.load(f)["supporters"]
+
+
+def mail_link():
+    return f'<a href="mailto:{CONTACT}">{e(CONTACT)}</a>'
+
+
+def mail_line(t):
+    if not CONTACT:
+        return ""
+    return '<p class="klein">' + e(t["spon_mail"]).replace("{email}", mail_link()) + "</p>"
 
 
 def supporters_html(t):
@@ -745,6 +755,7 @@ def page(code):
 <p class="vrijwillig">{e(t["vol"])}</p>
 <a class="knop" href="{PAYPAL}" rel="noopener">{HEART}{e(t["spon"][2])}</a>
 <p class="klein">{e(t["vol_small"])}</p>
+{mail_line(t)}
 </article>
 </div>
 </div>

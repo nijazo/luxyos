@@ -89,6 +89,8 @@ LuxyOS is free and non-commercial. It is paid for by donations, grants and spons
 - Donations pay for servers, test hardware, development and legal advice (trademark, CRA, privacy).
 - Donating is voluntary and gives no rights or influence over the product ([LEGAL.md](LEGAL.md)).
 - We plan to publish a yearly overview of what comes in and what it is spent on.
+- Sponsoring as a company or organisation? E-mail **sponsors@luxyos.com**.
+- Donors are anonymous unless they ask to be on the supporters list on luxyos.com ([terms](docs/terms.md#supporters-list-optional)).
 
 ## Ownership
 

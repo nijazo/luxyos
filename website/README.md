@@ -15,7 +15,7 @@ Edit texts in `src/build.py`, then run `python3 website/src/build.py`. Translati
 - Self-contained: no external fonts, scripts, trackers or cookies. Keep it that way; the footer promises it.
 - The donate button is a plain link to PayPal (paypal.me/nijazo), with no PayPal script.
 - Images are served from luxyos.com itself, so the page still loads nothing from other websites. `SHA256SUMS` lists every file for checking after upload.
-- Supporters list: hidden until `CONTACT` (the e-mail address for removal requests) is set in `src/build.py`. Donors opt in themselves; see [docs/terms.md](../docs/terms.md).
+- Supporters list: shown on every page; removal requests go to `CONTACT` (sponsors@luxyos.com) in `src/build.py`. Donors opt in themselves; see [docs/terms.md](../docs/terms.md).
 - GitHub is linked in the top bar, the developers block and the footer.
 - Redirects: luxyos.nl → https://luxyos.com/nl/ and luxyos.eu → https://luxyos.com/.
 
