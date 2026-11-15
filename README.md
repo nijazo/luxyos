@@ -7,7 +7,7 @@ It only starts what you use, runs your Windows programs, and sends nothing witho
 
 ---
 
-> **Status: design phase.** There is no source code yet. This repository holds the plan, the designs and the decisions, so that developers can help shape and build the first version.
+> **Status: design phase.** There is no source code yet. This repository holds the plan, the designs and the decisions, so that developers can help shape and build the first version. **Our goal is a first test version in 2027.** We are looking for developers and sponsors; see [How to help](#how-to-help) and [Support LuxyOS](#support-luxyos).
 
 ## What LuxyOS is
 

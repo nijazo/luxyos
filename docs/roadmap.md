@@ -1,5 +1,7 @@
 # Roadmap
 
+**Goal: a first test version in 2027.** This is a goal, not a promise ([LEGAL.md](../LEGAL.md)); it depends on finding developers and sponsors.
+
 ![Build order in four phases](design/diagram-build-order.png)
 
 | Phase | Goal | Gate |
