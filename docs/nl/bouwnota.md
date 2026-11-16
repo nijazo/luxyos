@@ -13,7 +13,7 @@ LuxyOS is een snel besturingssysteem dat alleen start wat de gebruiker vraagt, W
 - **Makkelijke bediening**: een gewone gebruiker heeft nooit een opdrachtregel nodig.
 - **Vertrouwd bureaublad**: indeling zoals Windows XP, met een eigen ontwerp.
 - **Gratis**: registratie is altijd vrijwillig.
-- **Keuzevrijheid**: de gebruiker kiest zelf antivirus, webbrowser en zoekmachine. De beheerder bepaalt of AI is toegestaan, alleen lokaal mag, of geblokkeerd is.
+- **Keuzevrijheid**: de gebruiker kiest zelf antivirus, webbrowser en zoekmachine, en of AI aan staat, alleen op de eigen computer werkt of helemaal uit staat. Met AI uit werkt AI nergens op de computer: niet in het systeem, niet in apps en niet online. Op het werk kan de beheerder die keuze vastzetten. Ontwerp: [AI](design/26-ai.png).
 - **Privacy**: niets verlaat het systeem zonder toestemming van de gebruiker. Geen telemetrie, geen advertenties, geen verkoop van gegevens.
 
 ## Bestaande systemen en wat dit OS anders maakt
@@ -872,7 +872,7 @@ Keuzescherm bij de eerste start:
 
 | Keuze | Opties | Let op |
 | --- | --- | --- |
-| Antivirus | IT DeXt Antivirus (ingebouwd en gratis) of een andere | Basis: ClamAV. Belangrijk, omdat Windows-virussen via Wine kunnen draaien |
+| Antivirus | IT DeXt Antivirus (ingebouwd en gratis) of een andere | Basis: ClamAV. Belangrijk, omdat Windows-virussen via Wine kunnen draaien. Blokkeert ook websites met schadelijk JavaScript; zodra een website schoon is, kun je hem weer bezoeken ([ontwerp](design/27-webbescherming.png)) |
 | Webbrowser | Firefox, Chrome, Edge, Brave, Vivaldi, Opera | Downloaden van de officiële site. Chrome mag je niet zelf meeleveren |
 | Zoekmachine | Google, Bing, DuckDuckGo, Ecosia, Startpage, Qwant | Neutraal aangeboden, zonder afspraken over inkomsten |
 

@@ -34,8 +34,8 @@ A Windows `.exe` "migration assistant": check report → collect data → full W
 - Nothing leaves the system without permission. Everything that sends data is off by default.
 - Privacy overview: which program connected to what, with per-app internet switches.
 - Sandbox per app; permissions from the app manifest.
-- IT DeXt Antivirus built in and free: real-time protection, Windows programs scanned before they run, quarantine ([design 25](design/25-security-antivirus.png)). Users can choose another antivirus.
-- AI setting for administrators: **blocked**, **local only** or **allowed** (OS features, store, app execution, network blocklist, NPU).
+- IT DeXt Antivirus built in and free: real-time protection, Windows programs scanned before they run, quarantine ([design 25](design/25-security-antivirus.png)). Web protection blocks websites with harmful JavaScript automatically and checks them again every hour; once a website is clean, it can be visited again and the user gets a message ([design 27](design/27-web-protection.png)). Users can choose another antivirus.
+- AI setting for every user: **off**, **only on this computer** or **on**. With AI off, AI works nowhere on the computer: not in OS features, not in apps from the store, not online (connections to AI services are blocked, also in browsers and Windows programs) and not on the NPU ([design 26](design/26-ai-settings.png)). Administrators can lock the setting for an organisation.
 - Disk encryption on by default (LUKS2 + TPM). Reset: keep files or remove everything (crypto-erase).
 - Central certificate management, like Windows (personal, trusted roots, intermediates, publishers, untrusted, machine).
 
@@ -75,7 +75,7 @@ A Windows `.exe` "migration assistant": check report → collect data → full W
 - GDPR and ePrivacy: privacy by design and by default, data export and deletion, consent before anything is sent.
 - Cyber Resilience Act: secure by default, SBOM per release, vulnerability handling and reporting, security updates for the stated support period, CE marking.
 - European Accessibility Act: screen reader, keyboard-only use, high contrast, scalable text in every screen.
-- AI Act: AI use is always labelled; administrators can block AI.
+- AI Act: AI use is always labelled; users and administrators can switch AI off completely.
 - Digital Services Act for the store: traceable sellers, reporting of illegal apps, reasons for removals.
 - Online services (updates, store, registration, backup) run in the EU.
 

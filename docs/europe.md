@@ -18,7 +18,7 @@ LuxyOS is made in and for the European Union. **EU law is the baseline for every
 | **ePrivacy Directive** | No reading from or storing on the user's device without consent, unless strictly needed for the function the user asked for. |
 | **Cyber Resilience Act (CRA)** | Operating systems are an "important product" under the CRA. Secure by default, no known exploitable vulnerabilities at release, security updates for the whole support period, a software bill of materials (SBOM), a vulnerability handling process, and reporting of actively exploited vulnerabilities. CE marking before sale. |
 | **European Accessibility Act (EAA)** | Operating systems for consumer computers must be accessible: screen reader, keyboard-only use, high contrast, scalable text, captions and accessible documentation. |
-| **AI Act** | Clear labels when AI is used, no hidden AI features. Administrators can block AI completely, allow local AI only, or allow everything. |
+| **AI Act** | Clear labels when AI is used, no hidden AI features. Every user can switch AI off completely, allow local AI only, or allow everything; administrators can lock the choice. |
 | **Digital Services Act (DSA)** | Rules for the store as an online marketplace: known and traceable sellers, a way to report illegal apps, clear reasons when an app is removed. |
 | **Digital Markets Act (DMA)**, as an example to follow | Free choice of browser, search engine and antivirus (choice screen); default apps can be changed and removed; no self-preferencing in the store. |
 | **Digital Content Directive** | Updates to keep LuxyOS working and secure as promised; clear information about what is included. |

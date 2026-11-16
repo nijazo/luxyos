@@ -28,6 +28,8 @@ Screen designs for LuxyOS. Names of apps, companies, people, numbers and times a
 | 23 | [Network & internet: Wi-Fi, VPN, IP settings, encrypted DNS, firewall per app](23-network-settings.png) |
 | 24 | [Accounts: Active Directory for work, Microsoft 365, Google and Yahoo](24-accounts.png) |
 | 25 | [Security with the built-in IT DeXt Antivirus](25-security-antivirus.png) |
+| 26 | [AI: the user decides, and “AI off” switches AI off everywhere on the computer](26-ai-settings.png) |
+| 27 | [Web protection: IT DeXt Antivirus blocks websites with harmful JavaScript and opens them again once they are clean](27-web-protection.png) |
 
 Diagrams: [architecture](diagram-architecture.png) and [build order](diagram-build-order.png).
 

@@ -20,7 +20,7 @@ It only starts what you use, runs your Windows programs, and sends nothing witho
 | **Privacy** | No telemetry, no advertising ID, no ads. Nothing leaves the computer without the user's permission. |
 | **Free and non-commercial** | LuxyOS is free for everyone: no paid editions, no ads, no data sales. Registration is optional; security updates are for everyone. |
 | **Free store for developers** | Developers list their apps for free, with no commission. Paid apps are sold on the developer's own website. See [docs/terms.md](docs/terms.md). |
-| **Choice** | The user picks browser, search engine and antivirus. Administrators decide whether AI is allowed, local only, or blocked. |
+| **Choice** | The user picks browser, search engine and antivirus. AI is optional: on, only on this computer, or completely off. |
 | **Business ready** | Active Directory, Remote Desktop (server and client), certificates, PowerShell, a winget-like package manager and remote management. |
 | **Familiar** | A desktop layout that Windows users recognise, with its own look. Easy to use without a command line. |
 | **Made for Europe** | Built in and for the EU. EU law (GDPR, Cyber Resilience Act, Accessibility Act, AI Act) is the baseline in every country. Anyone may use LuxyOS; partners must follow EU rules. See [docs/europe.md](docs/europe.md). |
@@ -45,6 +45,10 @@ These designs show the end result we are building towards. Names, numbers and ap
 <tr>
 <td><img src="docs/design/02-first-start-choices.png" alt="First start: choose browser, search engine and security"><br><sub>First start: the user chooses browser, search engine and antivirus</sub></td>
 <td><img src="docs/design/16-remote-desktop-app.png" alt="Remote Desktop app"><br><sub>Built-in Remote Desktop app for Windows servers</sub></td>
+</tr>
+<tr>
+<td><img src="docs/design/26-ai-settings.png" alt="AI settings with three choices: AI off, only on this computer, AI on. AI off is selected"><br><sub>AI is optional: “AI off” switches AI off everywhere, in the system, apps and online</sub></td>
+<td><img src="docs/design/27-web-protection.png" alt="IT DeXt Antivirus blocks a website with harmful JavaScript and shows a message when another website is safe again"><br><sub>IT DeXt Antivirus blocks websites with harmful JavaScript and opens them again once they are clean</sub></td>
 </tr>
 </table>
 

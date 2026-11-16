@@ -61,7 +61,7 @@ The GPL-3.0 licence allows anyone to use the code, including companies. The non-
 - **Privacy:** follow the GDPR. No tracking or data collection without the user's explicit consent. All data the app collects is declared in the manifest and shown before installation. No selling of user data.
 - **Advertising** in an app is declared on the store page and uses no tracking without consent.
 - **Safe:** no malware, hidden mining, unauthorised access or attempts to escape the sandbox.
-- **AI:** AI features are labelled and follow the administrator's AI setting (blocked, local only or allowed).
+- **AI:** AI features are labelled and follow the AI setting on the computer (off, only on this computer, or on). When AI is off, an app must not use AI.
 - **Legal:** content and app follow EU law ([europe.md](europe.md)).
 - The developer keeps all rights to the app. By listing it, the developer allows LuxyOS to host, sign, show and distribute it in the store.
 
