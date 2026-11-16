@@ -876,6 +876,10 @@ Keuzescherm bij de eerste start:
 | Webbrowser | Firefox, Chrome, Edge, Brave, Vivaldi, Opera | Downloaden van de officiële site. Chrome mag je niet zelf meeleveren |
 | Zoekmachine | Google, Bing, DuckDuckGo, Ecosia, Startpage, Qwant | Neutraal aangeboden, zonder afspraken over inkomsten |
 
+**Webbescherming**: IT DeXt Antivirus blokkeert websites met schadelijk JavaScript automatisch, voordat het script kan starten. Elk uur wordt de website opnieuw gecontroleerd. Is hij schoon, dan kun je hem weer bezoeken en krijg je een melding.
+
+![Ontwerp 27: IT DeXt Antivirus blokkeert een website met schadelijk JavaScript](design/27-webbescherming.png)
+
 ## Privacy: niets verlaat het systeem zonder toestemming
 
 Geen enkel gegeven gaat naar buiten zonder dat de gebruiker daar zelf ja op zegt. Dit is een kernbelofte.
@@ -897,19 +901,21 @@ Geen enkel gegeven gaat naar buiten zonder dat de gebruiker daar zelf ja op zegt
 - Privacyverklaring in gewone taal, volgens de AVG.
 - Bij bedrijfscomputers ziet de gebruiker welke regels de beheerder heeft ingesteld.
 
-## AI toestaan of blokkeren
+## AI aan of helemaal uit
 
-De beheerder kiest of AI op de computer mag. Staat AI uit, dan kan geen AI-platform geïnstalleerd of gebruikt worden. Staat AI aan, dan kan alles, net als op Windows.
+LuxyOS kan AI gebruiken om je te helpen, bijvoorbeeld bij zoeken, schrijven en foto's vinden. De gebruiker bepaalt of dat mag. Met "AI uit" werkt AI nergens op de computer: niet in het systeem, niet in apps en niet online. Op het werk zet de beheerder de keuze vast.
+
+![Ontwerp 26: Instellingen › AI, met "AI uit" gekozen](design/26-ai.png)
 
 **Drie standen**
 
 | Stand | Wat het betekent |
 | --- | --- |
-| AI geblokkeerd | Geen AI-functies in het OS, geen AI-apps installeren, AI-websites en AI-diensten geblokkeerd |
-| Alleen lokale AI | Alleen AI die op de eigen computer draait. Er gaan geen gegevens naar AI-diensten op internet |
-| AI toegestaan | Alles mag, zoals op Windows |
+| AI uit | AI werkt nergens: geen AI-functies in het OS, geen AI-apps installeren, AI-websites en AI-diensten geblokkeerd |
+| Alleen op deze computer | Alleen AI die op de eigen computer draait. Er gaan geen gegevens naar AI-diensten op internet |
+| AI aan | AI op de computer en online AI-diensten. Elke AI-functie heeft een label |
 
-- Keuze bij de eerste start, in het keuzescherm. Daarna alleen te wijzigen door een beheerder, met het beheerderswachtwoord.
+- Keuze bij de eerste start, in het keuzescherm. Daarna te wijzigen in Instellingen › AI. Thuis is de gebruiker meestal zelf beheerder; een standaardgebruiker heeft het beheerderswachtwoord nodig.
 - Bedrijven en scholen zetten het centraal vast, via AD-groepsbeleid of de beheersoftware.
 - De gebruiker ziet altijd de stand, bijvoorbeeld: "AI is geblokkeerd door je beheerder".
 - De beheerder ziet een logboek van geblokkeerde pogingen.
