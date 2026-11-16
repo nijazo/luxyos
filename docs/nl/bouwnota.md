@@ -620,7 +620,7 @@ optioneel: netwerk
 
 **App-winkel**:
 
-1. De ontwikkelaar uploadt de app met manifest via het portaal.
+1. De ontwikkelaar meldt de app met manifest aan: eerst via GitHub, later via een eigen portaal (zie Werkplan app-winkel).
 2. Automatische controle op malware, manifest en sandbox.
 3. De winkel ondertekent de app.
 4. De gebruiker installeert met één klik. Updates gaan vanzelf.
@@ -667,6 +667,70 @@ Open-source programma's van GitHub komen automatisch in de winkel, zowel Windows
 - Een app uit GitHub draait ook in de sandbox, met toestemmingen zoals elke andere app.
 - Later uitbreiden naar GitLab, Codeberg en SourceForge.
 - Bestaande hulpmiddelen ter inspiratie: de update-bots van winget en Flathub doen dit al.
+
+## Werkplan app-winkel
+
+De winkel start via GitHub: ontwikkelaars melden hun app aan met een klein bestand in een openbare repository, IT DeXt beoordeelt, en LuxyOS ondertekent en verspreidt. Een eigen ontwikkelaarsportaal komt later.
+
+**Besluiten** (16 november 2026)
+
+| Vraag | Besluit |
+| --- | --- |
+| Hoe melden ontwikkelaars apps aan? | Eerst via GitHub, zoals Flathub en winget. Eigen portaal in fase 2 |
+| Hoe controleren we ontwikkelaars? | Gratis apps: een GitHub-account met tweestapsverificatie. Betaalde apps: ook handelaarsgegevens (naam, adres, e-mail, telefoon, KvK-nummer, ID), verplicht door de DSA |
+| Wie beoordeelt apps? | IT DeXt. Nijaz werkt dit uit bij de start van de bouw |
+| Domeinen en servers | Later, als het plan werkt |
+
+**Zo komt een app in de winkel (fase 1)**
+
+1. De ontwikkelaar maakt een pull request in de winkel-repository, met één map per app:
+    - het manifest: naam, versie, toestemmingen, netwerkgebruik, welke gegevens de app verzamelt, en of de app AI gebruikt (lokaal of online);
+    - een link naar het pakket of de broncode, met checksum;
+    - pictogram, beschrijving, schermafbeeldingen en licentie;
+    - bij een betaalde app: de prijs en de link naar de eigen website.
+2. Automatische controle in GitHub Actions: manifest compleet, checksum, malwarescan, licentie, en een sandbox-test die kijkt of de app niets doet buiten zijn manifest.
+3. IT DeXt beoordeelt de eerste app van elke ontwikkelaar, en elke app met gevoelige toestemmingen (camera, microfoon, alle bestanden, online AI). Het besluit staat met reden in de pull request.
+4. Goedgekeurd: de bouwserver ondertekent het pakket met de sleutel van LuxyOS en zet het in de catalogus.
+5. Afgewezen: de ontwikkelaar past de app aan in dezelfde pull request. Bezwaar kan via een issue.
+6. Updates gaan dezelfde weg, of automatisch bij een nieuwe GitHub-release. Vraagt de update geen nieuwe toestemmingen, dan volstaat de automatische controle. Bij nieuwe toestemmingen kijkt IT DeXt opnieuw.
+
+Handelaarsgegevens van betaalde apps komen niet in de openbare repository. De ontwikkelaar stuurt ze naar een vast e-mailadres (nog aan te maken), IT DeXt controleert ze, en de winkelpagina toont alleen wat de DSA vraagt.
+
+**Zo downloadt een gebruiker**
+
+1. Winkel openen en een app kiezen. De pagina toont wat de app doet, de toestemmingen, Windows of Linux, het compatibiliteitslabel, de herkomst (*Gecontroleerd* of *Uit GitHub*) en bij betaalde apps de prijs met een link.
+2. Installeren: de gebruiker bevestigt de toestemmingen.
+3. LuxyOS controleert de handtekening, IT DeXt Antivirus scant, en de app komt in zijn eigen sandbox.
+4. Updates gaan vanzelf.
+
+Downloaden kan zonder account. De winkel stuurt niets mee over de gebruiker en telt alleen het aantal downloads per app per dag, zonder IP-adressen te bewaren.
+
+**Wat we bouwen**
+
+| Onderdeel | Wat het doet | Hergebruiken |
+| --- | --- | --- |
+| Winkel-repository | Eén map per app, met de regels voor aanmelden | Opzet van winget-pkgs en Flathub |
+| Controle | Manifest, checksum, malwarescan, licentie, sandbox-test | GitHub Actions, flatpak-builder, ClamAV, scanner van IT DeXt |
+| Bouw- en ondertekenserver | Bouwt en ondertekent pakketten; de sleutel zit in een beveiligde hardwaremodule | flat-manager (Flathub) |
+| Catalogus | Alle apps met hun gegevens, voor de winkel-app | AppStream |
+| Downloadserver | Pakketten en updates, in de EU | Flatpak-repository; later spiegelservers |
+| Winkel-app in LuxyOS | Zoeken, installeren, updates, toestemmingen | Eigen, in Rust en Qt, met de `app`-pakketbeheerder |
+
+Windows-programma's van andere makers downloadt de winkel van de website van de maker, met een vaste checksum, zoals winget. Dat kost LuxyOS geen dataverkeer.
+
+**Volgorde**
+
+1. Het manifestformaat vastleggen, gelijk aan het manifest uit de SDK.
+2. De winkel-repository met regels en automatische controle.
+3. De bouw- en ondertekenserver en de downloadserver. Dan de domeinen aanmaken.
+4. De winkel-app in LuxyOS, voor de testversie van 2027.
+5. Fase 2: eigen ontwikkelaarsportaal met accounts en een overzicht per ontwikkelaar. Fase 3: webwinkel op internet.
+
+**Nog open**
+
+- Hoe IT DeXt beoordeelt en welke code daarvoor gebruikt wordt (Nijaz komt hierop terug).
+- Domeinen, servers en het e-mailadres voor ontwikkelaars.
+- Naam van de winkel-repository op GitHub.
 
 ## Netwerk en Active Directory
 

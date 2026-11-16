@@ -67,7 +67,7 @@ A Windows `.exe` "migration assistant": check report → collect data → full W
 - Labels: *Verified* or *From GitHub*. Permissions from the manifest are shown before installation.
 - Developer mode, SDK, emulator, manifest per app.
 - Listing is free: no fees, no commission. The store handles no payments; a paid app's page shows the price and links to the developer's own website ([store terms](terms.md#2-store-terms-for-developers)).
-- Developer portal: request a listing, automatic checks, review with reasons, appeal.
+- Submitting apps: on GitHub first (pull request with a manifest, automatic checks, review by IT DeXt with reasons, appeal), an own developer portal later. Working plan: [store.md](store.md).
 
 ## Europe and law
 

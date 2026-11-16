@@ -41,7 +41,7 @@ The GPL-3.0 licence allows anyone to use the code, including companies. The non-
 
 ### How a request works
 
-1. Create a free developer account. For paid apps, also give the trader details the Digital Services Act requires: name, address, email, phone and, where applicable, the trade register number. The store shows these details to users.
+1. Create a free developer account. At the start this is a GitHub account with two-factor authentication; a LuxyOS developer portal follows later ([store.md](store.md)). For paid apps, also give the trader details the Digital Services Act requires: name, address, email, phone and, where applicable, the trade register number. The store shows these details to users.
 2. Submit the app with its manifest: permissions, network use and the data the app collects.
 3. Automatic checks: malware scan, manifest, sandbox and signature. Then a review against these terms.
 4. A decision within a stated time, with reasons. A rejected app can be fixed and submitted again, or the developer can appeal.

@@ -15,5 +15,6 @@ Each file records one decision: the context, what was decided, and the consequen
 | [0009](0009-eu-law-as-baseline.md) | EU law as the baseline, in every country | Proposed |
 | [0010](0010-licences.md) | Licences: GPL-3.0 for the system, Apache-2.0 for the SDK, CC BY 4.0 for documents | Accepted |
 | [0011](0011-free-non-commercial-and-free-store.md) | Free and non-commercial; a free store without commission | Accepted |
+| [0012](0012-store-starts-on-github.md) | The store starts on GitHub; IT DeXt reviews apps | Accepted |
 
 To propose a new decision, copy the format of an existing record and open a pull request.
